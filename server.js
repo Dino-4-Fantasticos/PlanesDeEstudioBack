@@ -19,4 +19,7 @@ mongoose
   .then(() => console.log("MongoDB database connected successfully"))
   .catch((err) => console.log(err));
 
+const usersRouter = require("./src/users/router");
+app.use("/api/users", usersRouter);
+
 app.listen(port, () => console.log(`Server is running on port: ${port}`));
