@@ -18,4 +18,29 @@ router.post("/", async (req, res) => {
   return res.json("¡El usuario se ha registrado correctamente!");
 });
 
+// READ
+router.get("/", async (req, res) => {
+  const { query = {} } = req;
+  const resFind = await User.find(query).catch((err) => err);
+  if (resFind instanceof Error) {
+    return res.status(400).json({ msg: "Hubo un error al obtener usuarios." });
+  }
+
+  return res.json(resFind);
+});
+
+router.get("/:matricula", async (req, res) => {
+  const { matricula } = req.params;
+  const resFind = await User.findOne({ matricula }).catch((err) => err);
+  if (resFind instanceof Error) {
+    return res.status(400).json({ msg: "Hubo un error al obtener usuario." });
+  }
+
+  if (resFind === null) {
+    return res.status(400).json({ msg: "No se encontró usuario registrado." });
+  }
+
+  return res.json(resFind);
+});
+
 module.exports = router;
