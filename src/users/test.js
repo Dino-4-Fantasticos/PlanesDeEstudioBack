@@ -267,3 +267,129 @@ describe("lectura de usuarios", () => {
     done();
   });
 });
+
+describe("actualización de usuarios", () => {
+  beforeEach(async () => {
+    const newUser = new User({
+      nombre: "Estudiante",
+      apellido: "Prueba",
+      matricula: "A01234567",
+      correo: "a01234567@itesm.mx",
+    });
+    await newUser.save();
+  });
+
+  it("regresa error al intentar actualizar un usuario no registrado", async (done) => {
+    const matriculaNoRegistrada = "A99999999";
+    const nuevosDatos = {};
+    const res = await request
+      .put(`${endpointUrl}/${matriculaNoRegistrada}`)
+      .send(nuevosDatos);
+
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const error = res.body;
+    expect(error).toMatchObject({
+      msg: "No se encontró usuario registrado.",
+    });
+
+    done();
+  });
+
+  it("muestra errores correspondientes en caso de remover información obligatoria", async (done) => {
+    const nuevosDatos = {
+      nombre: null,
+      apellido: null,
+      matricula: null,
+      correo: null,
+    };
+    const res = await request.put(`${endpointUrl}/A01234567`).send(nuevosDatos);
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const errors = res.body.err;
+    expect(errors).toMatchObject({
+      nombre: "El nombre es un campo obligatorio.",
+    });
+    expect(errors).toMatchObject({
+      matricula: "La matrícula es un campo obligatorio.",
+    });
+    expect(errors).toMatchObject({
+      correo: "El correo electrónico es un campo obligatorio.",
+    });
+    expect(errors).toMatchObject({
+      apellido: "El apellido es un campo obligatorio.",
+    });
+
+    done();
+  });
+
+  it("muestra errores correspondientes en caso de información inválida", async (done) => {
+    const nuevosDatos = {
+      matricula: "matriculaNoVálida",
+      correo: "correo@notec",
+    };
+    const res = await request.put(`${endpointUrl}/A01234567`).send(nuevosDatos);
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const errors = res.body.err;
+    expect(errors).toMatchObject({
+      matricula:
+        "La matrícula debe cumplir con el formato completo. [A0.......].",
+    });
+    expect(errors).toMatchObject({
+      correo:
+        "El correo electrónico debe contener una dirección válida del ITESM. [@itesm.mx / @tec.mx].",
+    });
+
+    done();
+  });
+
+  it("muestra errores correspondientes en caso de actualizar hacia un usuario ya registrado", async (done) => {
+    const otroUsuario = new User({
+      nombre: "Otro Estudiante",
+      apellido: "Prueba",
+      matricula: "A00000001",
+      correo: "a00000001@itesm.mx",
+    });
+    await otroUsuario.save();
+
+    const res = await request.put(`${endpointUrl}/A01234567`).send({
+      matricula: "A00000001",
+      correo: "a00000001@itesm.mx",
+    });
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const errors = res.body.err;
+    expect(errors).toMatchObject({
+      matricula: "Ya existe otro usuario registrado con esta matrícula.",
+    });
+    expect(errors).toMatchObject({
+      correo: "Ya existe otro usuario registrado con este correo.",
+    });
+
+    done();
+  });
+
+  it("actualiza correctamente el usuario", async (done) => {
+    const nuevosDatos = {
+      nombre: "Estudiante Actualizado",
+      apellido: "Prueba Actualizada",
+      matricula: "A09999999",
+      correo: "a09999999@itesm.mx",
+      esAdmin: true,
+      urlFoto: "https://custom-image-url.jpg",
+    };
+    const res = await request.put(`${endpointUrl}/A01234567`).send(nuevosDatos);
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuarioActualizado = await User.findOne({ matricula: "A09999999" });
+    expect(usuarioActualizado).toMatchObject(nuevosDatos);
+
+    done();
+  });
+});
