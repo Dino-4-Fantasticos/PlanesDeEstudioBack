@@ -73,4 +73,22 @@ router.put("/:matricula", async (req, res) => {
   return res.json("Usuario actualizado exitosamente.");
 });
 
+// DELETE
+router.delete("/:matricula", async (req, res) => {
+  const { matricula } = req.params;
+  const resDelete = await User.findOneAndDelete({ matricula }).catch(
+    (err) => err
+  );
+  if (resDelete instanceof Error) {
+    return res
+      .status(400)
+      .json({ msg: "Hubo un error al remover el usuario." });
+  }
+  if (resDelete === null) {
+    return res.status(400).json({ msg: "No se encontró usuario registrado." });
+  }
+
+  return res.json("Usuario removido exitosamente.");
+});
+
 module.exports = router;

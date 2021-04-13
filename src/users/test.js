@@ -393,3 +393,39 @@ describe("actualización de usuarios", () => {
     done();
   });
 });
+
+describe("remover de usuario", () => {
+  beforeEach(async () => {
+    const newUser = new User({
+      nombre: "Estudiante",
+      apellido: "Prueba",
+      matricula: "A01234567",
+      correo: "a01234567@itesm.mx",
+    });
+    await newUser.save();
+  });
+
+  it("regresa error al intentar remover usuario en específico no registrado", async (done) => {
+    const matriculaNoRegistrada = "A99999999";
+    const res = await request.delete(`${endpointUrl}/${matriculaNoRegistrada}`);
+
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const error = res.body;
+    expect(error).toMatchObject({ msg: "No se encontró usuario registrado." });
+
+    done();
+  });
+
+  it("remueve correctamente un usuario en específico", async (done) => {
+    const res = await request.delete(`${endpointUrl}/A01234567`);
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuario = await User.findOne({ matricula: "A00000001" });
+    expect(usuario).toEqual(null);
+
+    done();
+  });
+});
