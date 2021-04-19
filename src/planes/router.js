@@ -70,7 +70,6 @@ router.post("/", async (req, res) => {
   return res.json("¡El usuario se ha registrado correctamente!");
 });
 
-/*
 // READ
 router.get("/", async (req, res) => {
   const { query = {} } = req;
@@ -103,6 +102,7 @@ router.get("/:siglas", async (req, res) => {
   return res.json(resFind);
 });
 
+/*
 // UPDATE
 router.put("/:siglas", async (req, res) => {
   const { siglas } = req.params;

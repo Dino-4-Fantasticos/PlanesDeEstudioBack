@@ -265,7 +265,6 @@ describe("creación de plan de estudios", () => {
   });
 });
 
-/*
 describe("lectura de planes de estudio", () => {
   beforeEach(async () => {
     const newPlan01 = new Plan({
@@ -386,6 +385,7 @@ describe("lectura de planes de estudio", () => {
   });
 });
 
+/*
 describe("actualización de planes de estudio", () => {
   beforeEach(async () => {
     const newPlan = new Plan({
