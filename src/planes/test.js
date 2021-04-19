@@ -386,7 +386,6 @@ describe("lectura de planes de estudio", () => {
   });
 });
 
-/*
 describe("actualización de planes de estudio", () => {
   beforeEach(async () => {
     const newPlan = new Plan({
@@ -608,6 +607,7 @@ describe("actualización de planes de estudio", () => {
   });
 });
 
+/*
 describe("remover de usuario", () => {
   beforeEach(async () => {
     const newUser = new User({

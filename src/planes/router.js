@@ -102,7 +102,6 @@ router.get("/:siglas", async (req, res) => {
   return res.json(resFind);
 });
 
-/*
 // UPDATE
 router.put("/:siglas", async (req, res) => {
   const { siglas } = req.params;
@@ -141,6 +140,7 @@ router.put("/:siglas", async (req, res) => {
   return res.json("Plan de estudios actualizado exitosamente.");
 });
 
+/*
 // DELETE
 router.delete("/:matricula", async (req, res) => {
   const { matricula } = req.params;
