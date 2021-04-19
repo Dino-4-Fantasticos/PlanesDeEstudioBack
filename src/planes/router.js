@@ -140,24 +140,22 @@ router.put("/:siglas", async (req, res) => {
   return res.json("Plan de estudios actualizado exitosamente.");
 });
 
-/*
 // DELETE
-router.delete("/:matricula", async (req, res) => {
-  const { matricula } = req.params;
-  const resDelete = await User.findOneAndDelete({ matricula }).catch(
-    (err) => err
-  );
+router.delete("/:siglas", async (req, res) => {
+  const { siglas } = req.params;
+  const resDelete = await Plan.findOneAndDelete({ siglas }).catch((err) => err);
   if (resDelete instanceof Error) {
     return res
       .status(400)
-      .json({ msg: "Hubo un error al remover el usuario." });
+      .json({ msg: "Hubo un error al remover el plan de estudios." });
   }
   if (resDelete === null) {
-    return res.status(400).json({ msg: "No se encontró usuario registrado." });
+    return res
+      .status(400)
+      .json({ msg: "No se encontró este plan de estudios." });
   }
 
-  return res.json("Usuario removido exitosamente.");
+  return res.json("Plan de estudios removido exitosamente.");
 });
-*/
 
 module.exports = router;

@@ -607,36 +607,34 @@ describe("actualización de planes de estudio", () => {
   });
 });
 
-/*
-describe("remover de usuario", () => {
+describe("remover plan de estudios", () => {
   beforeEach(async () => {
-    const newUser = new User({
-      nombre: "Estudiante",
-      apellido: "Prueba",
-      matricula: "A01234567",
-      correo: "a01234567@itesm.mx",
+    const newPlan = new Plan({
+      siglas: "ITC11",
+      nombre: "Ingeniería en Tecnologías Computacionales",
+      materias: [[{ clave: "TC1018", nombre: "Estructura de Datos" }]],
     });
-    await newUser.save();
+    await newPlan.save();
   });
 
-  it("regresa error al intentar remover usuario en específico no registrado", async () => {
-    const matriculaNoRegistrada = "A99999999";
-    const res = await request.delete(`${endpointUrl}/${matriculaNoRegistrada}`);
+  it("regresa error al intentar remover un plan de estudio no existente", async () => {
+    const res = await request.delete(`${endpointUrl}/siglasNoExistentes`);
 
     const status = res.status;
     expect(status).toBe(400);
 
     const error = res.body;
-    expect(error).toMatchObject({ msg: "No se encontró usuario registrado." });
+    expect(error).toMatchObject({
+      msg: "No se encontró este plan de estudios.",
+    });
   });
 
-  it("remueve correctamente un usuario en específico", async () => {
-    const res = await request.delete(`${endpointUrl}/A01234567`);
+  it("remueve correctamente un plan de estudios determinado", async () => {
+    const res = await request.delete(`${endpointUrl}/ITC11`);
     const status = res.status;
     expect(status).toBe(200);
 
-    const usuario = await User.findOne({ matricula: "A00000001" });
-    expect(usuario).toEqual(null);
+    const plan = await Plan.findOne({ siglas: "ITC11" });
+    expect(plan).toBeNull();
   });
 });
-*/
