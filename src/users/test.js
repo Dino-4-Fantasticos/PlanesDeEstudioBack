@@ -1,6 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../server");
 const request = supertest(app);
+const { toQueryString } = require("../utils");
 
 const User = require("./model");
 
@@ -138,6 +139,292 @@ describe("creación de usuario", () => {
       esAdmin: true,
       urlFoto: "https://custom-image-url.jpg",
     });
+
+    done();
+  });
+});
+
+describe("lectura de usuarios", () => {
+  beforeEach(async () => {
+    const newUser01 = new User({
+      nombre: "Estudiante 01",
+      apellido: "Prueba",
+      matricula: "A00000001",
+      correo: "a00000001@itesm.mx",
+    });
+    const newUser02 = new User({
+      nombre: "Estudiante 02",
+      apellido: "Prueba",
+      matricula: "A00000002",
+      correo: "a00000002@itesm.mx",
+      esAdmin: true,
+    });
+    const newUser03 = new User({
+      nombre: "Profesor",
+      apellido: "Prueba",
+      matricula: "L00000003",
+      correo: "profesor@tec.mx",
+    });
+    await Promise.all([newUser01.save(), newUser02.save(), newUser03.save()]);
+  });
+
+  it("consigue correctamente todos los usuarios registrados", async (done) => {
+    const res = await request.get(`${endpointUrl}/`);
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const users = res.body;
+    expect(users).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          nombre: "Estudiante 01",
+          apellido: "Prueba",
+          matricula: "A00000001",
+          correo: "a00000001@itesm.mx",
+        }),
+        expect.objectContaining({
+          nombre: "Estudiante 02",
+          apellido: "Prueba",
+          matricula: "A00000002",
+          correo: "a00000002@itesm.mx",
+        }),
+        expect.objectContaining({
+          nombre: "Profesor",
+          apellido: "Prueba",
+          matricula: "L00000003",
+          correo: "profesor@tec.mx",
+        }),
+      ])
+    );
+
+    done();
+  });
+
+  it("regresa una lista vacía al aplicar una consulta que ningún usuario cumple", async (done) => {
+    const query = toQueryString({ apellido: "Apellido No Registrado" });
+    const res = await request.get(`${endpointUrl}?${query}`);
+
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuarios = res.body;
+    expect(usuarios).toEqual([]);
+
+    done();
+  });
+
+  it("aplica consulta de usuarios registrados", async (done) => {
+    const query = toQueryString({ esAdmin: true });
+    const res = await request.get(`${endpointUrl}?${query}`);
+
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuarios = res.body;
+    expect(usuarios).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          nombre: "Estudiante 02",
+          apellido: "Prueba",
+          matricula: "A00000002",
+          correo: "a00000002@itesm.mx",
+          esAdmin: true,
+        }),
+      ])
+    );
+
+    done();
+  });
+
+  it("regresa error al intentar conseguir usuario en específico no registrado", async (done) => {
+    const matriculaNoRegistrada = "A99999999";
+    const res = await request.get(`${endpointUrl}/${matriculaNoRegistrada}`);
+
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const error = res.body;
+    expect(error).toMatchObject({
+      msg: "No se encontró usuario registrado.",
+    });
+
+    done();
+  });
+
+  it("consigue correctamente un usuario en específico", async (done) => {
+    const res = await request.get(`${endpointUrl}/A00000001`);
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuario = res.body;
+    expect(usuario).toMatchObject({
+      nombre: "Estudiante 01",
+      apellido: "Prueba",
+      matricula: "A00000001",
+      correo: "a00000001@itesm.mx",
+    });
+
+    done();
+  });
+});
+
+describe("actualización de usuarios", () => {
+  beforeEach(async () => {
+    const newUser = new User({
+      nombre: "Estudiante",
+      apellido: "Prueba",
+      matricula: "A01234567",
+      correo: "a01234567@itesm.mx",
+    });
+    await newUser.save();
+  });
+
+  it("regresa error al intentar actualizar un usuario no registrado", async (done) => {
+    const matriculaNoRegistrada = "A99999999";
+    const nuevosDatos = {};
+    const res = await request
+      .put(`${endpointUrl}/${matriculaNoRegistrada}`)
+      .send(nuevosDatos);
+
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const error = res.body;
+    expect(error).toMatchObject({
+      msg: "No se encontró usuario registrado.",
+    });
+
+    done();
+  });
+
+  it("muestra errores correspondientes en caso de remover información obligatoria", async (done) => {
+    const nuevosDatos = {
+      nombre: null,
+      apellido: null,
+      matricula: null,
+      correo: null,
+    };
+    const res = await request.put(`${endpointUrl}/A01234567`).send(nuevosDatos);
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const errors = res.body.err;
+    expect(errors).toMatchObject({
+      nombre: "El nombre es un campo obligatorio.",
+    });
+    expect(errors).toMatchObject({
+      matricula: "La matrícula es un campo obligatorio.",
+    });
+    expect(errors).toMatchObject({
+      correo: "El correo electrónico es un campo obligatorio.",
+    });
+    expect(errors).toMatchObject({
+      apellido: "El apellido es un campo obligatorio.",
+    });
+
+    done();
+  });
+
+  it("muestra errores correspondientes en caso de información inválida", async (done) => {
+    const nuevosDatos = {
+      matricula: "matriculaNoVálida",
+      correo: "correo@notec",
+    };
+    const res = await request.put(`${endpointUrl}/A01234567`).send(nuevosDatos);
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const errors = res.body.err;
+    expect(errors).toMatchObject({
+      matricula:
+        "La matrícula debe cumplir con el formato completo. [A0.......].",
+    });
+    expect(errors).toMatchObject({
+      correo:
+        "El correo electrónico debe contener una dirección válida del ITESM. [@itesm.mx / @tec.mx].",
+    });
+
+    done();
+  });
+
+  it("muestra errores correspondientes en caso de actualizar hacia un usuario ya registrado", async (done) => {
+    const otroUsuario = new User({
+      nombre: "Otro Estudiante",
+      apellido: "Prueba",
+      matricula: "A00000001",
+      correo: "a00000001@itesm.mx",
+    });
+    await otroUsuario.save();
+
+    const res = await request.put(`${endpointUrl}/A01234567`).send({
+      matricula: "A00000001",
+      correo: "a00000001@itesm.mx",
+    });
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const errors = res.body.err;
+    expect(errors).toMatchObject({
+      matricula: "Ya existe otro usuario registrado con esta matrícula.",
+    });
+    expect(errors).toMatchObject({
+      correo: "Ya existe otro usuario registrado con este correo.",
+    });
+
+    done();
+  });
+
+  it("actualiza correctamente el usuario", async (done) => {
+    const nuevosDatos = {
+      nombre: "Estudiante Actualizado",
+      apellido: "Prueba Actualizada",
+      matricula: "A09999999",
+      correo: "a09999999@itesm.mx",
+      esAdmin: true,
+      urlFoto: "https://custom-image-url.jpg",
+    };
+    const res = await request.put(`${endpointUrl}/A01234567`).send(nuevosDatos);
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuarioActualizado = await User.findOne({ matricula: "A09999999" });
+    expect(usuarioActualizado).toMatchObject(nuevosDatos);
+
+    done();
+  });
+});
+
+describe("remover de usuario", () => {
+  beforeEach(async () => {
+    const newUser = new User({
+      nombre: "Estudiante",
+      apellido: "Prueba",
+      matricula: "A01234567",
+      correo: "a01234567@itesm.mx",
+    });
+    await newUser.save();
+  });
+
+  it("regresa error al intentar remover usuario en específico no registrado", async (done) => {
+    const matriculaNoRegistrada = "A99999999";
+    const res = await request.delete(`${endpointUrl}/${matriculaNoRegistrada}`);
+
+    const status = res.status;
+    expect(status).toBe(400);
+
+    const error = res.body;
+    expect(error).toMatchObject({ msg: "No se encontró usuario registrado." });
+
+    done();
+  });
+
+  it("remueve correctamente un usuario en específico", async (done) => {
+    const res = await request.delete(`${endpointUrl}/A01234567`);
+    const status = res.status;
+    expect(status).toBe(200);
+
+    const usuario = await User.findOne({ matricula: "A00000001" });
+    expect(usuario).toEqual(null);
 
     done();
   });
