@@ -50,6 +50,9 @@ const schema = new Schema({
     type: String,
     default: "https://i.stack.imgur.com/YaL3s.jpg",
   },
+
+  // TODO: Agregar los planes planeados del usuario
+  // planesPlaneados: { }
 });
 
 const uniqueErrors = {
