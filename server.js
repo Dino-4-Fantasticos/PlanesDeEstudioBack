@@ -11,4 +11,7 @@ app.use("/api/users", usersRouter);
 const planesRouter = require("./src/planes/router");
 app.use("/api/planes", planesRouter);
 
+const loginRouter = require("./src/login/router");
+app.use("/api/login", loginRouter);
+
 module.exports = app;
