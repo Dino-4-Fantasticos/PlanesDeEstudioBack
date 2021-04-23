@@ -2,16 +2,7 @@ const router = require("express").Router();
 const Plan = require("./model");
 const Materia = require("../materias/model");
 
-const { optionalStringToJSON } = require("../utils");
-
-/** Extraer los mensajes de error de un objeto estilo Error Mongoose */
-function extraerMensajesError({ errors }) {
-  const returnErrors = {};
-  for (const [key, obj] of Object.entries(errors)) {
-    returnErrors[key] = optionalStringToJSON(obj.message);
-  }
-  return returnErrors;
-}
+const { optionalStringToJSON, extraerMensajesError } = require("../utils");
 
 /** Guardar cada una de las materias en la base de datos */
 async function guardarMaterias(data) {
