@@ -1,0 +1,18 @@
+@import "../_variables";
+
+header {
+  color: inherit;
+}
+
+.header-navbar {
+  background-color: $fondo-app;
+  min-height: 78px;
+
+  > div {
+    background-color: $fondo-app;
+  }
+
+  .element span {
+    color: inherit;
+  }
+}
