@@ -16,4 +16,13 @@ function optionalStringToJSON(jsonString) {
   }
 }
 
-module.exports = { toQueryString, optionalStringToJSON };
+/** Extraer los mensajes de error de un objeto estilo Error Mongoose */
+function extraerMensajesError({ errors }) {
+  const returnErrors = {};
+  for (const [key, obj] of Object.entries(errors)) {
+    returnErrors[key] = optionalStringToJSON(obj.message);
+  }
+  return returnErrors;
+}
+
+module.exports = { toQueryString, optionalStringToJSON, extraerMensajesError };
