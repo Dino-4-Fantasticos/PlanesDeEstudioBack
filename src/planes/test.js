@@ -53,7 +53,7 @@ describe("creación de plan de estudios", () => {
       "ITC", // Siglas sin generación
       "ITC19PRO", // Siglas con letras al final
     ];
-    for (siglas of siglasIncorrectas) {
+    for (const siglas of siglasIncorrectas) {
       const resPost = await request
         .post(`${endpointUrl}/`)
         .send({ siglas, materias: materiasEjemplo });

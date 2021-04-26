@@ -41,7 +41,7 @@ describe("creación de usuario", () => {
       "X00000000", // Matrícula sin la letra inicial correcta
       "ABCDEFGH", // Matrícula sin números
     ];
-    for (matricula of matriculasIncorrectas) {
+    for (const matricula of matriculasIncorrectas) {
       const res = await request.post(`${endpointUrl}/`).send({ matricula });
       const status = res.status;
       expect(status).toBe(400);
@@ -61,7 +61,7 @@ describe("creación de usuario", () => {
       "@sinnombre", // Correo sin contenido antes del @
       "correo@notec", // Correo sin terminación @itesm.mx o @tec.mx
     ];
-    for (correo of correosIncorrectos) {
+    for (const correo of correosIncorrectos) {
       const res = await request.post(`${endpointUrl}/`).send({ correo });
       const status = res.status;
       expect(status).toBe(400);

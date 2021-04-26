@@ -7,7 +7,7 @@ setupDB("materias-testing");
 /** Función auxiliar que pasa manualmente cada uno de los datos y guarda el modelo */
 async function updateMateria(clave, nuevosDatos) {
   const materia = await Materia.findOne({ clave });
-  for ([key, value] of Object.entries(nuevosDatos)) {
+  for (const [key, value] of Object.entries(nuevosDatos)) {
     materia[key] = value;
   }
   return await materia.save();
@@ -48,7 +48,7 @@ describe("creación de materia", () => {
       "TC10000", // Números de más
       "TC1000BB", // Demasiadas letras al final
     ];
-    for (clave of clavesIncorrectas) {
+    for (const clave of clavesIncorrectas) {
       const nuevaMateria = new Materia({ clave });
       const resSave = await nuevaMateria.save().catch((err) => err);
       expect(resSave).toBeInstanceOf(Error);
