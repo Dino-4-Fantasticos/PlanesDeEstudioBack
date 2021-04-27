@@ -9,6 +9,18 @@ const G_CLIENT_ID =
 /** Nombre de la cookie utilizada para guardar la sesión de usuario. */
 const TOKEN_NAME = "pde_id_admin";
 
+function extraerMensajeErrorCliente(res) {
+  const err = new Error();
+  if (!res.response) {
+    err.message =
+      "Hubo un error de conexión con el servidor. Favor de intentarlo más tarde.";
+  } else {
+    err.message = res.response.data.msg;
+    err.err = res.response.data.err;
+  }
+  return err;
+}
+
 /**
  * Llamar al back-end para autenticar sesión iniciada.
  * En caso de sesión no válida, regresa error o nulo.
@@ -20,13 +32,22 @@ async function authenticate() {
   const resAuth = await axios
     .post(`${backendURL}/login/auth`, { token: Cookies.get(TOKEN_NAME) })
     .catch((err) => err);
-  if (resAuth instanceof Error) return resAuth;
+  if (resAuth instanceof Error) {
+    throw extraerMensajeErrorCliente(resAuth);
+  }
 
   const { matricula } = resAuth.data.verification;
   const resUserGet = await axios
     .get(`${backendURL}/users/${matricula}`)
     .catch((err) => err);
-  if (resUserGet instanceof Error) return resUserGet;
+  if (resUserGet instanceof Error) {
+    throw extraerMensajeErrorCliente(resUserGet);
+  }
+
+  const user = resUserGet.data;
+  if (!user.esAdmin) {
+    throw new Error("Usuario no es administrador.");
+  }
 
   return resUserGet.data;
 }
@@ -44,7 +65,7 @@ async function login({ profileObj }) {
     return;
   }
   Cookies.set(TOKEN_NAME, resLogin.data.token, { expires: 365 });
-  window.location = `${PUBLIC_URL}/#/`;
+  window.location = `${PUBLIC_URL}/home`;
 }
 
 /** Remover cookie de la sesión. */

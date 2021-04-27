@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { HashRouter as Router } from "react-router-dom";
 import "./App.scss";
 
+import SplashScreen from "./splash/view";
 import Header from "./header/view";
 import Footer from "./footer/view";
 
@@ -13,13 +14,7 @@ import { authenticate } from "./auth";
 async function checkSession(setLoggedUser) {
   const resAuth = await authenticate().catch((err) => err);
   if (resAuth instanceof Error) {
-    if (!resAuth.response) {
-      alert(
-        "Hubo un error de conexión al servidor para validar sesión iniciada."
-      );
-    } else if (resAuth.response.data.msg) {
-      alert(resAuth.response.data.msg);
-    }
+    alert(resAuth.message);
     setLoggedUser(null);
     return;
   }
@@ -32,8 +27,16 @@ export default function App() {
 
   useEffect(() => checkSession(setLoggedUser), []);
 
+  if (loggedUser === undefined) {
+    return <div>Cargando...</div>;
+  }
+
+  if (loggedUser === null) {
+    return <SplashScreen />;
+  }
+
   return (
-    <Router basename={PUBLIC_URL}>
+    <Router basename={`${PUBLIC_URL}/home`}>
       <UserContext.Provider value={loggedUser}>
         <Header />
         <div className="flex-grow-1"></div>
