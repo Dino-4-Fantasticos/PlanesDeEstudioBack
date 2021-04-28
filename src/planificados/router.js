@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Planificado = require("./model");
 
-const { extraerMensajesError } = require("../utils");
+const { extraerMensajesError } = require("../utils/functions");
 
 // CREATE
 router.post("/", async (req, res) => {

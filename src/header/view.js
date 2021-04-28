@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Navbar, Image, Nav, Button, Container } from "react-bootstrap";
 
-import { PUBLIC_URL } from "../utils";
-import { logout } from "../auth";
+import { PUBLIC_URL } from "../utils/variables";
+import { logout } from "../utils/auth";
 import logoutIcon from "./logout_white_24dp.svg";
-import { UserContext } from "../context";
+import { UserContext } from "../utils/context";
 
 import "./style.scss";
 

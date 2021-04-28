@@ -1,7 +1,7 @@
 const supertest = require("supertest");
 const app = require("../../server");
 const request = supertest(app);
-const { toQueryString } = require("../utils");
+const { toQueryString } = require("../utils/functions");
 
 const Plan = require("./model");
 const Materia = require("../materias/model");

@@ -6,9 +6,9 @@ import LoginScreen from "./login/view";
 import Header from "./header/view";
 import Footer from "./footer/view";
 
-import { UserContext } from "./context";
-import { PUBLIC_URL } from "./utils";
-import { authenticate } from "./auth";
+import { UserContext } from "./utils/context";
+import { PUBLIC_URL } from "./utils/variables";
+import { authenticate } from "./utils/auth";
 
 /** Función que verifica si la sesión está iniciada y cambia el loggedUser correspondientemente. */
 async function checkSession(setLoggedUser) {

@@ -1,5 +1,5 @@
 import { GoogleLogin } from "react-google-login";
-import { login, G_CLIENT_ID } from "../auth";
+import { login, G_CLIENT_ID } from "../utils/auth";
 
 import "./style.scss";
 

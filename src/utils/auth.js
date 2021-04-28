@@ -1,6 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { PUBLIC_URL, backendURL } from "./utils";
+import { PUBLIC_URL, backendURL } from "./variables";
 
 /** ID de cliente de Google Cloud Platform para inicio de sesión con Google. */
 const G_CLIENT_ID =
