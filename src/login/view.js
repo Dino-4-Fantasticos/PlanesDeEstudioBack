@@ -3,7 +3,7 @@ import { login, G_CLIENT_ID } from "../auth";
 
 import "./style.scss";
 
-export default function SplashScreen() {
+export default function LoginScreen() {
   return (
     <div id="splash-screen">
       <div className="jumbotron text-center">

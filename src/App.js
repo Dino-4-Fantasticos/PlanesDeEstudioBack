@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { HashRouter as Router } from "react-router-dom";
 import "./App.scss";
 
-import SplashScreen from "./splash/view";
+import LoginScreen from "./login/view";
 import Header from "./header/view";
 import Footer from "./footer/view";
 
@@ -32,11 +32,11 @@ export default function App() {
   }
 
   if (loggedUser === null) {
-    return <SplashScreen />;
+    return <LoginScreen />;
   }
 
   return (
-    <Router basename={`${PUBLIC_URL}/home`}>
+    <Router basename={PUBLIC_URL}>
       <UserContext.Provider value={loggedUser}>
         <Header />
         <div className="flex-grow-1"></div>
