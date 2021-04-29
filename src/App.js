@@ -7,7 +7,6 @@ import Header from "./header/view";
 import Footer from "./footer/view";
 
 import { UserContext } from "./utils/context";
-import { PUBLIC_URL } from "./utils/variables";
 import { authenticate } from "./utils/auth";
 
 /** Función que verifica si la sesión está iniciada y cambia el loggedUser correspondientemente. */
@@ -36,7 +35,7 @@ export default function App() {
   }
 
   return (
-    <Router basename={PUBLIC_URL}>
+    <Router>
       <UserContext.Provider value={loggedUser}>
         <Header />
         <div className="spacer"></div>

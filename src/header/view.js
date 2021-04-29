@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Navbar, Image, Nav, Button, Container } from "react-bootstrap";
 
-import { PUBLIC_URL } from "../utils/variables";
 import { logout } from "../utils/auth";
 import logoutIcon from "./logout_white_24dp.svg";
 import { UserContext } from "../utils/context";
@@ -24,12 +23,12 @@ export default function Header() {
       height={66}
     >
       <Container fluid className="fixed-top pr-3 pl-3">
-        <Navbar.Brand href={`${PUBLIC_URL}/`}>
+        <Navbar.Brand href="/">
           <h1> Planes de Estudio -ADMIN- </h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="header-collapse" />
         <Navbar.Collapse id="header-collapse" className="justify-content-end">
-          <Nav.Link href={`${PUBLIC_URL}/`} className="element">
+          <Nav.Link href="/login" className="element">
             <Button onClick={logout} variant="danger" className="d-flex">
               <Image
                 className="imagen-perfil"

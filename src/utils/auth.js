@@ -1,6 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { PUBLIC_URL, backendURL } from "./variables";
+import { backendURL } from "./variables";
 
 /** ID de cliente de Google Cloud Platform para inicio de sesión con Google. */
 const G_CLIENT_ID =
@@ -65,13 +65,13 @@ async function login({ profileObj }) {
     return;
   }
   Cookies.set(TOKEN_NAME, resLogin.data.token, { expires: 365 });
-  window.location = `${PUBLIC_URL}/home`;
+  window.location = "/";
 }
 
 /** Remover cookie de la sesión. */
 function logout() {
   Cookies.remove(TOKEN_NAME);
-  window.location = `${PUBLIC_URL}/`;
+  window.location = "/login";
 }
 
 export { G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
