@@ -1,15 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Header from "./Header";
+import Header from "./view";
 import { UserContext } from "../utils/context";
-
-it("renderiza header cuando no se ha iniciado sesión", () => {
-  const { getByText } = render(<Header />);
-
-  expect(getByText("Planes de Estudio")).toBeInTheDocument();
-  expect(getByText("Iniciar sesión")).toBeInTheDocument();
-});
 
 it("renderiza header cuando se ha iniciado sesión", () => {
   const { getByText, container } = render(
@@ -20,7 +13,7 @@ it("renderiza header cuando se ha iniciado sesión", () => {
     </UserContext.Provider>
   );
 
-  expect(getByText("Planes de Estudio")).toBeInTheDocument();
+  expect(getByText("Planes de Estudio -ADMIN-")).toBeInTheDocument();
 
   const imagenPerfil = container.querySelector(".imagen-perfil");
   expect(imagenPerfil).toBeInTheDocument();

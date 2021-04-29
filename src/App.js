@@ -39,7 +39,7 @@ export default function App() {
     <Router basename={PUBLIC_URL}>
       <UserContext.Provider value={loggedUser}>
         <Header />
-        <div className="flex-grow-1"></div>
+        <div className="spacer"></div>
         <Footer />
       </UserContext.Provider>
     </Router>
