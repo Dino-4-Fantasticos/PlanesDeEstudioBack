@@ -32,3 +32,5 @@ jobs:
         mongodb-version: ${{ matrix.mongodb-version }}
     - run: npm ci
     - run: npm test
+      env:
+          JWT_SECRET: test
