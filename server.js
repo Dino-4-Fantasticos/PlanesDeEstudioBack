@@ -11,6 +11,9 @@ app.use("/api/users", usersRouter);
 const planesRouter = require("./src/planes/router");
 app.use("/api/planes", planesRouter);
 
+const planificadosRouter = require("./src/planificados/router");
+app.use("/api/planificados", planificadosRouter);
+
 const loginRouter = require("./src/login/router");
 app.use("/api/login", loginRouter);
 
