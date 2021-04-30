@@ -1,0 +1,34 @@
+@import "../_variables";
+
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .jumbotron {
+    background-color: $fondo-app !important;
+    font-size: 2.5em;
+
+    .redirect-text {
+      margin-top: 2.5em;
+      font-size: 0.5em;
+      line-height: 1.25em !important;
+    }
+  }
+
+  .login-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    button {
+      font-size: 2em !important;
+
+      span {
+        color: inherit;
+      }
+    }
+  }
+}

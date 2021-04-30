@@ -29,15 +29,15 @@ const materiaSchema = new Schema(
 function validacionMaterias(materias) {
   const materiasSet = new Set();
   const errores = {};
-  for (semestre of materias) {
-    for (materia of semestre) {
+  for (const semestre of materias) {
+    for (const materia of semestre) {
       const { clave, periodos } = materia;
       const erroresMateria = {};
       if (this.esTec21) {
         if (!periodos) {
           erroresMateria.periodos =
             "Los periodos en los que se imparte la materia es un campo obligatorio para cada materia dentro de un plan Tec21.";
-        } else if (periodos.length != BLOQUES_POR_SEMESTRE) {
+        } else if (periodos.length !== BLOQUES_POR_SEMESTRE) {
           erroresMateria.periodos =
             "Los periodos constan de un array de 3 booleanos para indicar en qué momentos se imparte una materia.";
         }

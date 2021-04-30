@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../users/model");
 const jwt = require("jsonwebtoken");
 
-const { extraerMensajesError } = require("../utils");
+const { extraerMensajesError } = require("../utils/functions");
 
 require("dotenv").config();
 

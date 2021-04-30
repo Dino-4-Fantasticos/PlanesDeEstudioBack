@@ -2,7 +2,10 @@ const router = require("express").Router();
 const Plan = require("./model");
 const Materia = require("../materias/model");
 
-const { optionalStringToJSON, extraerMensajesError } = require("../utils");
+const {
+  optionalStringToJSON,
+  extraerMensajesError,
+} = require("../utils/functions");
 
 /** Guardar cada una de las materias en la base de datos */
 async function guardarMaterias(data) {
