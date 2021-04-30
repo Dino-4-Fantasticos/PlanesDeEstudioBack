@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { HashRouter as Router } from "react-router-dom";
 import "./App.scss";
 
-import LoginScreen from "./login/view";
 import Header from "./header/view";
+import LoginScreen from "./login/view";
+import PanelAdmin from "./panel-admin/view";
 import Footer from "./footer/view";
 
 import { UserContext } from "./utils/context";
@@ -38,7 +39,9 @@ export default function App() {
     <Router>
       <UserContext.Provider value={loggedUser}>
         <Header />
-        <div className="spacer"></div>
+        <div className="spacer" />
+        <PanelAdmin />
+        <div className="spacer" />
         <Footer />
       </UserContext.Provider>
     </Router>

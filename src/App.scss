@@ -29,6 +29,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 .spacer {
   flex-grow: 1;
 }
