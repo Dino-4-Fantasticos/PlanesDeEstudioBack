@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 
 import Header from "./header/view";
 import LoginScreen from "./login/view";
 import PanelAdmin from "./panel-admin/view";
+import PlanesRoutes from "./planes/views/routes";
 import Footer from "./footer/view";
 
 import { UserContext } from "./utils/context";
@@ -40,7 +41,10 @@ export default function App() {
       <UserContext.Provider value={loggedUser}>
         <Header />
         <div className="spacer" />
-        <PanelAdmin />
+        <Switch>
+          <Route path="/" exact component={PanelAdmin} />
+          <Route path="/planes" component={PlanesRoutes} />
+        </Switch>
         <div className="spacer" />
         <Footer />
       </UserContext.Provider>
