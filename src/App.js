@@ -6,6 +6,7 @@ import Header from "./header/view";
 import LoginScreen from "./login/view";
 import PanelAdmin from "./panel-admin/view";
 import PlanesRoutes from "./planes/views/routes";
+import UsuariosIndex from "./users/view";
 import Footer from "./footer/view";
 
 import { UserContext } from "./utils/context";
@@ -44,6 +45,7 @@ export default function App() {
         <Switch>
           <Route path="/" exact component={PanelAdmin} />
           <Route path="/planes" component={PlanesRoutes} />
+          <Route path="/usuarios" component={UsuariosIndex} />
         </Switch>
         <div className="spacer" />
         <Footer />

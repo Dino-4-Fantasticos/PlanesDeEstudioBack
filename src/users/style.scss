@@ -1,0 +1,13 @@
+#usuarios-index {
+  .usuario-summary {
+    font-size: 2em;
+
+    .foto-perfil {
+      border-radius: 50%;
+    }
+
+    .blurred {
+      opacity: 0.25;
+    }
+  }
+}
