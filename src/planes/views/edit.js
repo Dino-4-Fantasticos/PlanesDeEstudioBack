@@ -11,21 +11,22 @@ async function cargarPlan(siglas, setPlan) {
     .catch((err) => err);
   if (resGet instanceof Error) {
     alert(resGet.response.data.msg);
-    // window.location = "/planes";
     return;
   }
-  setPlan(resGet);
+  setPlan(resGet.data);
 }
 
 async function guardarPlan(plan) {
-  const resGet = await axios
-    .put(`${backendURL}/planes/${plan.siglas}`, plan)
+  const siglas = plan.siglas;
+  delete plan.siglas;
+  const resPut = await axios
+    .put(`${backendURL}/planes/${siglas}`, plan)
     .catch((err) => err);
-  if (resGet instanceof Error) {
-    alert(resGet.body.msg);
+  if (resPut instanceof Error) {
+    alert(resPut.body.msg);
     return;
   }
-  alert(resGet.body.msg);
+  window.location = "/planes";
 }
 
 /** Ventana para editar un plan de estudios en específico. */
@@ -34,6 +35,10 @@ export default function PlanesEdit() {
 
   const { siglas } = useParams();
   useEffect(() => cargarPlan(siglas, setPlan), [siglas]);
+
+  if (!plan) {
+    return <></>;
+  }
 
   return (
     <main id="planes-edit">

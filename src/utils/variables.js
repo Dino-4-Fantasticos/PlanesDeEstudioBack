@@ -6,4 +6,7 @@ const backendURL =
     ? "https://planes-estudio.herokuapp.com/api"
     : "http://localhost:5000/api";
 
-export { backendURL };
+/** URL where the client is hosted */
+const clientURL = "https://dino-4-fantasticos.github.io/PlanesDeEstudio/#";
+
+export { backendURL, clientURL };

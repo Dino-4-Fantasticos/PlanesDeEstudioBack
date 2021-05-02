@@ -37,3 +37,25 @@ main {
 .spacer {
   flex-grow: 1;
 }
+
+p.text-danger {
+  font-size: 0.75em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+label {
+  margin: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.form-control {
+  font-size: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -5,14 +5,15 @@ import { backendURL } from "../../utils/variables";
 import PlanForm from "./_form";
 
 async function guardarPlan(plan) {
-  const resGet = await axios
+  const resPost = await axios
     .post(`${backendURL}/planes`, plan)
     .catch((err) => err);
-  if (resGet instanceof Error) {
-    alert(resGet.body.msg);
-    return;
+  if (resPost instanceof Error) {
+    throw resPost;
   }
-  alert(resGet.body.msg);
+  alert(resPost.data.msg);
+  window.location = "/planes";
+  return resPost;
 }
 
 /** Ventana para crear un nuevo plan de estudios. */

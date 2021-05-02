@@ -5,6 +5,8 @@ import PlanesIndex from "./index";
 import PlanesNew from "./new";
 import PlanesEdit from "./edit";
 
+import "./style.scss";
+
 /** Componente principal de la aplicación. */
 export default function PlanesRoutes() {
   const currRoute = "/planes";

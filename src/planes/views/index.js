@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import { backendURL } from "../../utils/variables";
-import PlanSummary from "./summary";
+import PlanSummary from "./plan-summary";
 
 async function fetchPlanes(setPlanes) {
   const resGet = await axios.get(`${backendURL}/planes`).catch((err) => err);
@@ -25,8 +25,8 @@ export default function PlanesIndex() {
   return (
     <main id="planes-index">
       <h1 className="w-100 text-center">Planes de estudio</h1>
-      {planes.map((plan) => (
-        <PlanSummary {...plan} />
+      {planes.map((plan, idx) => (
+        <PlanSummary key={`plan-${idx}`} {...{ plan }} />
       ))}
       <div className="text-right">
         <a href={`${pathName}/new`}>
