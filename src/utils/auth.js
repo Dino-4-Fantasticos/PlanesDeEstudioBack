@@ -1,10 +1,8 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { backendURL } from "./variables";
 
-/** ID de cliente de Google Cloud Platform para inicio de sesión con Google. */
-const G_CLIENT_ID =
-  "78830882271-iabhrh1kgh03rbb0js65vh0iftf6jkjh.apps.googleusercontent.com";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const G_CLIENT_ID = process.env.REACT_APP_G_CLIENT_ID;
 
 /** Nombre de la cookie utilizada para guardar la sesión de usuario. */
 const TOKEN_NAME = "pde_id_admin";
@@ -30,7 +28,7 @@ async function authenticate() {
   if (!Cookies.get(TOKEN_NAME)) return null;
 
   const resAuth = await axios
-    .post(`${backendURL}/login/auth`, { token: Cookies.get(TOKEN_NAME) })
+    .post(`${BACKEND_URL}/login/auth`, { token: Cookies.get(TOKEN_NAME) })
     .catch((err) => err);
   if (resAuth instanceof Error) {
     throw extraerMensajeErrorCliente(resAuth);
@@ -38,7 +36,7 @@ async function authenticate() {
 
   const { matricula } = resAuth.data.verification;
   const resUserGet = await axios
-    .get(`${backendURL}/users/${matricula}`)
+    .get(`${BACKEND_URL}/users/${matricula}`)
     .catch((err) => err);
   if (resUserGet instanceof Error) {
     throw extraerMensajeErrorCliente(resUserGet);
@@ -55,7 +53,7 @@ async function authenticate() {
 /** Guardar la sesión en una cookie y refrescar la página. */
 async function login({ profileObj }) {
   const resLogin = await axios
-    .post(`${backendURL}/login/`, profileObj)
+    .post(`${BACKEND_URL}/login/`, profileObj)
     .catch((err) => err);
   if (resLogin instanceof Error) {
     const errMsg = resLogin.response

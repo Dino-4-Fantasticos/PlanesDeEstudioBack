@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import { backendURL } from "../../utils/variables";
 import PlanSummary from "./plan-summary";
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 async function fetchPlanes(setPlanes) {
-  const resGet = await axios.get(`${backendURL}/planes`).catch((err) => err);
+  const resGet = await axios.get(`${BACKEND_URL}/planes`).catch((err) => err);
   if (resGet instanceof Error) {
     alert(resGet.message);
     setPlanes(null);

@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import { backendURL } from "../../utils/variables";
 import PlanForm from "./_form";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 async function cargarPlan(siglas, setPlan) {
   const resGet = await axios
-    .get(`${backendURL}/planes/${siglas}`)
+    .get(`${BACKEND_URL}/planes/${siglas}`)
     .catch((err) => err);
   if (resGet instanceof Error) {
     alert(resGet.response.data.msg);
@@ -20,7 +21,7 @@ async function guardarPlan(plan) {
   const siglas = plan.siglas;
   delete plan.siglas;
   const resPut = await axios
-    .put(`${backendURL}/planes/${siglas}`, plan)
+    .put(`${BACKEND_URL}/planes/${siglas}`, plan)
     .catch((err) => err);
   if (resPut instanceof Error) {
     alert(resPut.body.msg);

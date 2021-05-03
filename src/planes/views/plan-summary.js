@@ -2,11 +2,12 @@ import axios from "axios";
 import deleteIcon from "../../assets/delete_white_24dp.svg";
 import editIcon from "../../assets/edit_white_24dp.svg";
 
-import { backendURL, clientURL } from "../../utils/variables";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
 
 async function eliminarPlan(plan) {
   const resDelete = await axios
-    .delete(`${backendURL}/planes/${plan.siglas}`)
+    .delete(`${BACKEND_URL}/planes/${plan.siglas}`)
     .catch((err) => err);
   if (resDelete instanceof Error) {
     alert(resDelete.response.data.msg);
@@ -19,7 +20,7 @@ async function eliminarPlan(plan) {
 export default function PlanesSummary({ plan }) {
   return (
     <figure className="plan-summary bg-secondary">
-      <a href={`${clientURL}/plan/${plan.siglas}`} className="plan-content">
+      <a href={`${CLIENT_URL}/plan/${plan.siglas}`} className="plan-content">
         <div className="flex-grow-1">
           <p className="nombre">{plan.nombre}</p>
           <p className="siglas">{plan.siglas}</p>

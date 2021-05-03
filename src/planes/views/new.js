@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
 
-import { backendURL } from "../../utils/variables";
 import PlanForm from "./_form";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 async function guardarPlan(plan) {
   const resPost = await axios
-    .post(`${backendURL}/planes`, plan)
+    .post(`${BACKEND_URL}/planes`, plan)
     .catch((err) => err);
   if (resPost instanceof Error) {
     throw resPost;

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import deleteIcon from "../../assets/delete_white_24dp.svg";
 import axios from "axios";
 
-import { backendURL } from "../../utils/variables";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const NewMateriaContext = React.createContext();
 
@@ -74,7 +74,7 @@ function NewMateria({ toggleShowNewMateria, semIdx }) {
     const nuevaMateria = { clave, nombre, periodos };
     const postData = { esTec21, materias, semIdx, nuevaMateria };
     const resValidate = await axios
-      .post(`${backendURL}/planes/validate-materia`, postData)
+      .post(`${BACKEND_URL}/planes/validate-materia`, postData)
       .catch((err) => err);
     if (resValidate instanceof Error) {
       const errors = resValidate.response.data.err;
