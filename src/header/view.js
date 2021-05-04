@@ -28,7 +28,7 @@ export default function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="header-collapse" />
         <Navbar.Collapse id="header-collapse" className="justify-content-end">
-          <Nav.Link href="/login" className="element">
+          <Nav.Link href="/login" className="element pr-0">
             <Button onClick={logout} variant="danger" className="d-flex">
               <Image
                 className="imagen-perfil"

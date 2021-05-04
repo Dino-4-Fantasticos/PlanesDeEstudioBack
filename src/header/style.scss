@@ -8,6 +8,20 @@ header {
   background-color: $fondo-app;
   min-height: 78px;
 
+  h1 {
+    font-size: 1rem;
+    margin: 0;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
+  }
+
+  #header-collapse {
+    text-align: -webkit-right;
+  }
+
   > div {
     background-color: $fondo-app;
   }

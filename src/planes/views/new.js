@@ -20,7 +20,7 @@ async function guardarPlan(plan) {
 /** Ventana para crear un nuevo plan de estudios. */
 export default function PlanesNew() {
   return (
-    <main id="planes-new">
+    <main id="planes-new" className="container-fluid">
       <PlanForm action={guardarPlan} />
     </main>
   );

@@ -34,6 +34,7 @@ function UsuarioSummary({ usuario }) {
         alt="foto perfil"
         className="foto-perfil"
         width={48}
+        height={48}
       />
       <p className="m-0 flex-grow-1 ml-2">
         {usuario.nombre} {usuario.apellido}
@@ -52,6 +53,7 @@ function UsuarioSummary({ usuario }) {
           src={manageAccountsIcon}
           alt="manage-account"
           width={48}
+          height={48}
           className="cursor-pointer blurred"
           onClick={() => setAdmin(usuario.matricula, true)}
         />
@@ -66,7 +68,7 @@ export default function UsuariosIndex() {
   useEffect(() => fetchUsuarios(setUsuarios), []);
 
   return (
-    <main id="usuarios-index">
+    <main id="usuarios-index" className="container">
       {usuarios.map((usuario) => (
         <UsuarioSummary key={usuario.matricula} {...{ usuario }} />
       ))}
