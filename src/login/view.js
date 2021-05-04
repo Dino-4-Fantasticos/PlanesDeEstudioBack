@@ -5,7 +5,7 @@ import "./style.scss";
 
 export default function LoginScreen() {
   return (
-    <div id="splash-screen">
+    <div id="login-screen">
       <div className="jumbotron text-center">
         <p>
           <strong>PLANES DE ESTUDIO</strong>
