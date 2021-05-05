@@ -9,7 +9,7 @@ const { setupDB } = require("../test-setup");
 const endpointUrl = "/api/planificados";
 
 // Setup Users Test Database
-setupDB("planes-testing");
+setupDB("planificados-testing");
 
 const usuarioEjemplo = "A01634310";
 const siglasEjemplo = "ITC11";
