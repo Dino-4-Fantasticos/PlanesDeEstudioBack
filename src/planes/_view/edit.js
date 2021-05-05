@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import PlanForm from "./_form";
+import PlanForm from "./form";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 

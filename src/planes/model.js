@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
+const Materia = require("../materias/model");
 
 const BLOQUES_POR_SEMESTRE = 3;
 
@@ -9,12 +10,6 @@ const materiaSchema = new Schema(
     clave: {
       type: String,
       required: [true, "La clave es obligatoria para cada materia."],
-    },
-
-    /** Nombre de la materia. [Ej. Estructura de Datos] */
-    nombre: {
-      type: String,
-      required: [true, "El nombre es un campo obligatorio para cada materia."],
     },
 
     /** Periodos en los que se imparte. (Exclusivo Tec21) */
@@ -104,6 +99,24 @@ const schema = new Schema({
     required: [true, "Es necesario agregar materias al plan de estudios."],
     validate: validacionMaterias,
   },
+});
+
+schema.virtual("materiasCompletas").get(async function () {
+  const cMaterias = [];
+  for (const semestre of this.materias) {
+    const cSemestre = [];
+    for (const { clave } of semestre) {
+      const resMateria = await Materia.findOne({ clave }, "-_id -__v")
+        .lean()
+        .catch((err) => err);
+      if (resMateria instanceof Error) {
+        throw resMateria;
+      }
+      cSemestre.push(resMateria);
+    }
+    cMaterias.push(cSemestre);
+  }
+  return cMaterias;
 });
 
 const uniqueErrors = {

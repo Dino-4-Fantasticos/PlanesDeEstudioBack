@@ -12,37 +12,69 @@ const endpointUrl = "/api/planes";
 // Setup Users Test Database
 setupDB("planes-testing");
 
-describe("creación de plan de estudios", () => {
-  const materiasEjemplo = [
-    [
-      { clave: "TC1018", nombre: "Estructura de Datos" },
-      { clave: "H1018", nombre: "Ética, Persona y Sociedad" },
-    ],
-    [
-      { clave: "TC2017", nombre: "Análisis y Diseño de Algoritmos" },
-      { clave: "TC1020", nombre: "Bases de Datos" },
-    ],
-  ];
+const cargaAcademicaEjemplo = {
+  horasClase: 3,
+  horasLaboratorio: 0,
+  unidades: 8,
+  creditosAcademicos: 3,
+  unidadesDeCarga: 3.5,
+};
+const materiaEjemplo01 = {
+  clave: "TC1018",
+  nombre: "Estructura de Datos",
+  horasClase: 3,
+  horasLaboratorio: 0,
+  unidades: 8,
+  creditosAcademicos: 3,
+  unidadesDeCarga: 3.5,
+};
+const materiaEjemplo02 = {
+  clave: "F1005",
+  nombre: "Electricidad y magnetismo",
+  horasClase: 3,
+  horasLaboratorio: 1,
+  unidades: 8,
+  creditosAcademicos: 3,
+  unidadesDeCarga: 4.7,
+};
+const materiaEjemplo03 = {
+  clave: "H1040",
+  nombre: "Análisis y expresión verbal",
+  horasClase: 5,
+  horasLaboratorio: 0,
+  unidades: 8,
+  creditosAcademicos: 3,
+  unidadesDeCarga: 5.8,
+};
+const materiasEjemplo = [
+  [materiaEjemplo01, materiaEjemplo02],
+  [materiaEjemplo03],
+];
 
+describe("creación de plan de estudios", () => {
   it("regresa errores cuando faltan campos", async () => {
     const resPost01 = await request.post(`${endpointUrl}/`).send({});
-    const status01 = resPost01.status;
+    const {
+      status: status01,
+      body: { err: errors01 },
+    } = resPost01;
     expect(status01).toBe(400);
-    const errors01 = resPost01.body.err;
-    expect(errors01).toMatchObject({
+    expect(errors01).toEqual({
+      siglas: "Las siglas del plan de estudios son obligatorias.",
+      nombre: "El nombre de la carrera es un campo obligatorio.",
       materias: "Es necesario agregar materias al plan de estudios.",
     });
 
     const resPost02 = await request.post(`${endpointUrl}/`).send({
       materias: materiasEjemplo,
     });
-    const status02 = resPost02.status;
+    const {
+      status: status02,
+      body: { err: errors02 },
+    } = resPost02;
     expect(status02).toBe(400);
-    const errors02 = resPost02.body.err;
-    expect(errors02).toMatchObject({
+    expect(errors02).toEqual({
       siglas: "Las siglas del plan de estudios son obligatorias.",
-    });
-    expect(errors02).toMatchObject({
       nombre: "El nombre de la carrera es un campo obligatorio.",
     });
   });
@@ -120,7 +152,15 @@ describe("creación de plan de estudios", () => {
   });
 
   it("regresa errores cuando hay materias repetidas entre sí", async () => {
-    const materiaRepetida = { clave: "TC1018", nombre: "Estructura de Datos" };
+    const materiaRepetida = {
+      clave: "TC1018",
+      nombre: "Estructura de Datos",
+      horasClase: 3,
+      horasLaboratorio: 0,
+      unidades: 8,
+      creditosAcademicos: 3,
+      unidadesDeCarga: 3.5,
+    };
     const resPost = await request.post(`${endpointUrl}/`).send({
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
@@ -145,11 +185,13 @@ describe("creación de plan de estudios", () => {
     const materiaSinPeriodos = {
       clave: "H1018",
       nombre: "Ética, Persona y Sociedad",
+      ...cargaAcademicaEjemplo,
     };
     const materiaConPeriodosNoValidos = {
       clave: "TC1018",
       nombre: "Estructura de Datos",
       periodos: [],
+      ...cargaAcademicaEjemplo,
     };
     const resPost = await request.post(`${endpointUrl}/`).send({
       siglas: "ITC11",
@@ -180,16 +222,8 @@ describe("creación de plan de estudios", () => {
     const resPost = await request.post(`${endpointUrl}/`).send({
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
-      materias: [
-        [
-          { clave: "TC1018", nombre: "Estructura de Datos" },
-          { clave: "H1018", nombre: "Ética, Persona y Sociedad" },
-        ],
-        [
-          { clave: "TC2017", nombre: "Análisis y Diseño de Algoritmos" },
-          { clave: "TC1020", nombre: "Bases de Datos" },
-        ],
-      ],
+      materias: materiasEjemplo,
+      ...cargaAcademicaEjemplo,
     });
 
     const status = resPost.status;
@@ -198,22 +232,9 @@ describe("creación de plan de estudios", () => {
     const materias = await Materia.find().lean();
     expect(materias).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({
-          clave: "TC1018",
-          nombre: "Estructura de Datos",
-        }),
-        expect.objectContaining({
-          clave: "H1018",
-          nombre: "Ética, Persona y Sociedad",
-        }),
-        expect.objectContaining({
-          clave: "TC2017",
-          nombre: "Análisis y Diseño de Algoritmos",
-        }),
-        expect.objectContaining({
-          clave: "TC1020",
-          nombre: "Bases de Datos",
-        }),
+        expect.objectContaining(materiaEjemplo01),
+        expect.objectContaining(materiaEjemplo02),
+        expect.objectContaining(materiaEjemplo03),
       ])
     );
   });
@@ -223,6 +244,7 @@ describe("creación de plan de estudios", () => {
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
       materias: materiasEjemplo,
+      ...cargaAcademicaEjemplo,
     });
 
     const status = resPost.status;
@@ -240,6 +262,7 @@ describe("creación de plan de estudios", () => {
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
       materias: materiasEjemplo,
+      ...cargaAcademicaEjemplo,
     });
 
     const status = resPost.status;
@@ -252,15 +275,8 @@ describe("creación de plan de estudios", () => {
       esVigente: true,
       esTec21: false,
       materias: [
-        // Las materias son guardadas en el orden en que se introdujeron
-        [
-          { clave: "TC1018", nombre: "Estructura de Datos" },
-          { clave: "H1018", nombre: "Ética, Persona y Sociedad" },
-        ],
-        [
-          { clave: "TC2017", nombre: "Análisis y Diseño de Algoritmos" },
-          { clave: "TC1020", nombre: "Bases de Datos" },
-        ],
+        [{ clave: materiaEjemplo01.clave }, { clave: materiaEjemplo02.clave }],
+        [{ clave: materiaEjemplo03.clave }],
       ],
     });
   });
@@ -271,50 +287,31 @@ describe("lectura de planes de estudio", () => {
     const newPlan01 = new Plan({
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
-      materias: [
-        [
-          {
-            clave: "TC1018",
-            nombre: "Estructura de Datos",
-          },
-        ],
-      ],
+      materias: [[{ clave: materiaEjemplo01.clave }]],
+      ...cargaAcademicaEjemplo,
     });
     const newPlan02 = new Plan({
       siglas: "ITC19",
       nombre: "Ingeniería en Tecnologías Computacionales",
       esTec21: true,
       materias: [
-        [
-          {
-            clave: "TC1018",
-            nombre: "Estructura de Datos",
-            periodos: [true, false, false],
-          },
-        ],
+        [{ clave: materiaEjemplo02.clave, periodos: [true, false, false] }],
       ],
+      ...cargaAcademicaEjemplo,
     });
     const newPlan03 = new Plan({
       siglas: "INT11",
       nombre: "Ingeniería en Negocios y Tecnologías",
-      materias: [
-        [
-          {
-            clave: "TI2011",
-            nombre: "Evaluación y Administración de Proyectos",
-          },
-        ],
-      ],
+      materias: [[{ clave: materiaEjemplo03.clave }]],
+      ...cargaAcademicaEjemplo,
     });
     await Promise.all([newPlan01.save(), newPlan02.save(), newPlan03.save()]);
   });
 
   it("consigue correctamente todos los planes de estudio", async () => {
-    const res = await request.get(`${endpointUrl}/`);
-    const status = res.status;
+    const resGet = await request.get(`${endpointUrl}/`);
+    const { status, body: planes } = resGet;
     expect(status).toBe(200);
-
-    const planes = res.body;
     expect(planes).toEqual([
       expect.objectContaining({
         siglas: "INT11",
@@ -334,23 +331,17 @@ describe("lectura de planes de estudio", () => {
 
   it("regresa una lista vacía al aplicar una consulta que ningún plan de estudios cumple", async () => {
     const query = toQueryString({ siglas: "siglasNoRegistradas" });
-    const res = await request.get(`${endpointUrl}?${query}`);
-
-    const status = res.status;
+    const resGet = await request.get(`${endpointUrl}?${query}`);
+    const { status, body: planes } = resGet;
     expect(status).toBe(200);
-
-    const planes = res.body;
     expect(planes).toEqual([]);
   });
 
   it("aplica consulta de planes de estudios", async () => {
     const query = toQueryString({ esTec21: true });
-    const res = await request.get(`${endpointUrl}?${query}`);
-
-    const status = res.status;
+    const resGet = await request.get(`${endpointUrl}?${query}`);
+    const { status, body: planes } = resGet;
     expect(status).toBe(200);
-
-    const planes = res.body;
     expect(planes).toEqual([
       expect.objectContaining({
         siglas: "ITC19",
@@ -361,38 +352,35 @@ describe("lectura de planes de estudio", () => {
   });
 
   it("regresa error al intentar conseguir plan en específico no registrado", async () => {
-    const res = await request.get(`${endpointUrl}/siglasNoRegistradas`);
-
-    const status = res.status;
+    const resGet = await request.get(`${endpointUrl}/siglasNoRegistradas`);
+    const { status, body: error } = resGet;
     expect(status).toBe(400);
-
-    const error = res.body;
     expect(error).toMatchObject({
       msg: "No se encontró plan registrado con estas siglas.",
     });
   });
 
   it("consigue correctamente un plan de estudios en específico", async () => {
-    const res = await request.get(`${endpointUrl}/ITC11`);
-    const status = res.status;
+    const resGet = await request.get(`${endpointUrl}/ITC11`);
+    const { status, body: plan } = resGet;
     expect(status).toBe(200);
-
-    const plan = res.body;
     expect(plan).toMatchObject({
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
-      materias: [[{ clave: "TC1018", nombre: "Estructura de Datos" }]],
+      materias: [[{ clave: materiaEjemplo01.clave }]],
     });
   });
 });
 
 describe("actualización de planes de estudio", () => {
+  const planData = {
+    siglas: "ITC11",
+    nombre: "Ingeniería en Tecnologías Computacionales",
+    materias: [[{ clave: materiaEjemplo01.clave }]],
+  };
+
   beforeEach(async () => {
-    const newPlan = new Plan({
-      siglas: "ITC11",
-      nombre: "Ingeniería en Tecnologías Computacionales",
-      materias: [[{ clave: "TC1018", nombre: "Estructura de Datos" }]],
-    });
+    const newPlan = new Plan(planData);
     await newPlan.save();
   });
 
@@ -401,29 +389,20 @@ describe("actualización de planes de estudio", () => {
     const resPut = await request
       .put(`${endpointUrl}/siglasNoRegistradas`)
       .send(nuevosDatos);
-
-    const status = resPut.status;
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const error = resPut.body;
-    expect(error).toMatchObject({
+    expect(body).toEqual({
       msg: "No se encontró plan de estudios.",
     });
   });
 
   it("regresa errores en caso de remover información obligatoria", async () => {
-    const nuevosDatos = {
-      siglas: null,
-      nombre: null,
-      esVigente: null,
-      esTec21: null,
-    };
-    const resPut = await request.put(`${endpointUrl}/ITC11`).send(nuevosDatos);
-    const status = resPut.status;
+    const resPut = await request
+      .put(`${endpointUrl}/ITC11`)
+      .send({ siglas: null, nombre: null, esVigente: null, esTec21: null });
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const errors = resPut.body.err;
-    expect(errors).toMatchObject({
+    expect(body.err).toEqual({
       siglas: "Las siglas del plan de estudios son obligatorias.",
       nombre: "El nombre de la carrera es un campo obligatorio.",
       esVigente:
@@ -434,36 +413,30 @@ describe("actualización de planes de estudio", () => {
   });
 
   it("regresa errores en caso de siglas no válidas", async () => {
-    const nuevosDatos = { siglas: "siglasNoVálidas" };
-    const resPut = await request.put(`${endpointUrl}/ITC11`).send(nuevosDatos);
-    const status = resPut.status;
+    const resPut = await request
+      .put(`${endpointUrl}/ITC11`)
+      .send({ siglas: "siglasNoVálidas" });
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const errors = resPut.body.err;
-    expect(errors).toMatchObject({
+    expect(body.err).toMatchObject({
       siglas:
         "Las siglas de la carrera deben contener <2 o 3 letras indicando carrera><2 números indicando generación>.",
     });
   });
 
   it("regresa errores cuando se actualiza con materias no válidas", async () => {
-    const materiaSinClave = { nombre: "Estructura de Datos" };
-    const materiaSinNombre = { clave: "TC1018" };
+    const materiaSinDatos = {};
     const materiaClaveNoValida = {
       clave: "ClaveNoVálida",
       nombre: "Estructura de Datos",
     };
     const resPut = await request.put(`${endpointUrl}/ITC11`).send({
-      materias: [[materiaSinClave, materiaSinNombre], [materiaClaveNoValida]],
+      materias: [[materiaSinDatos], [materiaClaveNoValida]],
     });
-
-    const status = resPut.status;
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const errors = resPut.body.err;
-    expect(errors).toMatchObject({
+    expect(body.err).toMatchObject({
       materias: {
-        TC1018: { nombre: "El nombre de la materia es un campo obligatorio." },
         misc: [
           { clave: "La clave de la materia es un campo obligatorio." },
           {
@@ -476,18 +449,19 @@ describe("actualización de planes de estudio", () => {
   });
 
   it("regresa errores cuando hay materias repetidas entre sí", async () => {
-    const materiaRepetida = { clave: "TC1018", nombre: "Estructura de Datos" };
-    const resPut = await request.put(`${endpointUrl}/ITC11`).send({
-      materias: [[materiaRepetida, materiaRepetida]],
-    });
-
-    const status = resPut.status;
+    const materiaRepetida = {
+      clave: materiaEjemplo01.clave,
+      nombre: "NombreMateria",
+      ...cargaAcademicaEjemplo,
+    };
+    const resPut = await request
+      .put(`${endpointUrl}/ITC11`)
+      .send({ materias: [[materiaRepetida, materiaRepetida]] });
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const errors = resPut.body.err;
-    expect(errors).toMatchObject({
+    expect(body.err).toMatchObject({
       materias: {
-        TC1018: {
+        [materiaEjemplo01.clave]: {
           clave:
             "Las materias deben ser únicas dentro de cada plan de estudios.",
         },
@@ -496,31 +470,24 @@ describe("actualización de planes de estudio", () => {
   });
 
   it("regresa errores cuando un plan Tec21 no incluye periodos para sus materias o estos no tienen el formato correcto", async () => {
-    const materiaSinPeriodos = {
-      clave: "H1018",
-      nombre: "Ética, Persona y Sociedad",
-    };
+    const materiaSinPeriodos = materiaEjemplo01;
     const materiaConPeriodosNoValidos = {
-      clave: "TC1018",
-      nombre: "Estructura de Datos",
+      ...materiaEjemplo02,
       periodos: [],
     };
     const resPut = await request.put(`${endpointUrl}/ITC11`).send({
       esTec21: true,
       materias: [[materiaSinPeriodos, materiaConPeriodosNoValidos]],
     });
-
-    const status = resPut.status;
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const errors = resPut.body.err;
-    expect(errors).toMatchObject({
+    expect(body.err).toMatchObject({
       materias: {
-        H1018: {
+        [materiaEjemplo01.clave]: {
           periodos:
             "Los periodos en los que se imparte la materia es un campo obligatorio para cada materia dentro de un plan Tec21.",
         },
-        TC1018: {
+        [materiaEjemplo02.clave]: {
           periodos:
             "Los periodos constan de un array de 3 booleanos para indicar en qué momentos se imparte una materia.",
         },
@@ -529,21 +496,14 @@ describe("actualización de planes de estudio", () => {
   });
 
   it("guarda correctamente las nuevas materias agregadas", async () => {
-    const nuevaMateria = {
-      clave: "H1018",
-      nombre: "Ética, Persona y Sociedad",
-    };
+    const nuevaMateria = materiaEjemplo02;
     const resPut = await request.put(`${endpointUrl}/ITC11`).send({
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
-      materias: [
-        [{ clave: "TC1018", nombre: "Estructura de Datos" }, nuevaMateria],
-      ],
+      materias: [[materiaEjemplo01, nuevaMateria]],
     });
-
-    const status = resPut.status;
+    const { status } = resPut;
     expect(status).toBe(200);
-
     const materias = await Materia.find().lean();
     expect(materias).toEqual(
       expect.arrayContaining([expect.objectContaining(nuevaMateria)])
@@ -551,30 +511,20 @@ describe("actualización de planes de estudio", () => {
   });
 
   it("regresa errores en caso de actualizar hacia un plan ya registrado", async () => {
+    const siglasRepetidas = "ITC19";
     const otroPlan = new Plan({
-      siglas: "ITC19",
+      siglas: siglasRepetidas,
       nombre: "Ingeniería en Tecnologías Computacionales",
-      esTec21: true,
-      materias: [
-        [
-          {
-            clave: "TC1018",
-            nombre: "Estructura de Datos",
-            periodos: [true, false, false],
-          },
-        ],
-      ],
+      materias: materiasEjemplo,
     });
     await otroPlan.save();
 
-    const resPut = await request.put(`${endpointUrl}/ITC11`).send({
-      siglas: "ITC19",
-    });
-    const status = resPut.status;
+    const resPut = await request
+      .put(`${endpointUrl}/ITC11`)
+      .send({ siglas: siglasRepetidas });
+    const { status, body } = resPut;
     expect(status).toBe(400);
-
-    const errors = resPut.body.err;
-    expect(errors).toMatchObject({
+    expect(body.err).toMatchObject({
       siglas: "Ya existe otro plan de estudios registrado con estas siglas.",
     });
   });
@@ -586,55 +536,54 @@ describe("actualización de planes de estudio", () => {
       nombre: "Nombre Actualizado",
       esVigente: false,
       esTec21: true,
-      materias: [
-        [
-          {
-            clave: "TI2011",
-            nombre: "Evaluación y Administración de Proyectos",
-            periodos: [true, true, false],
-          },
-        ],
-      ],
+      materias: [[{ ...materiaEjemplo02, periodos: [true, true, false] }]],
     };
     const resPut = await request.put(`${endpointUrl}/ITC11`).send(nuevosDatos);
-    const status = resPut.status;
+    const { status } = resPut;
     expect(status).toBe(200);
-
     const planActualizado = await Plan.findOne({
       siglas: siglasActualizadas,
     }).lean();
-    expect(planActualizado).toMatchObject(nuevosDatos);
+    expect(planActualizado).toMatchObject({
+      siglas: siglasActualizadas,
+      nombre: "Nombre Actualizado",
+      esVigente: false,
+      esTec21: true,
+      materias: [
+        [{ clave: materiaEjemplo02.clave, periodos: [true, true, false] }],
+      ],
+    });
   });
 });
 
 describe("remover plan de estudios", () => {
+  const planPrevioSiglas = "ITC11";
+
   beforeEach(async () => {
     const newPlan = new Plan({
-      siglas: "ITC11",
+      siglas: planPrevioSiglas,
       nombre: "Ingeniería en Tecnologías Computacionales",
-      materias: [[{ clave: "TC1018", nombre: "Estructura de Datos" }]],
+      materias: [[{ clave: materiaEjemplo01.clave }]],
     });
     await newPlan.save();
   });
 
   it("regresa error al intentar remover un plan de estudio no existente", async () => {
-    const res = await request.delete(`${endpointUrl}/siglasNoExistentes`);
-
-    const status = res.status;
+    const resDelete = await request.delete(`${endpointUrl}/siglasNoExistentes`);
+    const { status, body } = resDelete;
     expect(status).toBe(400);
-
-    const error = res.body;
-    expect(error).toMatchObject({
+    expect(body).toMatchObject({
       msg: "No se encontró este plan de estudios.",
     });
   });
 
   it("remueve correctamente un plan de estudios determinado", async () => {
-    const res = await request.delete(`${endpointUrl}/ITC11`);
-    const status = res.status;
+    const resDelete = await request.delete(
+      `${endpointUrl}/${planPrevioSiglas}`
+    );
+    const { status } = resDelete;
+    const plan = await Plan.findOne({ siglas: planPrevioSiglas });
     expect(status).toBe(200);
-
-    const plan = await Plan.findOne({ siglas: "ITC11" });
     expect(plan).toBeNull();
   });
 });

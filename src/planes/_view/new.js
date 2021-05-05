@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import PlanForm from "./_form";
+import PlanForm from "./form";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -13,7 +13,8 @@ async function guardarPlan(plan) {
     throw resPost;
   }
   alert(resPost.data.msg);
-  window.location = "/planes";
+  // window.location = "/planes";
+  this.props.history.push("/planes");
   return resPost;
 }
 

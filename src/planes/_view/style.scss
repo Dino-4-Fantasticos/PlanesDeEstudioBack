@@ -4,20 +4,20 @@
   font-size: 1.25em;
 }
 
-.bottom-buttons {
-  justify-content: flex-end;
-
-  button {
-    margin: 0.5rem;
-  }
-}
-
 .planes-form {
   @media (min-width: 768px) {
     padding: 0px 1em;
   }
   @media (min-width: 992px) {
     padding: 0px 2em;
+  }
+
+  .bottom-buttons {
+    justify-content: flex-end;
+
+    button {
+      margin: 0.5rem;
+    }
   }
 }
 
@@ -49,11 +49,13 @@
 
       .nombre-materia {
         height: 2em;
-      }
-
-      p {
         margin: 0;
         line-height: 1.15em;
+      }
+
+      small {
+        line-height: 1em;
+        display: block;
       }
 
       .hover-materia-banner {
@@ -89,6 +91,21 @@
 
       .clave-form {
         text-transform: uppercase;
+      }
+
+      .inline-form-group {
+        > div {
+          display: flex;
+
+          label {
+            flex-grow: 1;
+            line-height: 32px;
+          }
+
+          input {
+            width: 48px;
+          }
+        }
       }
     }
 
