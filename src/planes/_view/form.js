@@ -45,8 +45,8 @@ export default function PlanesForm({ plan = {}, action }) {
                 type="text"
                 autoComplete="nope"
                 className="form-control"
-                placeholder="Ej. [ITC11]"
                 value={siglas}
+                style={{ backgroundColor: "#ffffffb0" }}
                 disabled
                 onChange={(e) => {
                   setSiglas(e.target.value);

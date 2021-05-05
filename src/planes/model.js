@@ -105,12 +105,16 @@ schema.virtual("materiasCompletas").get(async function () {
   const cMaterias = [];
   for (const semestre of this.materias) {
     const cSemestre = [];
-    for (const { clave } of semestre) {
+    for (const materia of semestre) {
+      const { clave, periodos } = materia;
       const resMateria = await Materia.findOne({ clave }, "-_id -__v")
         .lean()
         .catch((err) => err);
       if (resMateria instanceof Error) {
         throw resMateria;
+      }
+      if (this.esTec21) {
+        resMateria.periodos = periodos;
       }
       cSemestre.push(resMateria);
     }

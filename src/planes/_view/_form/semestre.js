@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Materia from "./materia";
-import NewMateria from "./new-materia";
+import FormMateria from "./form-materia";
 
 /** Componente referente al contenido de un semestre escolar. */
 export default function Semestre({ semestre, semIdx, setMaterias }) {
@@ -8,7 +8,7 @@ export default function Semestre({ semestre, semIdx, setMaterias }) {
 
   return (
     <div key={`sem-${semIdx + 1}`} className="d-flex p-1 flex-column semestre">
-      <label className="mb-2">Semestre {semIdx}</label>
+      <label className="mt-1 mb-1">Semestre {semIdx}</label>
       {semestre.map((materia, matIdx) => (
         <Materia
           key={`sem-${semIdx}-mat-${matIdx}`}
@@ -16,12 +16,14 @@ export default function Semestre({ semestre, semIdx, setMaterias }) {
         />
       ))}
       <div className="spacer" />
-      {showNewMateria && <NewMateria {...{ toggleShowNewMateria, semIdx }} />}
+      {showNewMateria && (
+        <FormMateria toggleShow={toggleShowNewMateria} semIdx={semIdx} />
+      )}
       {!showNewMateria && (
         <button
           type="button"
           onClick={() => toggleShowNewMateria(true)}
-          className="btn btn-light"
+          className="btn btn-light mt-3"
         >
           +
         </button>
@@ -31,7 +33,7 @@ export default function Semestre({ semestre, semIdx, setMaterias }) {
         onClick={() =>
           setMaterias((m) => [...m.slice(0, semIdx), ...m.slice(semIdx + 1)])
         }
-        className="remover-semestre btn btn-danger mt-2"
+        className="remover-semestre btn btn-danger mt-1"
       >
         Remover semestre
       </button>

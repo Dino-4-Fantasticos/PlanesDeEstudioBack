@@ -13,8 +13,7 @@ async function guardarPlan(plan) {
     throw resPost;
   }
   alert(resPost.data.msg);
-  // window.location = "/planes";
-  this.props.history.push("/planes");
+  window.location = "/planes";
   return resPost;
 }
 

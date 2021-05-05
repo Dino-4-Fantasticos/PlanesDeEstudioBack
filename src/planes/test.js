@@ -284,11 +284,13 @@ describe("creación de plan de estudios", () => {
 
 describe("lectura de planes de estudio", () => {
   beforeEach(async () => {
+    const newMateria01 = new Materia(materiaEjemplo01);
+    const newMateria02 = new Materia(materiaEjemplo02);
+    const newMateria03 = new Materia(materiaEjemplo03);
     const newPlan01 = new Plan({
       siglas: "ITC11",
       nombre: "Ingeniería en Tecnologías Computacionales",
       materias: [[{ clave: materiaEjemplo01.clave }]],
-      ...cargaAcademicaEjemplo,
     });
     const newPlan02 = new Plan({
       siglas: "ITC19",
@@ -297,15 +299,20 @@ describe("lectura de planes de estudio", () => {
       materias: [
         [{ clave: materiaEjemplo02.clave, periodos: [true, false, false] }],
       ],
-      ...cargaAcademicaEjemplo,
     });
     const newPlan03 = new Plan({
       siglas: "INT11",
       nombre: "Ingeniería en Negocios y Tecnologías",
       materias: [[{ clave: materiaEjemplo03.clave }]],
-      ...cargaAcademicaEjemplo,
     });
-    await Promise.all([newPlan01.save(), newPlan02.save(), newPlan03.save()]);
+    await Promise.all([
+      newPlan01.save(),
+      newPlan02.save(),
+      newPlan03.save(),
+      newMateria01.save(),
+      newMateria02.save(),
+      newMateria03.save(),
+    ]);
   });
 
   it("consigue correctamente todos los planes de estudio", async () => {

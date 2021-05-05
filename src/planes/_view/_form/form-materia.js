@@ -19,7 +19,6 @@ function agregarMateria(materia, setMaterias, semIdx) {
 }
 
 /** Función para editar la matriz de materias. */
-/*
 function editarMateria(materia, setMaterias, semIdx, matIdx) {
   setMaterias((m) => {
     const semestre = m[semIdx];
@@ -36,29 +35,41 @@ function editarMateria(materia, setMaterias, semIdx, matIdx) {
     return newMaterias;
   });
 }
-*/
 
 /** Componente formulario para agregar una nueva materia. */
-export default function NewMateria({ toggleShowNewMateria, semIdx }) {
+export default function FormMateria({
+  toggleShow,
+  semIdx,
+  materia = {},
+  matIdx,
+}) {
   const { materias, setMaterias, esTec21 } = useContext(PlanFormContext);
+
+  const editMode = Object.keys(materia).length > 0;
 
   const periodosDefault = esTec21 ? [false, false, false] : null;
 
-  const [clave, setClave] = useState("");
+  const [clave, setClave] = useState(materia.clave || "");
   const [errClave, setErrClave] = useState("");
-  const [nombre, setNombre] = useState("");
+  const [nombre, setNombre] = useState(materia.nombre || "");
   const [errNombre, setErrNombre] = useState("");
-  const [periodos, setPeriodos] = useState(periodosDefault);
+  const [periodos, setPeriodos] = useState(materia.periodos || periodosDefault);
   const [errPeriodos, setErrPeriodos] = useState("");
-  const [horasClase, setHorasClase] = useState("");
+  const [horasClase, setHorasClase] = useState(materia.horasClase || "");
   const [errHorasClase, setErrHorasClase] = useState("");
-  const [horasLaboratorio, setHorasLaboratorio] = useState("");
+  const [horasLaboratorio, setHorasLaboratorio] = useState(
+    materia.horasLaboratorio === 0 ? 0 : materia.horasLaboratorio || ""
+  );
   const [errHorasLaboratorio, setErrHorasLaboratorio] = useState("");
-  const [unidades, setUnidades] = useState("");
+  const [unidades, setUnidades] = useState(materia.unidades || "");
   const [errUnidades, setErrUnidades] = useState("");
-  const [creditosAcademicos, setCreditosAcademicos] = useState("");
+  const [creditosAcademicos, setCreditosAcademicos] = useState(
+    materia.creditosAcademicos || ""
+  );
   const [errCreditosAcademicos, setErrCreditosAcademicos] = useState("");
-  const [unidadesDeCarga, setUnidadesDeCarga] = useState("");
+  const [unidadesDeCarga, setUnidadesDeCarga] = useState(
+    materia.unidadesDeCarga || ""
+  );
   const [errUnidadesDeCarga, setErrUnidadesDeCarga] = useState("");
 
   async function guardarMateria() {
@@ -77,6 +88,7 @@ export default function NewMateria({ toggleShowNewMateria, semIdx }) {
       materias,
       semIdx,
       nuevaMateria,
+      editMode: Object.keys(materia).length > 0,
     };
     const resValidate = await axios
       .post(`${BACKEND_URL}/planes/validate-materia`, postData)
@@ -98,25 +110,45 @@ export default function NewMateria({ toggleShowNewMateria, semIdx }) {
       }
       return;
     }
-    toggleShowNewMateria(false);
-    agregarMateria(nuevaMateria, setMaterias, semIdx);
+    toggleShow(false);
+    if (Object.keys(materia).length) {
+      editarMateria(nuevaMateria, setMaterias, semIdx, matIdx);
+    } else {
+      agregarMateria(nuevaMateria, setMaterias, semIdx);
+    }
   }
 
   return (
-    <div className="card new-materia p-2">
-      <div className="form-group">
+    <section className="card new-materia p-2 mt-1">
+      <div className="form-group mb-1">
         <label className="text-dark">Clave:</label>
-        <input
-          type="text"
-          autoComplete="nope"
-          className="form-control clave-form"
-          placeholder="Ej. [TC1018]"
-          value={clave}
-          onChange={(e) => {
-            setClave(e.target.value.toUpperCase());
-            setErrClave("");
-          }}
-        />
+        {editMode && (
+          <input
+            type="text"
+            autoComplete="nope"
+            className="form-control clave-form"
+            style={{ backgroundColor: "#00000030" }}
+            disabled
+            value={clave}
+            onChange={(e) => {
+              setClave(e.target.value.toUpperCase());
+              setErrClave("");
+            }}
+          />
+        )}
+        {!editMode && (
+          <input
+            type="text"
+            autoComplete="nope"
+            className="form-control clave-form"
+            placeholder="Ej. [TC1018]"
+            value={clave}
+            onChange={(e) => {
+              setClave(e.target.value.toUpperCase());
+              setErrClave("");
+            }}
+          />
+        )}
         <p className="text-danger">{errClave}</p>
       </div>
 
@@ -254,11 +286,11 @@ export default function NewMateria({ toggleShowNewMateria, semIdx }) {
       </button>
       <button
         type="button"
-        onClick={() => toggleShowNewMateria(false)}
+        onClick={() => toggleShow(false)}
         className="btn btn-sm btn-outline-secondary"
       >
         Cancelar
       </button>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
+import editIcon from "../../../assets/edit_white_24dp.svg";
 import deleteIcon from "../../../assets/delete_white_24dp.svg";
 import PlanFormContext from "./context";
+import FormMateria from "./form-materia";
 
 /** Función para remover una materia de la matriz de materias. */
 function removerMateria(setMaterias, semIdx, matIdx) {
@@ -31,14 +33,25 @@ export default function Materia({ materia, semIdx, matIdx }) {
     creditosAcademicos,
     unidadesDeCarga,
   } = materia;
+
+  const [editMode, toggleEditMode] = useState(false);
   const [isHovered, toggleHover] = useState(false);
 
   const { setMaterias } = useContext(PlanFormContext);
 
+  if (editMode) {
+    return (
+      <FormMateria
+        {...{ semIdx, materia, matIdx }}
+        toggleShow={toggleEditMode}
+      />
+    );
+  }
+
   return (
     <>
       <figure
-        className="materia card mb-1"
+        className="materia card mt-1"
         onMouseEnter={() => toggleHover(true)}
         onMouseLeave={() => toggleHover(false)}
       >
@@ -63,6 +76,13 @@ export default function Materia({ materia, semIdx, matIdx }) {
         </div>
         {isHovered && (
           <div className="hover-materia-banner">
+            <img
+              src={editIcon}
+              alt="delete"
+              width={30}
+              className="cursor-pointer"
+              onClick={() => toggleEditMode(true)}
+            />
             <img
               src={deleteIcon}
               alt="delete"

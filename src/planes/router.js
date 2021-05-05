@@ -15,12 +15,26 @@ async function guardarMaterias(data) {
   for (const semestre of materias) {
     for (const materia of semestre) {
       const { clave } = materia;
-      const alreadyExists = await Materia.exists({ clave });
-      if (!alreadyExists) {
+      const materiaToUpdate = await Materia.findOne({ clave }).exec();
+      if (!materiaToUpdate) {
         const newMateria = new Materia(materia);
         const resSaveMateria = await newMateria.save().catch((err) => err);
         if (resSaveMateria instanceof Error) {
           const mensajesError = extraerMensajesError(resSaveMateria);
+          if (clave && !("clave" in mensajesError)) {
+            errores[clave] = mensajesError;
+          } else {
+            if (!errores.misc) errores.misc = [];
+            errores.misc.push(mensajesError);
+          }
+        }
+      } else {
+        for (const [key, value] of Object.entries(materia)) {
+          materiaToUpdate[key] = value;
+        }
+        const resUpdate = await materiaToUpdate.save().catch((err) => err);
+        if (resUpdate instanceof Error) {
+          const mensajesError = extraerMensajesError(resUpdate);
           if (clave && !("clave" in mensajesError)) {
             errores[clave] = mensajesError;
           } else {
@@ -160,10 +174,17 @@ router.delete("/:siglas", async (req, res) => {
   return res.json({ msg: "Plan de estudios removido exitosamente." });
 });
 
-// VALIDATE
+// VALIDATE - Ruta para validar la adición o edición de UNA materia.
 router.post("/validate-materia", async (req, res) => {
-  const { esTec21 = false, materias, semIdx, nuevaMateria } = req.body;
+  const {
+    esTec21 = false,
+    materias,
+    semIdx,
+    nuevaMateria,
+    editMode,
+  } = req.body;
 
+  // Validación de materia individualmente
   const materiaDoc = new Materia(nuevaMateria);
   const resMateriaValidate = materiaDoc.validateSync();
   if (resMateriaValidate instanceof Error) {
@@ -177,11 +198,19 @@ router.post("/validate-materia", async (req, res) => {
     });
   }
 
+  // Validación de materia dentro del plan de estudios
   materias[semIdx].push(nuevaMateria);
   const planDoc = new Plan({ esTec21, materias });
   const resPlanValidate = await planDoc.validate().catch((err) => err);
-  for (const key of Object.keys(resPlanValidate.errors)) {
+  for (const key of Object.keys(resPlanValidate.errors))
     if (key !== "materias") delete resPlanValidate.errors[key];
+  if (resPlanValidate.errors.materias) {
+    const materiasErrors = optionalStringToJSON(
+      resPlanValidate.errors.materias.properties.message
+    );
+    if (materiasErrors[nuevaMateria.clave].clave && editMode) {
+      delete resPlanValidate.errors.materias;
+    }
   }
   const containsErrors = Object.keys(resPlanValidate.errors).length > 0;
   if (resPlanValidate instanceof Error && containsErrors) {
