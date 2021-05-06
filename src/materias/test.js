@@ -65,11 +65,7 @@ describe("creación de materia", () => {
     expect(errors).toEqual({
       clave: "La clave de la materia es un campo obligatorio.",
       nombre: "El nombre de la materia es un campo obligatorio.",
-      horasClase: "Las horas de clase son un campo obligatorio.",
-      horasLaboratorio: "Las horas de laboratorio son un campo obligatorio.",
       unidades: "Las unidades son un campo obligatorio.",
-      creditosAcademicos: "Los créditos académicos son un campo obligatorio.",
-      unidadesDeCarga: "Las unidades de carga son un campo obligatorio.",
     });
   });
 
@@ -193,11 +189,7 @@ describe("actualización de materias", () => {
     expect(errors).toEqual({
       clave: "La clave de la materia es un campo obligatorio.",
       nombre: "El nombre de la materia es un campo obligatorio.",
-      horasClase: "Las horas de clase son un campo obligatorio.",
-      horasLaboratorio: "Las horas de laboratorio son un campo obligatorio.",
       unidades: "Las unidades son un campo obligatorio.",
-      creditosAcademicos: "Los créditos académicos son un campo obligatorio.",
-      unidadesDeCarga: "Las unidades de carga son un campo obligatorio.",
     });
   });
 

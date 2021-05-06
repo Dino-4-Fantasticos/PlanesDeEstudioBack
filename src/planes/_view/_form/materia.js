@@ -48,6 +48,8 @@ export default function Materia({ materia, semIdx, matIdx }) {
     );
   }
 
+  const labelLA = periodos ? "A" : "L";
+
   return (
     <>
       <figure
@@ -62,8 +64,23 @@ export default function Materia({ materia, semIdx, matIdx }) {
               {clave}
             </small>
             <small className="carga-academica mt-1">
-              {horasClase} - {horasLaboratorio} - {unidades} -{" "}
-              {creditosAcademicos} - {unidadesDeCarga}
+              {horasClase !== "" && (
+                <span className="ml-1 mr-1">CL: {horasClase}</span>
+              )}
+              {horasLaboratorio !== "" && (
+                <span className="ml-1 mr-1">
+                  {labelLA}: {horasLaboratorio}
+                </span>
+              )}
+              {unidades !== "" && (
+                <span className="ml-1 mr-1">U: {unidades}</span>
+              )}
+              {creditosAcademicos !== "" && (
+                <span className="ml-1 mr-1">CA: {creditosAcademicos}</span>
+              )}
+              {unidadesDeCarga !== "" && (
+                <span className="ml-1 mr-1">UDC: {unidadesDeCarga}</span>
+              )}
             </small>
           </div>
           {periodos && (

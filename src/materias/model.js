@@ -25,14 +25,14 @@ const schema = new Schema({
   /** Horas de clase por semana. [CL - Ej. 3] */
   horasClase: {
     type: Number,
-    required: [true, "Las horas de clase son un campo obligatorio."],
+    required: false,
     min: [0, "Debe ser un número mayor o igual a 0."],
   },
 
   /** Horas de laboratorio por semana. [L/A - Ej. 3] */
   horasLaboratorio: {
     type: Number,
-    required: [true, "Las horas de laboratorio son un campo obligatorio."],
+    required: false,
     min: [0, "Debe ser un número mayor o igual a 0."],
   },
 
@@ -46,14 +46,14 @@ const schema = new Schema({
   /** Créditos académicos del curso. [CA - Ej. 8] */
   creditosAcademicos: {
     type: Number,
-    required: [true, "Los créditos académicos son un campo obligatorio."],
+    required: false,
     min: [0, "Debe ser un número mayor o igual a 0."],
   },
 
   /** Unidades de carga para el curso. [UDC - Ej. 3.5] */
   unidadesDeCarga: {
     type: Number,
-    required: [true, "Las unidades de carga son un campo obligatorio."],
+    required: false,
     min: [0, "Debe ser un número mayor o igual a 0."],
   },
 });
