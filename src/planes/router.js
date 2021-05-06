@@ -188,4 +188,38 @@ router.post("/validate-materia", async (req, res) => {
   return res.json({ msg: "La nueva materia pasó la validación exitosamente." });
 });
 
+// VALIDATE
+router.post("/validate-materia", async (req, res) => {
+  const { esTec21 = false, materias, semIdx, nuevaMateria } = req.body;
+
+  const materiaDoc = new Materia(nuevaMateria);
+  const resMateriaValidate = materiaDoc.validateSync();
+  if (resMateriaValidate instanceof Error) {
+    const errors = resMateriaValidate.errors;
+    if (errors.clave && errors.clave.kind === "unique") {
+      delete resMateriaValidate.errors.clave;
+    }
+    return res.status(400).json({
+      err: extraerMensajesError(resMateriaValidate),
+      msg: "La nueva materia no pasó la validación.",
+    });
+  }
+
+  materias[semIdx].push(nuevaMateria);
+  const planDoc = new Plan({ esTec21, materias });
+  const resPlanValidate = await planDoc.validate().catch((err) => err);
+  for (const key of Object.keys(resPlanValidate.errors)) {
+    if (key !== "materias") delete resPlanValidate.errors[key];
+  }
+  const containsErrors = Object.keys(resPlanValidate.errors).length > 0;
+  if (resPlanValidate instanceof Error && containsErrors) {
+    return res.status(400).json({
+      err: extraerMensajesError(resPlanValidate),
+      msg: "La nueva materia no pasó la validación.",
+    });
+  }
+
+  return res.json({ msg: "La nueva materia pasó la validación exitosamente." });
+});
+
 module.exports = router;
