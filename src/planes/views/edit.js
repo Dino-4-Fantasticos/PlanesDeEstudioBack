@@ -42,7 +42,7 @@ export default function PlanesEdit() {
   }
 
   return (
-    <main id="planes-edit">
+    <main id="planes-edit" className="container-fluid">
       <PlanForm plan={plan} action={guardarPlan} />
     </main>
   );

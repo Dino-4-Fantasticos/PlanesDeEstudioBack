@@ -5,7 +5,7 @@ import "./style.scss";
 
 export default function LoginScreen() {
   return (
-    <div id="login-screen">
+    <main id="login-screen" className="container">
       <div className="jumbotron text-center">
         <p>
           <strong>PLANES DE ESTUDIO</strong>
@@ -28,6 +28,6 @@ export default function LoginScreen() {
           prompt="select_account"
         />
       </div>
-    </div>
+    </main>
   );
 }

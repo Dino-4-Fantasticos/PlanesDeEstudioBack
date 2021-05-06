@@ -24,7 +24,7 @@ export default function PlanesIndex() {
   const pathName = window.location.pathname;
 
   return (
-    <main id="planes-index">
+    <main id="planes-index" className="container">
       <h1 className="w-100 text-center">Planes de estudio</h1>
       {planes.map((plan, idx) => (
         <PlanSummary key={`plan-${idx}`} {...{ plan }} />

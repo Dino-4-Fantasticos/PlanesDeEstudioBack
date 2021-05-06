@@ -1,6 +1,10 @@
 #usuarios-index {
   .usuario-summary {
-    font-size: 2em;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
 
     .foto-perfil {
       border-radius: 50%;

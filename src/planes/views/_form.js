@@ -279,10 +279,7 @@ export default function PlanesForm({ plan = {}, action }) {
 
   return (
     <NewMateriaContext.Provider value={contextObj}>
-      <form
-        onSubmit={guardarPlanDeEstudios}
-        className="planes-form container-fluid mb-4"
-      >
+      <form onSubmit={guardarPlanDeEstudios} className="planes-form mb-4">
         <div className="row">
           <div className="col- col-sm-3 form-group p-2 m-0">
             <label>Siglas:</label>
@@ -396,15 +393,13 @@ export default function PlanesForm({ plan = {}, action }) {
             Guardar plan de estudios
           </button>
 
-          {editMode && (
-            <button
-              type="button"
-              onClick={() => (window.location = "/planes")}
-              className="btn btn-lg bg-danger text-light"
-            >
-              Cancelar cambios
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={() => (window.location = "/planes")}
+            className="btn btn-lg bg-danger text-light"
+          >
+            Cancelar cambios
+          </button>
         </div>
       </form>
     </NewMateriaContext.Provider>
