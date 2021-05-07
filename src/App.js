@@ -5,7 +5,7 @@ import "./App.scss";
 import Header from "./header/view";
 import LoginScreen from "./login/view";
 import PanelAdmin from "./panel-admin/view";
-import PlanesRoutes from "./planes/views/routes";
+import PlanesRoutes from "./planes/view";
 import UsuariosIndex from "./users/view";
 import Footer from "./footer/view";
 

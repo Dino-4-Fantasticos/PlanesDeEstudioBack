@@ -6,6 +6,7 @@ const schema = new Schema({
   clave: {
     type: String,
     index: true,
+    uppercase: true,
     required: [true, "La clave de la materia es un campo obligatorio."],
     unique: true,
     uniqueCaseInsensitive: true,
@@ -19,6 +20,41 @@ const schema = new Schema({
   nombre: {
     type: String,
     required: [true, "El nombre de la materia es un campo obligatorio."],
+  },
+
+  /** Horas de clase por semana. [CL - Ej. 3] */
+  horasClase: {
+    type: Number,
+    required: false,
+    min: [0, "Debe ser un número mayor o igual a 0."],
+  },
+
+  /** Horas de laboratorio por semana. [L/A - Ej. 3] */
+  horasLaboratorio: {
+    type: Number,
+    required: false,
+    min: [0, "Debe ser un número mayor o igual a 0."],
+  },
+
+  /** Unidades que trae consigo la materia. [U - Ej. 8] */
+  unidades: {
+    type: Number,
+    required: [true, "Las unidades son un campo obligatorio."],
+    min: [0, "Debe ser un número mayor o igual a 0."],
+  },
+
+  /** Créditos académicos del curso. [CA - Ej. 8] */
+  creditosAcademicos: {
+    type: Number,
+    required: false,
+    min: [0, "Debe ser un número mayor o igual a 0."],
+  },
+
+  /** Unidades de carga para el curso. [UDC - Ej. 3.5] */
+  unidadesDeCarga: {
+    type: Number,
+    required: false,
+    min: [0, "Debe ser un número mayor o igual a 0."],
   },
 });
 

@@ -14,13 +14,27 @@ async function guardarMaterias(data) {
   const errores = {};
   for (const semestre of materias) {
     for (const materia of semestre) {
-      const { clave, nombre } = materia;
-      const alreadyExists = await Materia.exists({ clave });
-      if (!alreadyExists) {
-        const newMateria = new Materia({ clave, nombre });
+      const { clave } = materia;
+      const materiaToUpdate = await Materia.findOne({ clave }).exec();
+      if (!materiaToUpdate) {
+        const newMateria = new Materia(materia);
         const resSaveMateria = await newMateria.save().catch((err) => err);
         if (resSaveMateria instanceof Error) {
           const mensajesError = extraerMensajesError(resSaveMateria);
+          if (clave && !("clave" in mensajesError)) {
+            errores[clave] = mensajesError;
+          } else {
+            if (!errores.misc) errores.misc = [];
+            errores.misc.push(mensajesError);
+          }
+        }
+      } else {
+        for (const [key, value] of Object.entries(materia)) {
+          materiaToUpdate[key] = value;
+        }
+        const resUpdate = await materiaToUpdate.save().catch((err) => err);
+        if (resUpdate instanceof Error) {
+          const mensajesError = extraerMensajesError(resUpdate);
           if (clave && !("clave" in mensajesError)) {
             errores[clave] = mensajesError;
           } else {
@@ -83,9 +97,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:siglas", async (req, res) => {
   const { siglas } = req.params;
-  const resFind = await Plan.findOne({ siglas })
-    .lean()
-    .catch((err) => err);
+  const resFind = await Plan.findOne({ siglas }).catch((err) => err);
   if (resFind instanceof Error) {
     return res.status(400).json({ msg: "Hubo un error al obtener plan." });
   }
@@ -94,8 +106,16 @@ router.get("/:siglas", async (req, res) => {
       .status(400)
       .json({ msg: "No se encontró plan registrado con estas siglas." });
   }
+  const resMatCompletas = await resFind.materiasCompletas.catch((err) => err);
+  if (resMatCompletas instanceof Error) {
+    return res
+      .status(400)
+      .json({ err: resMatCompletas, msg: "Hubo un error al obtener plan." });
+  }
+  const objFind = resFind.toObject();
+  objFind.materias = resMatCompletas;
 
-  return res.json(resFind);
+  return res.json(objFind);
 });
 
 // UPDATE
@@ -154,10 +174,17 @@ router.delete("/:siglas", async (req, res) => {
   return res.json({ msg: "Plan de estudios removido exitosamente." });
 });
 
-// VALIDATE
+// VALIDATE - Ruta para validar la adición o edición de UNA materia.
 router.post("/validate-materia", async (req, res) => {
-  const { esTec21 = false, materias, semIdx, nuevaMateria } = req.body;
+  const {
+    esTec21 = false,
+    materias,
+    semIdx,
+    nuevaMateria,
+    editMode,
+  } = req.body;
 
+  // Validación de materia individualmente
   const materiaDoc = new Materia(nuevaMateria);
   const resMateriaValidate = materiaDoc.validateSync();
   if (resMateriaValidate instanceof Error) {
@@ -171,45 +198,19 @@ router.post("/validate-materia", async (req, res) => {
     });
   }
 
+  // Validación de materia dentro del plan de estudios
   materias[semIdx].push(nuevaMateria);
   const planDoc = new Plan({ esTec21, materias });
   const resPlanValidate = await planDoc.validate().catch((err) => err);
-  for (const key of Object.keys(resPlanValidate.errors)) {
+  for (const key of Object.keys(resPlanValidate.errors))
     if (key !== "materias") delete resPlanValidate.errors[key];
-  }
-  const containsErrors = Object.keys(resPlanValidate.errors).length > 0;
-  if (resPlanValidate instanceof Error && containsErrors) {
-    return res.status(400).json({
-      err: extraerMensajesError(resPlanValidate),
-      msg: "La nueva materia no pasó la validación.",
-    });
-  }
-
-  return res.json({ msg: "La nueva materia pasó la validación exitosamente." });
-});
-
-// VALIDATE
-router.post("/validate-materia", async (req, res) => {
-  const { esTec21 = false, materias, semIdx, nuevaMateria } = req.body;
-
-  const materiaDoc = new Materia(nuevaMateria);
-  const resMateriaValidate = materiaDoc.validateSync();
-  if (resMateriaValidate instanceof Error) {
-    const errors = resMateriaValidate.errors;
-    if (errors.clave && errors.clave.kind === "unique") {
-      delete resMateriaValidate.errors.clave;
+  if (resPlanValidate.errors.materias) {
+    const materiasErrors = optionalStringToJSON(
+      resPlanValidate.errors.materias.properties.message
+    );
+    if (materiasErrors[nuevaMateria.clave].clave && editMode) {
+      delete resPlanValidate.errors.materias;
     }
-    return res.status(400).json({
-      err: extraerMensajesError(resMateriaValidate),
-      msg: "La nueva materia no pasó la validación.",
-    });
-  }
-
-  materias[semIdx].push(nuevaMateria);
-  const planDoc = new Plan({ esTec21, materias });
-  const resPlanValidate = await planDoc.validate().catch((err) => err);
-  for (const key of Object.keys(resPlanValidate.errors)) {
-    if (key !== "materias") delete resPlanValidate.errors[key];
   }
   const containsErrors = Object.keys(resPlanValidate.errors).length > 0;
   if (resPlanValidate instanceof Error && containsErrors) {

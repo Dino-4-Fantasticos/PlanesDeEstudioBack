@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import PlanForm from "./_form";
+import PlanForm from "./form";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
