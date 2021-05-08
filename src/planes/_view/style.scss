@@ -85,6 +85,33 @@
     .new-materia {
       width: 100%;
 
+      .form-group {
+        padding-top: 0.5em;
+        margin: 0px;
+
+        .form-label {
+          color: #aaa;
+        }
+
+        .form-control {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+
+            & + .form-label {
+              color: #80bdff;
+            }
+          }
+
+          &:focus + .form-label,
+          &:not(:placeholder-shown) + .form-label {
+            transform: translate(0.5em, -3.75em);
+            background: white;
+            padding: 0px 4px;
+          }
+        }
+      }
+
       label {
         margin: 0;
       }
