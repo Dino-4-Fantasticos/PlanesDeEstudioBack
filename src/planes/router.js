@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Plan = require("./model");
 const Materia = require("../materias/model");
+const cors = require("cors");
 
 const {
   optionalStringToJSON,
@@ -53,7 +54,7 @@ async function guardarMaterias(data) {
 }
 
 // CREATE
-router.post("/", async (req, res) => {
+router.post("/", cors(), async (req, res) => {
   const data = req.body || {};
 
   // Guardar materias
@@ -81,7 +82,7 @@ router.post("/", async (req, res) => {
 });
 
 // READ
-router.get("/", async (req, res) => {
+router.get("/", cors(), async (req, res) => {
   const { query = {} } = req;
   const resFind = await Plan.find(query, "-materias", { sort: { siglas: 1 } })
     .lean()
@@ -95,7 +96,7 @@ router.get("/", async (req, res) => {
   return res.json(resFind);
 });
 
-router.get("/:siglas", async (req, res) => {
+router.get("/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const resFind = await Plan.findOne({ siglas }).catch((err) => err);
   if (resFind instanceof Error) {
@@ -119,7 +120,7 @@ router.get("/:siglas", async (req, res) => {
 });
 
 // UPDATE
-router.put("/:siglas", async (req, res) => {
+router.put("/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const planToUpdate = await Plan.findOne({ siglas }).catch((err) => err);
   if (planToUpdate instanceof Error) {
@@ -157,7 +158,7 @@ router.put("/:siglas", async (req, res) => {
 });
 
 // DELETE
-router.delete("/:siglas", async (req, res) => {
+router.delete("/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const resDelete = await Plan.findOneAndDelete({ siglas }).catch((err) => err);
   if (resDelete instanceof Error) {
@@ -175,7 +176,7 @@ router.delete("/:siglas", async (req, res) => {
 });
 
 // VALIDATE - Ruta para validar la adición o edición de UNA materia.
-router.post("/validate-materia", async (req, res) => {
+router.post("/validate-materia", cors(), async (req, res) => {
   const {
     esTec21 = false,
     materias,
