@@ -20,7 +20,7 @@ async function eliminarPlan(plan) {
 export default function PlanesSummary({ plan }) {
   return (
     <figure className="plan-summary bg-secondary">
-      <a href={`${CLIENT_URL}/plan/${plan.siglas}`} target="_blank" className="plan-content">
+      <a href={`${CLIENT_URL}/plan/${plan.siglas}`} target="_blank" rel="noreferrer" className="plan-content">
         <div className="flex-grow-1">
           <p className="nombre">{plan.nombre}</p>
           <p className="siglas">{plan.siglas}</p>
