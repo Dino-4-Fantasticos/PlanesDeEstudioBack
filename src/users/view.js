@@ -69,6 +69,7 @@ export default function UsuariosIndex() {
 
   return (
     <main id="usuarios-index" className="container">
+      <p className="text-right">Administrador:</p>
       {usuarios.map((usuario) => (
         <UsuarioSummary key={usuario.matricula} {...{ usuario }} />
       ))}
