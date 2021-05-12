@@ -131,5 +131,4 @@ schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
 /** Plan de estudios tal cual ofrecido por el Tecnológico de Monterrey */
 const Plan = model("Plan", schema);
 
-
 module.exports = Plan;
