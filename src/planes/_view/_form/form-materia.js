@@ -4,6 +4,12 @@ import PlanFormContext from "./context";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
+const DEFAULT_HORAS_CLASE = 3;
+const DEFAULT_HORAS_LABORATORIO = 0;
+const DEFAULT_UNIDADES = 8;
+const DEFAULT_CREDITOS_ACADEMICOS = 3;
+const DEFAULT_UNIDADES_DE_CARGA = 3.5;
+
 /** Función para editar la matriz de materias. */
 function agregarMateria(materia, setMaterias, semIdx) {
   setMaterias((m) => {
@@ -55,20 +61,26 @@ export default function FormMateria({
   const [errNombre, setErrNombre] = useState("");
   const [periodos, setPeriodos] = useState(materia.periodos || periodosDefault);
   const [errPeriodos, setErrPeriodos] = useState("");
-  const [horasClase, setHorasClase] = useState(materia.horasClase || "");
+  const [horasClase, setHorasClase] = useState(
+    materia.horasClase || DEFAULT_HORAS_CLASE
+  );
   const [errHorasClase, setErrHorasClase] = useState("");
   const [horasLaboratorio, setHorasLaboratorio] = useState(
-    materia.horasLaboratorio === 0 ? 0 : materia.horasLaboratorio || ""
+    materia.horasLaboratorio === 0
+      ? 0
+      : materia.horasLaboratorio || DEFAULT_HORAS_LABORATORIO
   );
   const [errHorasLaboratorio, setErrHorasLaboratorio] = useState("");
-  const [unidades, setUnidades] = useState(materia.unidades || "");
+  const [unidades, setUnidades] = useState(
+    materia.unidades || DEFAULT_UNIDADES
+  );
   const [errUnidades, setErrUnidades] = useState("");
   const [creditosAcademicos, setCreditosAcademicos] = useState(
-    materia.creditosAcademicos || ""
+    materia.creditosAcademicos || DEFAULT_CREDITOS_ACADEMICOS
   );
   const [errCreditosAcademicos, setErrCreditosAcademicos] = useState("");
   const [unidadesDeCarga, setUnidadesDeCarga] = useState(
-    materia.unidadesDeCarga || ""
+    materia.unidadesDeCarga || DEFAULT_UNIDADES_DE_CARGA
   );
   const [errUnidadesDeCarga, setErrUnidadesDeCarga] = useState("");
 
