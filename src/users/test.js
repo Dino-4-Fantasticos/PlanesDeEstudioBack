@@ -1,3 +1,8 @@
+import React from "react";
+import { render, screen } from "@testing-library/react";
+
+import Users from "./view";
+
 const supertest = require("supertest");
 const app = require("../../server");
 const request = supertest(app);
@@ -265,6 +270,14 @@ describe("lectura de usuarios", () => {
     });
 
     done();
+  });
+
+  it("renderea texto de la vista", () => {
+    render(<Users />);
+
+    const admin = screen.getByText(/Administrador:/);
+  
+    expect(admin).toBeInTheDocument();
   });
 });
 
