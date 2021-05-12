@@ -29,11 +29,8 @@ const materiaGuardadaSchema = {
   // Clave de la materia a la cual está relacionada en el plan de estudios
   clave: {
     type: String,
-    index: true,
     uppercase: true,
     required: [true, "La clave de la materia es un campo obligatorio."],
-    unique: true,
-    uniqueCaseInsensitive: true,
     match: [
       /^[A-Z]{1,2}[0-9]{4}[A-Z]?$/,
       "La clave de materia debe contener <1 o 2 letras><4 números>[0 o 1 letra al final].",
@@ -75,7 +72,7 @@ const schema = new Schema({
 
   /** Personalizaciones a las distintas materias del plan de estudios. */
   materias: {
-    type: [[materiaGuardadaSchema]]
+    type: [[materiaGuardadaSchema]],
   }
 });
 
