@@ -3,9 +3,9 @@
   "name": "Planes de Estudio - Admin",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "favicon.ico",
       "sizes": "480x480",
-      "type": "image/png"
+      "type": "image/x-ico"
     }
   ],
   "start_url": ".",
