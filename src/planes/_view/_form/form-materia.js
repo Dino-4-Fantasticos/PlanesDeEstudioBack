@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import PlanFormContext from "./context";
 
@@ -62,25 +62,23 @@ export default function FormMateria({
   const [periodos, setPeriodos] = useState(materia.periodos || periodosDefault);
   const [errPeriodos, setErrPeriodos] = useState("");
   const [horasClase, setHorasClase] = useState(
-    materia.horasClase || DEFAULT_HORAS_CLASE
+    materia.horasClase ?? DEFAULT_HORAS_CLASE
   );
   const [errHorasClase, setErrHorasClase] = useState("");
   const [horasLaboratorio, setHorasLaboratorio] = useState(
-    materia.horasLaboratorio === 0
-      ? 0
-      : materia.horasLaboratorio || DEFAULT_HORAS_LABORATORIO
+    materia.horasLaboratorio ?? DEFAULT_HORAS_LABORATORIO
   );
   const [errHorasLaboratorio, setErrHorasLaboratorio] = useState("");
   const [unidades, setUnidades] = useState(
-    materia.unidades || DEFAULT_UNIDADES
+    materia.unidades ?? DEFAULT_UNIDADES
   );
   const [errUnidades, setErrUnidades] = useState("");
   const [creditosAcademicos, setCreditosAcademicos] = useState(
-    materia.creditosAcademicos || DEFAULT_CREDITOS_ACADEMICOS
+    materia.creditosAcademicos ?? DEFAULT_CREDITOS_ACADEMICOS
   );
   const [errCreditosAcademicos, setErrCreditosAcademicos] = useState("");
   const [unidadesDeCarga, setUnidadesDeCarga] = useState(
-    materia.unidadesDeCarga || DEFAULT_UNIDADES_DE_CARGA
+    materia.unidadesDeCarga ?? DEFAULT_UNIDADES_DE_CARGA
   );
   const [errUnidadesDeCarga, setErrUnidadesDeCarga] = useState("");
 
@@ -129,6 +127,25 @@ export default function FormMateria({
       agregarMateria(nuevaMateria, setMaterias, semIdx);
     }
   }
+
+  useEffect(() => {
+    async function fetchInfoMateria() {
+      if (!/^[A-Z]{1,2}[0-9]{4}[A-Z]?$/.test(clave)) return;
+      const resGet = await axios
+        .get(`${BACKEND_URL}/materias/${clave}`)
+        .catch((err) => err);
+      if (resGet instanceof Error) return;
+      const { data } = resGet;
+      setNombre(data.nombre);
+      setHorasClase(data.horasClase);
+      setHorasLaboratorio(data.horasLaboratorio);
+      setUnidades(data.unidades);
+      setCreditosAcademicos(data.creditosAcademicos);
+      setUnidadesDeCarga(data.unidadesDeCarga);
+      if (esTec21 && data.periodos) setPeriodos(data.periodos);
+    }
+    fetchInfoMateria();
+  }, [clave, esTec21]);
 
   return (
     <section className="card new-materia p-2 mt-1">
