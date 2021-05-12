@@ -127,6 +127,13 @@ router.put("/:_id", async (req, res) => {
     });
   }
 
+  if (planToUpdate === null) {
+    res.statusMessage = 'No se encontró el plan dado.'
+    return res.status(404).json({
+      msg: "No se encontró el plan dado.",
+    });
+  }
+
   const data = req.body;
   for (const [key, value] of Object.entries(data)) {
     planToUpdate[key] = value;
