@@ -121,7 +121,6 @@ export default function FormMateria({
   return (
     <section className="card new-materia p-2 mt-1">
       <div className="form-group mb-1">
-        <label className="text-dark">Clave:</label>
         {editMode && (
           <input
             type="text"
@@ -142,6 +141,7 @@ export default function FormMateria({
             autoComplete="nope"
             className="form-control clave-form"
             placeholder="Ej. [TC1018]"
+            maxLength="7"
             value={clave}
             onChange={(e) => {
               setClave(e.target.value.toUpperCase());
@@ -149,11 +149,11 @@ export default function FormMateria({
             }}
           />
         )}
+        <label className="form-label">Clave:</label>
         <p className="text-danger">{errClave}</p>
       </div>
 
       <div className="form-group">
-        <label className="text-dark">Nombre:</label>
         <input
           type="text"
           autoComplete="nope"
@@ -165,6 +165,7 @@ export default function FormMateria({
             setErrNombre("");
           }}
         />
+        <label className="form-label">Nombre:</label>
         <p className="text-danger">{errNombre}</p>
       </div>
 

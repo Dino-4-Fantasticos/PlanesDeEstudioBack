@@ -22,7 +22,10 @@ router.post("/", cors(), async (req, res) => {
 // READ
 router.get("/", cors(), async (req, res) => {
   const { query = {} } = req;
-  const resFind = await User.find(query).catch((err) => err);
+  const resFind = await User.find(query)
+    .sort("matricula")
+    .lean()
+    .catch((err) => err);
   if (resFind instanceof Error) {
     return res.status(400).json({ msg: "Hubo un error al obtener usuarios." });
   }

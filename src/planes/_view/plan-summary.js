@@ -1,6 +1,7 @@
 import axios from "axios";
 import deleteIcon from "../../assets/delete_white_24dp.svg";
 import editIcon from "../../assets/edit_white_24dp.svg";
+import tec21Icon from "./logo-tec21.svg";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
@@ -23,15 +24,22 @@ export default function PlanesSummary({ plan }) {
       <a href={`${CLIENT_URL}/plan/${plan.siglas}`} target="_blank" rel="noreferrer" className="plan-content">
         <div className="flex-grow-1">
           <p className="nombre">{plan.nombre}</p>
-          <p className="siglas">{plan.siglas}</p>
+          <div className="d-flex">
+            <p className="siglas">{plan.siglas}</p>
+            {plan.esTec21 && (
+              <img src={tec21Icon} alt="Tec 21" className="tec21-label ml-2" />
+            )}
+          </div>
         </div>
       </a>
-      <a href={`/planes/${plan.siglas}/edit`} className="edit-button">
-        <img src={editIcon} alt="delete" />
-      </a>
-      <button onClick={() => eliminarPlan(plan)} className="delete-button">
-        <img src={deleteIcon} alt="delete" />
-      </button>
+      <div className="d-flex icons-container">
+        <a href={`/planes/${plan.siglas}/edit`} className="edit-button">
+          <img src={editIcon} alt="delete" />
+        </a>
+        <button onClick={() => eliminarPlan(plan)} className="delete-button">
+          <img src={deleteIcon} alt="delete" />
+        </button>
+      </div>
     </figure>
   );
 }

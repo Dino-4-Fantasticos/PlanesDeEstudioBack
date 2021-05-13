@@ -21,6 +21,16 @@
   }
 }
 
+.filtro-tec21 {
+  color: #6c757d;
+  padding: 0.25em;
+  border-radius: 0.5em;
+
+  > option {
+    color: #6c757d;
+  }
+}
+
 .semestre-container {
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -85,6 +95,33 @@
     .new-materia {
       width: 100%;
 
+      .form-group {
+        padding-top: 0.5em;
+        margin: 0px;
+
+        .form-label {
+          color: #aaa;
+        }
+
+        .form-control {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+
+            & + .form-label {
+              color: #80bdff;
+            }
+          }
+
+          &:focus + .form-label,
+          &:not(:placeholder-shown) + .form-label {
+            transform: translate(0.5em, -3.75em);
+            background: white;
+            padding: 0px 4px;
+          }
+        }
+      }
+
       label {
         margin: 0;
       }
@@ -141,21 +178,45 @@
   .edit-button {
     display: flex;
     align-items: center;
-    padding: 0px 6px;
   }
 
-  a,
-  button {
-    background-color: transparent;
-    border: none;
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-right: 0.5em;
+    }
+
+    a,
+    button {
+      background-color: transparent;
+      border: none;
+      height: fit-content;
+    }
 
     img {
       height: 1.5em;
+    }
+
+    .delete-button {
+      padding: 0;
+      display: block;
     }
   }
 
   .siglas {
     font-weight: bold;
     font-size: 1.5em;
+  }
+
+  .tec21-label {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 14px;
+    height: 0.75em;
+    line-height: 1.5em;
   }
 }

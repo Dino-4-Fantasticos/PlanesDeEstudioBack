@@ -38,8 +38,7 @@ export default function PlanesForm({ plan = {}, action }) {
     <PlanFormContext.Provider value={contextObj}>
       <form onSubmit={guardarPlanDeEstudios} className="planes-form mb-4">
         <div className="row">
-          <div className="col- col-sm-3 form-group p-2 m-0">
-            <label>Siglas:</label>
+          <div className="col- col-sm-4 col-md-3 form-group m-0">
             {editMode && (
               <input
                 type="text"
@@ -60,17 +59,19 @@ export default function PlanesForm({ plan = {}, action }) {
                 autoComplete="nope"
                 className="form-control"
                 placeholder="Ej. [ITC11]"
+                maxLength="6"
                 value={siglas}
                 onChange={(e) => {
-                  setSiglas(e.target.value);
+                  setSiglas(e.target.value.toUpperCase());
                   setErrSiglas("");
                 }}
               />
             )}
+            <label className="form-label">Siglas:</label>
             <p className="text-danger">{errSiglas}</p>
           </div>
 
-          <div className="col- col-sm-9 form-group pl-4 pt-4 m-0">
+          <div className="col- col-sm-8 col-md-9 form-group pt-3 m-0">
             <div className="custom-control custom-switch">
               <input
                 type="checkbox"
@@ -110,20 +111,22 @@ export default function PlanesForm({ plan = {}, action }) {
           </div>
         </div>
 
-        <div className="row form-group p-2">
-          <label>Nombre:</label>
-          <input
-            type="text"
-            autoComplete="nope"
-            className="form-control"
-            placeholder="Ej. [Ingeniería en Tecnologías Computacionales]"
-            value={nombre}
-            onChange={(e) => {
-              setNombre(e.target.value);
-              setErrNombre("");
-            }}
-          />
-          <p className="text-danger">{errNombre}</p>
+        <div className="row mt-3">
+          <div className="form-group col-12 col-md-6">
+            <input
+              type="text"
+              autoComplete="nope"
+              className="form-control"
+              placeholder="Ej. [Ingeniería en Tecnologías Computacionales]"
+              value={nombre}
+              onChange={(e) => {
+                setNombre(e.target.value);
+                setErrNombre("");
+              }}
+            />
+            <label className="form-label">Nombre:</label>
+            <p className="text-danger">{errNombre}</p>
+          </div>
         </div>
 
         <div className="row mb-3 justify-content-center">
