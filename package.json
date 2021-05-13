@@ -12,7 +12,7 @@
     "test-server": "jest --config=server.jest.config.js",
     "test-client": "react-scripts test --watchAll=false",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-build",
-    "seed": "sudo mongod & seed",
+    "seed": "mongod & seed",
     "dev": "concurrently \"npm run start-server\" \"npm run start-client\""
   },
   "dependencies": {
