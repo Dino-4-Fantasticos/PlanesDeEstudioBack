@@ -45,7 +45,7 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
   const objFind = resFind.toObject();
   objFind.materias = resMatCompletas;
 
-  const resPlanificado = await Planificado.find({ siglas, usuario: matricula })
+  const resPlanificado = await Planificado.findOne({ siglas, usuario: matricula })
     .lean()
     .catch((err) => err);
   if (resPlanificado instanceof Error) {
@@ -54,7 +54,7 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
       .json({ msg: "Hubo un error al obtener planes de estudios." });
   }
 
-  if (resPlanificado.length > 0) {
+  if (resPlanificado) {
     res.statusMessage = "Ya hay un plan creado para esta carrera."
     return res
       .status(200)
