@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("../users/model");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
 const { extraerMensajesError } = require("../utils/functions");
 
@@ -10,7 +11,7 @@ function extraerMatricula({ email }) {
   return email.split("@")[0].toUpperCase();
 }
 
-router.post("/", async (req, res) => {
+router.post("/", cors(), async (req, res) => {
   const profileObj = req.body;
   if (!profileObj || !Object.keys(profileObj).length) {
     return res.status(400).json({
@@ -67,7 +68,7 @@ router.post("/", async (req, res) => {
   });
 });
 
-router.post("/auth", (req, res) => {
+router.post("/auth", cors(), (req, res) => {
   const { token } = req.body;
   if (!token) {
     return res.status(400).json({

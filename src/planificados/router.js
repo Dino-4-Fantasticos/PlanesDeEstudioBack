@@ -1,11 +1,12 @@
 const router = require("express").Router();
+const cors = require("cors");
 const Planificado = require("./model");
 const Plan = require("./../planes/model");
 
 const { extraerMensajesError } = require("../utils/functions");
 
 // CREATE
-router.post("/", async (req, res) => {
+router.post("/", cors(), async (req, res) => {
   const data = req.body || {};
 
   // Guardar plan de estudios
@@ -22,7 +23,7 @@ router.post("/", async (req, res) => {
 });
 
 // CREATE DEFAULT
-router.post("/crearPlanificadoBase/:siglas", async (req, res) => {
+router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const { matricula } = req.body;
 
@@ -90,7 +91,7 @@ router.post("/crearPlanificadoBase/:siglas", async (req, res) => {
 });
 
 // READ
-router.get("/", async (req, res) => {
+router.get("/", cors(), async (req, res) => {
   const { query = {} } = req;
   const resFind = await Planificado.find(query)
     .lean()
@@ -104,7 +105,7 @@ router.get("/", async (req, res) => {
   return res.json(resFind);
 });
 
-router.get("/:_id", async (req, res) => {
+router.get("/:_id", cors(), async (req, res) => {
   const { _id } = req.params;
   const resFind = await Planificado.findById(_id)
     .lean()
@@ -117,7 +118,7 @@ router.get("/:_id", async (req, res) => {
 });
 
 // UPDATE
-router.put("/:_id", async (req, res) => {
+router.put("/:_id", cors(), async (req, res) => {
   const { _id } = req.params;
 
   const planToUpdate = await Planificado.findById(_id).catch((err) => err);
@@ -150,7 +151,7 @@ router.put("/:_id", async (req, res) => {
 });
 
 // DELETE
-router.delete("/:_id", async (req, res) => {
+router.delete("/:_id", cors(), async (req, res) => {
   const { _id } = req.params;
   const resDelete = await Planificado.findByIdAndDelete(_id).catch(
     (err) => err
