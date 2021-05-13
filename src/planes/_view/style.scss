@@ -1,0 +1,222 @@
+@import "../../_variables";
+
+.custom-switch {
+  font-size: 1.25em;
+}
+
+.planes-form {
+  @media (min-width: 768px) {
+    padding: 0px 1em;
+  }
+  @media (min-width: 992px) {
+    padding: 0px 2em;
+  }
+
+  .bottom-buttons {
+    justify-content: flex-end;
+
+    button {
+      margin: 0.5rem;
+    }
+  }
+}
+
+.filtro-tec21 {
+  color: #6c757d;
+  padding: 0.25em;
+  border-radius: 0.5em;
+
+  > option {
+    color: #6c757d;
+  }
+}
+
+.semestre-container {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+  > * {
+    margin: 0.25em;
+  }
+
+  .semestre {
+    min-width: 200px;
+    width: 200px;
+    background-color: #ffffff20;
+    border-radius: 8px;
+    font-size: 0.75em;
+
+    > label {
+      text-align: center;
+      font-size: 1.15em;
+    }
+
+    .materia {
+      background-color: $bg-orange !important;
+      text-align: center;
+      margin: 0;
+      position: relative;
+
+      .nombre-materia {
+        height: 2em;
+        margin: 0;
+        line-height: 1.15em;
+      }
+
+      small {
+        line-height: 1em;
+        display: block;
+      }
+
+      .hover-materia-banner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+        display: flex;
+        justify-content: center;
+        border-radius: 4px;
+      }
+    }
+
+    .periodos-container {
+      display: flex;
+      flex-direction: row;
+      height: 7px;
+
+      > div,
+      > button {
+        border: 1px solid #00000040;
+        height: 8px;
+        margin: 0;
+      }
+    }
+
+    .new-materia {
+      width: 100%;
+
+      .form-group {
+        padding-top: 0.5em;
+        margin: 0px;
+
+        .form-label {
+          color: #aaa;
+        }
+
+        .form-control {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+
+            & + .form-label {
+              color: #80bdff;
+            }
+          }
+
+          &:focus + .form-label,
+          &:not(:placeholder-shown) + .form-label {
+            transform: translate(0.5em, -3.75em);
+            background: white;
+            padding: 0px 4px;
+          }
+        }
+      }
+
+      label {
+        margin: 0;
+      }
+
+      .clave-form {
+        text-transform: uppercase;
+      }
+
+      .inline-form-group {
+        > div {
+          display: flex;
+
+          label {
+            flex-grow: 1;
+            line-height: 32px;
+          }
+
+          input {
+            width: 48px;
+          }
+        }
+      }
+    }
+
+    .btn-guardar-materia {
+      line-height: 1.15em;
+    }
+  }
+
+  .nuevo-semestre {
+    height: 3em;
+  }
+}
+
+.plan-summary {
+  margin: 1rem 0;
+  display: flex;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5em;
+
+  .plan-content {
+    padding: 0.5rem;
+    flex-grow: 1;
+    overflow-x: clip;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.15em;
+  }
+
+  .edit-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin-right: 0.5em;
+    }
+
+    a,
+    button {
+      background-color: transparent;
+      border: none;
+      height: fit-content;
+    }
+
+    img {
+      height: 1.5em;
+    }
+
+    .delete-button {
+      padding: 0;
+      display: block;
+    }
+  }
+
+  .siglas {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .tec21-label {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 14px;
+    height: 0.75em;
+    line-height: 1.5em;
+  }
+}

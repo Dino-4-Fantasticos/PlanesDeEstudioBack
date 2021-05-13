@@ -1,0 +1,15 @@
+{
+  "short_name": "PDE_Admin",
+  "name": "Planes de Estudio - Admin",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "480x480",
+      "type": "image/x-ico"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#191C25",
+  "background_color": "#191C25"
+}

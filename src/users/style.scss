@@ -1,0 +1,27 @@
+#usuarios-index {
+  .usuario-summary {
+    align-items: center;
+
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
+
+    .foto-perfil {
+      border-radius: 50%;
+    }
+
+    .blurred {
+      opacity: 0.25;
+    }
+
+    .user-info {
+      line-height: 1em;
+
+      .matricula {
+        font-size: 0.75em;
+        height: 1em;
+        font-weight: lighter;
+      }
+    }
+  }
+}
