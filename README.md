@@ -17,7 +17,7 @@ Para el funcionamiento correcto de la aplicación localmente, se deberá crear u
 Se puede utilizar el comando `npm start` como en todo proyecto de node, pero se recomienda correr `npm run dev` para correr el proyecto con nodemon, el cual actualizará los cambios necesarios cada que el archivo presente cambios.
 
 ### Seeds
-Para seedear la base de datos de manera local, se puede correr el comando `npm run seed`.
+Para seedear la base de datos de manera local, es necesario hacer la instalación del seeder. Puedes hacer esto con `npm install -g node-mongo-seeds`. Posteriormente se ejecuta el comando `npm run seed`.
 
 ## Guía de contribución
 
