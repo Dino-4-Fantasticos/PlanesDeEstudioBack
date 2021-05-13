@@ -23,6 +23,9 @@ export default function PlanesForm({ plan = {}, action }) {
 
   async function guardarPlanDeEstudios(e) {
     e.preventDefault();
+    const confirmMessage = `Se guardará plan de estudios ${siglas}. ¿Continuar?`;
+    if (!window.confirm(confirmMessage)) return;
+
     const newPlan = { siglas, nombre, esVigente, esTec21, materias };
     const resAction = await action(newPlan).catch((err) => err);
     if (resAction instanceof Error && resAction.response) {
@@ -155,7 +158,11 @@ export default function PlanesForm({ plan = {}, action }) {
 
           <button
             type="button"
-            onClick={() => (window.location = "/planes")}
+            onClick={() => {
+              const confirmMessage = `¿Cancelar cambios? Se perderá la información no guardada.`;
+              if (!window.confirm(confirmMessage)) return;
+              window.location = "/planes";
+            }}
             className="btn btn-lg bg-danger text-light"
           >
             Cancelar cambios

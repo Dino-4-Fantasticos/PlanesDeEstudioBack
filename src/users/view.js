@@ -17,6 +17,11 @@ async function fetchUsuarios(setUsuarios) {
 }
 
 async function setAdmin(matricula, esAdmin) {
+  const confirmMessage = esAdmin
+    ? `Se añadirá al usuario ${matricula} a los administradores.`
+    : `Se removerá al usuario ${matricula} de los administradores.`;
+  if (!window.confirm(confirmMessage)) return;
+
   const resPut = await axios
     .put(`${BACKEND_URL}/users/${matricula}`, { esAdmin })
     .catch((err) => err);
@@ -40,10 +45,12 @@ function filtrarUsuarios(usuarios, filtro) {
 }
 
 function UsuarioSummary({ usuario }) {
+  const { matricula, nombre, apellido, urlFoto, esAdmin } = usuario;
+
   return (
     <div className="card usuario-summary bg-secondary mb-2 d-flex flex-row p-2">
       <img
-        src={usuario.urlFoto}
+        src={urlFoto}
         alt="foto perfil"
         className="foto-perfil"
         width={48}
@@ -51,27 +58,27 @@ function UsuarioSummary({ usuario }) {
       />
       <div className="m-0 flex-grow-1 ml-2 user-info">
         <p className="m-0 ml-2 nombre">
-          {usuario.nombre} {usuario.apellido}
+          {nombre} {apellido}
         </p>
-        <small className="m-0 ml-2 matricula">{usuario.matricula}</small>
+        <small className="m-0 ml-2 matricula">{matricula}</small>
       </div>
-      {usuario.esAdmin && (
+      {esAdmin && (
         <img
           src={manageAccountsIcon}
           alt="manage-account"
           width={48}
           className="cursor-pointer"
-          onClick={() => setAdmin(usuario.matricula, false)}
+          onClick={() => setAdmin(matricula, false)}
         />
       )}
-      {!usuario.esAdmin && (
+      {!esAdmin && (
         <img
           src={manageAccountsIcon}
           alt="manage-account"
           width={48}
           height={48}
           className="cursor-pointer blurred"
-          onClick={() => setAdmin(usuario.matricula, true)}
+          onClick={() => setAdmin(matricula, true)}
         />
       )}
     </div>
