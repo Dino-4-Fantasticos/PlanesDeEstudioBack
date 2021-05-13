@@ -6,6 +6,9 @@ import FormMateria from "./form-materia";
 
 /** Función para remover una materia de la matriz de materias. */
 function removerMateria(setMaterias, semIdx, matIdx) {
+  const confirmMessage = `¿Remover materia del plan de estudios?`;
+  if (!window.confirm(confirmMessage)) return;
+
   setMaterias((m) => {
     const semestre = m[semIdx];
     const editedSemestre = [
