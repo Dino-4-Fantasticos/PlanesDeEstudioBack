@@ -45,7 +45,10 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
   const objFind = resFind.toObject();
   objFind.materias = resMatCompletas;
 
-  const resPlanificado = await Planificado.findOne({ siglas, usuario: matricula })
+  const resPlanificado = await Planificado.findOne({
+    siglas,
+    usuario: matricula,
+  })
     .lean()
     .catch((err) => err);
   if (resPlanificado instanceof Error) {
@@ -55,7 +58,7 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
   }
 
   if (resPlanificado) {
-    res.statusMessage = "Ya hay un plan creado para esta carrera."
+    res.statusMessage = "Ya hay un plan creado para esta carrera.";
     return res
       .status(200)
       .json({ planificado: resPlanificado, oficial: objFind });
@@ -66,11 +69,13 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
     siglas: objFind.siglas,
     nombre: objFind.nombre,
     etiquetas: [
-      { color: '#BF7913', nombre: 'Completo' },
-      { color: '#439630', nombre: 'Incompleto' }
+      { color: "#BF7913", nombre: "Incompleto" },
+      { color: "#439630", nombre: "Completo" },
     ],
-    materias: objFind.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: 0 })))
-  }
+    materias: objFind.materias.map((sem) =>
+      sem.map((materia) => ({ clave: materia.clave, color: 0 }))
+    ),
+  };
 
   // Guardar plan de estudios
   const newPlanificado = new Planificado(data);
@@ -82,11 +87,11 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
     });
   }
 
-  res.statusMessage = '¡El plan de estudios se ha personalizado correctamente!';
+  res.statusMessage = "¡El plan de estudios se ha personalizado correctamente!";
 
   return res.status(200).json({
     planificado: newPlanificado,
-    oficial: objFind
+    oficial: objFind,
   });
 });
 
@@ -129,7 +134,7 @@ router.put("/:_id", cors(), async (req, res) => {
   }
 
   if (planToUpdate === null) {
-    res.statusMessage = 'No se encontró el plan dado.'
+    res.statusMessage = "No se encontró el plan dado.";
     return res.status(404).json({
       msg: "No se encontró el plan dado.",
     });
