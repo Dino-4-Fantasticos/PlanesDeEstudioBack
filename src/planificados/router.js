@@ -167,7 +167,7 @@ router.delete("/:_id", cors(), async (req, res) => {
       .json({ msg: "No se encontró este plan planificado." });
   }
 
-  return res.json("Plan planificado removido exitosamente.");
+  return res.json({ msg: "Plan planificado removido exitosamente." });
 });
 
 module.exports = router;
