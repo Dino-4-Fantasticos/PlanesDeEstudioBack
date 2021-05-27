@@ -66,8 +66,8 @@ router.post("/crearPlanificadoBase/:siglas", cors(), async (req, res) => {
     siglas: objFind.siglas,
     nombre: objFind.nombre,
     etiquetas: [
-      { color: '#BF7913', nombre: 'Completo' },
-      { color: '#439630', nombre: 'Incompleto' }
+      { color: '#BF7913', nombre: 'Incompleto' },
+      { color: '#439630', nombre: 'Completo' }
     ],
     materias: objFind.materias.map(sem => sem.map(materia => ({ clave: materia.clave, color: 0 })))
   }
