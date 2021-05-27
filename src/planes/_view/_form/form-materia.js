@@ -104,6 +104,10 @@ export default function FormMateria({
       .post(`${BACKEND_URL}/planes/validate-materia`, postData)
       .catch((err) => err);
     if (resValidate instanceof Error) {
+      if (!resValidate.response) {
+        alert("Hubo un error comunicación con el servidor.");
+        return;
+      }
       const errors = resValidate.response.data.err;
       const { materias } = errors;
       if (materias) {
@@ -290,27 +294,36 @@ export default function FormMateria({
             <button
               type="button"
               className={`flex-grow-1 ${periodos[0] && "bg-primary"}`}
-              onClick={() => setPeriodos((p) => [!p[0], p[1], p[2]])}
+              onClick={() => {
+                setPeriodos((p) => [!p[0], p[1], p[2]]);
+                setErrPeriodos("");
+              }}
             ></button>
             <button
               type="button"
               className={`flex-grow-1 ${periodos[1] && "bg-primary"}`}
-              onClick={() => setPeriodos((p) => [p[0], !p[1], p[2]])}
+              onClick={() => {
+                setPeriodos((p) => [p[0], !p[1], p[2]]);
+                setErrPeriodos("");
+              }}
             ></button>
             <button
               type="button"
               className={`flex-grow-1 ${periodos[2] && "bg-primary"}`}
-              onClick={() => setPeriodos((p) => [p[0], p[1], !p[2]])}
+              onClick={() => {
+                setPeriodos((p) => [p[0], p[1], !p[2]]);
+                setErrPeriodos("");
+              }}
             ></button>
           </div>
-          <small className="text-danger">{errPeriodos}</small>
+          <p className="text-danger">{errPeriodos}</p>
         </div>
       )}
 
       <button
         type="button"
         onClick={guardarMateria}
-        className="btn btn-primary btn-guardar-materia mb-1"
+        className="btn btn-primary btn-guardar-materia mb-1 mt-2"
       >
         Guardar nueva materia
       </button>
