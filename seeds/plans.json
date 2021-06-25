@@ -7226,174 +7226,226 @@
    "materias": [
      [
        {
-         "clave": "EG1001"
+         "clave": "EG1001",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "F1001B"
+         "clave": "F1001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1006B"
+         "clave": "F1006B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "F1007B"
+         "clave": "F1007B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1028"
+         "clave": "MA1028",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "Q1019"
+         "clave": "Q1019",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC1028"
+         "clave": "TC1028",
+         "periodos": [true, true, false]
        }
      ],
      [
        {
-         "clave": "EG1002"
+         "clave": "EG1002",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "F1008"
+         "clave": "F1008",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1015B"
+         "clave": "F1015B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1016B"
+         "clave": "F1016B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "F1017B"
+         "clave": "F1017B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1029"
+         "clave": "MA1029",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "MA1030"
+         "clave": "MA1030",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1031"
+         "clave": "MA1031",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "Q1021"
+         "clave": "Q1021",
+         "periodos": [false, true, false]
        }
      ],
      [
        {
-         "clave": "EG1003"
+         "clave": "EG1003",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "IN1001B"
+         "clave": "IN1001B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN1002B"
+         "clave": "IN1002B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "M1011"
+         "clave": "M1011",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "MA1034"
+         "clave": "MA1034",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "MA1035"
+         "clave": "MA1035",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "TE1020"
+         "clave": "TE1020",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "VA1001B"
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
        }
      ],
      [
        {
-         "clave": "EG1004"
+         "clave": "EG1004",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "IN2001B"
+         "clave": "IN2001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "IN2002B"
+         "clave": "IN2002B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN2003B"
+         "clave": "IN2003B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "IN2032"
+         "clave": "IN2032",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "IN2037"
+         "clave": "IN2037",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN2038"
+         "clave": "IN2038",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "EG1005"
+         "clave": "EG1005",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "IN2004B"
+         "clave": "IN2004B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "IN2005B"
+         "clave": "IN2005B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN2006B"
+         "clave": "IN2006B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "IN2039"
+         "clave": "IN2039",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "IN2040"
+         "clave": "IN2040",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN2041"
+         "clave": "IN2041",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "IN2007B"
+         "clave": "IN2007B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "IN2008B"
+         "clave": "IN2008B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN2009B"
+         "clave": "IN2009B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "IN2042"
+         "clave": "IN2042",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "IN2043"
+         "clave": "IN2043",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "IN2044"
+         "clave": "IN2044",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "OP3091"
+         "clave": "OP3091",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3092"
+         "clave": "OP3092",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3093"
+         "clave": "OP3093",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3094"
+         "clave": "OP3094",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3095"
+         "clave": "OP3095",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3096"
+         "clave": "OP3096",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "IN3001B"
+         "clave": "IN3001B",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "OP3001B"
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
        }
      ]
    ]
@@ -7406,141 +7458,182 @@
    "materias": [
      [
        {
-         "clave": "EG1001"
+         "clave": "EG1001",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "F1001B"
+         "clave": "F1001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1004B"
+         "clave": "F1004B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "F1005B"
+         "clave": "F1005B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1028"
+         "clave": "MA1028",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "Q1020"
+         "clave": "Q1020",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC1029"
+         "clave": "TC1029",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "BT1013"
+         "clave": "BT1013",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "EG1002"
+         "clave": "EG1002",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "F1008"
+         "clave": "F1008",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1013B"
+         "clave": "F1013B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "F1014B"
+         "clave": "F1014B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1029"
+         "clave": "MA1029",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "MA1031"
+         "clave": "MA1031",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC1003B"
+         "clave": "TC1003B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TC1030"
+         "clave": "TC1030",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "EG1003"
+         "clave": "EG1003",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MA1033"
+         "clave": "MA1033",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TC1004B"
+         "clave": "TC1004B",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "TC1031"
+         "clave": "TC1031",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "TC1032"
+         "clave": "TC1032",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "TI1015"
+         "clave": "TI1015",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "VA1001B"
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
        }
      ],
      [
        {
-         "clave": "EG1004"
+         "clave": "EG1004",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "TC2005B"
+         "clave": "TC2005B",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "TC2006B"
+         "clave": "TC2006B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC2037"
+         "clave": "TC2037",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "EG1005"
+         "clave": "EG1005",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "TC2007B"
+         "clave": "TC2007B",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "TC2008B"
+         "clave": "TC2008B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC2038"
+         "clave": "TC2038",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "TC3001B"
+         "clave": "TC3001B",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "OP3091"
+         "clave": "OP3091",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3092"
+         "clave": "OP3092",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3093"
+         "clave": "OP3093",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3094"
+         "clave": "OP3094",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3095"
+         "clave": "OP3095",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3096"
+         "clave": "OP3096",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "OP3001B"
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TC3002B"
+         "clave": "TC3002B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "TC3003B"
+         "clave": "TC3003B",
+         "periodos": [false, false, true]
        }
      ]
    ]
@@ -8152,168 +8245,218 @@
    "materias": [
      [
        {
-         "clave": "EC1001B"
+         "clave": "EC1001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "EG1001"
+         "clave": "EG1001",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MA1022"
+         "clave": "MA1022",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "P1010"
+         "clave": "P1010",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "P1011"
+         "clave": "P1011",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "RI1001B"
+         "clave": "RI1001B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "TC1001B"
+         "clave": "TC1001B",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "D1001B"
+         "clave": "D1001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "EC1002B"
+         "clave": "EC1002B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "EC1013"
+         "clave": "EC1013",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "EC1014"
+         "clave": "EC1014",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "EG1002"
+         "clave": "EG1002",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MA1023"
+         "clave": "MA1023",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "MA1024"
+         "clave": "MA1024",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TC1002B"
+         "clave": "TC1002B",
+         "periodos": [false, true, false]
        }
      ],
      [
        {
-         "clave": "EC1003B"
+         "clave": "EC1003B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "EC1015"
+         "clave": "EC1015",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "EC1016"
+         "clave": "EC1016",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "EG1003"
+         "clave": "EG1003",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1025"
+         "clave": "MA1025",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MA1026"
+         "clave": "MA1026",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "P1001B"
+         "clave": "P1001B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "VA1001B"
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
        }
      ],
      [
        {
-         "clave": "EG1004"
+         "clave": "EG1004",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "RI2001B"
+         "clave": "RI2001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "RI2002B"
+         "clave": "RI2002B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "RI2003B"
+         "clave": "RI2003B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "RI2039"
+         "clave": "RI2039",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "RI2040"
+         "clave": "RI2040",
+         "periodos": [false, true, true]
        }
      ],
      [
        {
-         "clave": "EG1005"
+         "clave": "EG1005",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "RI2004B"
+         "clave": "RI2004B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "RI2005B"
+         "clave": "RI2005B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "RI2006B"
+         "clave": "RI2006B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "RI2041"
+         "clave": "RI2041",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "RI2042"
+         "clave": "RI2042",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "RI2043"
+         "clave": "RI2043",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "VA3111"
+         "clave": "VA3111",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "VA3112"
+         "clave": "VA3112",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "VA3113"
+         "clave": "VA3113",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "VA3114"
+         "clave": "VA3114",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "VA3115"
+         "clave": "VA3115",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "VA3116"
+         "clave": "VA3116",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "OP3091"
+         "clave": "OP3091",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3092"
+         "clave": "OP3092",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3093"
+         "clave": "OP3093",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3094"
+         "clave": "OP3094",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3095"
+         "clave": "OP3095",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3096"
+         "clave": "OP3096",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "OP3001B"
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "RI3002B"
+         "clave": "RI3002B",
+         "periodos": [false, true, true]
        }
      ]
    ]
@@ -8523,150 +8666,194 @@
    "materias": [
      [
        {
-         "clave": "EG1001"
+         "clave": "EG1001",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "F1001B"
+         "clave": "F1001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1004B"
+         "clave": "F1004B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "F1005B"
+         "clave": "F1005B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1028"
+         "clave": "MA1028",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "Q1020"
+         "clave": "Q1020",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC1029"
+         "clave": "TC1029",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "BT1013"
+         "clave": "BT1013",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "EG1002"
+         "clave": "EG1002",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "F1008"
+         "clave": "F1008",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "F1013B"
+         "clave": "F1013B",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "F1014B"
+         "clave": "F1014B",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "MA1029"
+         "clave": "MA1029",
+         "periodos": [true, true, false]
        },
        {
-         "clave": "MA1031"
+         "clave": "MA1031",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC1003B"
+         "clave": "TC1003B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TC1030"
+         "clave": "TC1030",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "EG1003"
+         "clave": "EG1003",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MA1033"
+         "clave": "MA1033",
+         "periodos": [false, false, true]
        },
        {
-         "clave": "TC1004B"
+         "clave": "TC1004B",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "TC1031"
+         "clave": "TC1031",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "TC1032"
+         "clave": "TC1032",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "TE1019"
+         "clave": "TE1019",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "VA1001B"
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
        }
      ],
      [
        {
-         "clave": "EG1004"
+         "clave": "EG1004",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MA2016"
+         "clave": "MA2016",
+         "periodos": [false, true, false]
        },
        {
-         "clave": "TE2002B"
+         "clave": "TE2002B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TE2003B"
+         "clave": "TE2003B",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "TE2044"
+         "clave": "TE2044",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TE2045"
+         "clave": "TE2045",
+         "periodos": [false, false, true]
        }
      ],
      [
        {
-         "clave": "EG1005"
+         "clave": "EG1005",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "MR2002B"
+         "clave": "MR2002B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TC2036"
+         "clave": "TC2036",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "TE2004B"
+         "clave": "TE2004B",
+         "periodos": [false, true, true]
        },
        {
-         "clave": "TE2046"
+         "clave": "TE2046",
+         "periodos": [true, false, false]
        }
      ],
      [
        {
-         "clave": "OP3091"
+         "clave": "OP3091",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3092"
+         "clave": "OP3092",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3093"
+         "clave": "OP3093",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3094"
+         "clave": "OP3094",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3095"
+         "clave": "OP3095",
+         "periodos": [true, true, true]
        },
        {
-         "clave": "OP3096"
+         "clave": "OP3096",
+         "periodos": [true, true, true]
        }
      ],
      [
        {
-         "clave": "TE3001B"
+         "clave": "TE3001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TE3002B"
+         "clave": "TE3002B",
+         "periodos": [false, true, true]
        }
      ],
      [
        {
-         "clave": "OP3001B"
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
        },
        {
-         "clave": "TE3003B"
+         "clave": "TE3003B",
+         "periodos": [false, true, true]
        }
      ]
    ]
