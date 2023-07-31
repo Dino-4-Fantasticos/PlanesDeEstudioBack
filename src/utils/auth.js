@@ -42,10 +42,11 @@ async function authenticate() {
     throw extraerMensajeErrorCliente(resUserGet);
   }
 
+  
   const user = resUserGet.data;
-  // if (!user.esAdmin) {
-  //   throw new Error("Usuario no es administrador.");
-  // }
+  if (!user.esAdmin) {
+    throw new Error("Usuario no es administrador.");
+  }
 
   return resUserGet.data;
 }
