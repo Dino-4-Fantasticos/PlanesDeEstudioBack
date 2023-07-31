@@ -30,9 +30,11 @@ export default function Semestre({ semestre, semIdx, setMaterias }) {
       )}
       <button
         type="button"
-        onClick={() =>
-          setMaterias((m) => [...m.slice(0, semIdx), ...m.slice(semIdx + 1)])
-        }
+        onClick={() => {
+          const confirmMessage = `¿Remover semestre y todas sus materias?`;
+          if (!window.confirm(confirmMessage)) return;
+          setMaterias((m) => [...m.slice(0, semIdx), ...m.slice(semIdx + 1)]);
+        }}
         className="remover-semestre btn btn-danger mt-1"
       >
         Remover semestre

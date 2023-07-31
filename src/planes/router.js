@@ -1,11 +1,19 @@
 const router = require("express").Router();
 const Plan = require("./model");
 const Materia = require("../materias/model");
+const cors = require("cors");
 
 const {
   optionalStringToJSON,
   extraerMensajesError,
 } = require("../utils/functions");
+
+function containsErrors(res) {
+  if (!res) return false;
+  if (!res.errors) return false;
+  if (Object.keys(res.errors).length === 0) return false;
+  return true;
+}
 
 /** Guardar cada una de las materias en la base de datos */
 async function guardarMaterias(data) {
@@ -53,7 +61,7 @@ async function guardarMaterias(data) {
 }
 
 // CREATE
-router.post("/", async (req, res) => {
+router.post("/", cors(), async (req, res) => {
   const data = req.body || {};
 
   // Guardar materias
@@ -81,7 +89,7 @@ router.post("/", async (req, res) => {
 });
 
 // READ
-router.get("/", async (req, res) => {
+router.get("/", cors(), async (req, res) => {
   const { query = {} } = req;
   const resFind = await Plan.find(query, "-materias", { sort: { siglas: 1 } })
     .lean()
@@ -95,7 +103,7 @@ router.get("/", async (req, res) => {
   return res.json(resFind);
 });
 
-router.get("/:siglas", async (req, res) => {
+router.get("/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const resFind = await Plan.findOne({ siglas }).catch((err) => err);
   if (resFind instanceof Error) {
@@ -119,7 +127,7 @@ router.get("/:siglas", async (req, res) => {
 });
 
 // UPDATE
-router.put("/:siglas", async (req, res) => {
+router.put("/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const planToUpdate = await Plan.findOne({ siglas }).catch((err) => err);
   if (planToUpdate instanceof Error) {
@@ -138,8 +146,7 @@ router.put("/:siglas", async (req, res) => {
   if (resGuardarMaterias instanceof Error)
     return res.status(400).json({
       err: { materias: optionalStringToJSON(resGuardarMaterias.message) },
-      msg:
-        "Hubo un error al guardar las materias para actualizar el plan de estudios.",
+      msg: "Hubo un error al guardar las materias para actualizar el plan de estudios.",
     });
 
   for (const [key, value] of Object.entries(data)) {
@@ -157,7 +164,7 @@ router.put("/:siglas", async (req, res) => {
 });
 
 // DELETE
-router.delete("/:siglas", async (req, res) => {
+router.delete("/:siglas", cors(), async (req, res) => {
   const { siglas } = req.params;
   const resDelete = await Plan.findOneAndDelete({ siglas }).catch((err) => err);
   if (resDelete instanceof Error) {
@@ -175,7 +182,7 @@ router.delete("/:siglas", async (req, res) => {
 });
 
 // VALIDATE - Ruta para validar la adición o edición de UNA materia.
-router.post("/validate-materia", async (req, res) => {
+router.post("/validate-materia", cors(), async (req, res) => {
   const {
     esTec21 = false,
     materias,
@@ -184,14 +191,23 @@ router.post("/validate-materia", async (req, res) => {
     editMode,
   } = req.body;
 
-  // Validación de materia individualmente
+  // Validación de nueva materia individual
   const materiaDoc = new Materia(nuevaMateria);
-  const resMateriaValidate = materiaDoc.validateSync();
-  if (resMateriaValidate instanceof Error) {
-    const errors = resMateriaValidate.errors;
-    if (errors.clave && errors.clave.kind === "unique") {
-      delete resMateriaValidate.errors.clave;
-    }
+  let resMateriaValidate = materiaDoc.validateSync();
+  const badPeriodos =
+    !nuevaMateria.periodos || nuevaMateria.periodos.every((p) => !p);
+  if (esTec21 && badPeriodos) {
+    resMateriaValidate = resMateriaValidate || { errors: {} };
+    resMateriaValidate.errors.periodos = {
+      message:
+        "Los periodos en los que se imparte la materia es un campo obligatorio para cada materia dentro de un plan Tec21.",
+    };
+  }
+  const { errors: { clave: { kind } = {} } = {} } = resMateriaValidate || {};
+  if (kind === "unique") {
+    delete resMateriaValidate.errors.clave;
+  }
+  if (containsErrors(resMateriaValidate)) {
     return res.status(400).json({
       err: extraerMensajesError(resMateriaValidate),
       msg: "La nueva materia no pasó la validación.",
@@ -212,8 +228,7 @@ router.post("/validate-materia", async (req, res) => {
       delete resPlanValidate.errors.materias;
     }
   }
-  const containsErrors = Object.keys(resPlanValidate.errors).length > 0;
-  if (resPlanValidate instanceof Error && containsErrors) {
+  if (containsErrors(resPlanValidate)) {
     return res.status(400).json({
       err: extraerMensajesError(resPlanValidate),
       msg: "La nueva materia no pasó la validación.",

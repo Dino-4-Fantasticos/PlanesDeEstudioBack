@@ -8,7 +8,7 @@
     "start-client": "react-scripts start",
     "start-server": "nodemon start.js",
     "start": "node start.js",
-    "test": "concurrently \"npm run test-server\" \"npm run test-client\"",
+    "test": "npm run test-server && npm run test-client",
     "test-server": "jest --config=server.jest.config.js",
     "test-client": "react-scripts test --watchAll=false",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-build",
