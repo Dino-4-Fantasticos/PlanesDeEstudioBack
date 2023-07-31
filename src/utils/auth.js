@@ -1,32 +1,11 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-const { OAuth2Client } = require('google-auth-library')
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const G_CLIENT_ID = process.env.REACT_APP_G_CLIENT_ID;
 
 /** Nombre de la cookie utilizada para guardar la sesión de usuario. */
 const TOKEN_NAME = "pde_id_admin";
-
-/**
- * @description Function to decode Google OAuth token
- * @param token: string
- * @returns ticket object
- */
-const getDecodedOAuthJwtGoogle = async token => {
-  try {
-    const client = new OAuth2Client(G_CLIENT_ID)
-
-    const ticket = await client.verifyIdToken({
-      idToken: token,
-      audience: G_CLIENT_ID,
-    })
-
-    return ticket
-  } catch (error) {
-    return { status: 500, data: error }
-  }
-}
 
 function extraerMensajeErrorCliente(res) {
   const err = new Error();
@@ -73,7 +52,6 @@ async function authenticate() {
 
 /** Guardar la sesión en una cookie y refrescar la página. */
 async function login(credentialResponse) {
-  console.log('login', credentialResponse)
   const resLogin = await axios
     .post(`${BACKEND_URL}/login/`, credentialResponse)
     .catch((err) => err);
@@ -94,4 +72,4 @@ function logout() {
   window.location = "/login";
 }
 
-export { G_CLIENT_ID, TOKEN_NAME, getDecodedOAuthJwtGoogle, authenticate, login, logout };
+export { G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };

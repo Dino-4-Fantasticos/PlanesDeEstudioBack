@@ -35,25 +35,15 @@ router.get("/", cors(), async (req, res) => {
 
 router.get("/:matricula", cors(), async (req, res) => {
   const { matricula } = req.params;
-  // const resFind = await User.findOne({ matricula }).catch((err) => err);
-  // if (resFind instanceof Error) {
-  //   return res.status(400).json({ msg: "Hubo un error al obtener usuario." });
-  // }
-  // if (resFind === null) {
-  //   return res.status(400).json({ msg: "No se encontró usuario registrado." });
-  // }
+  const resFind = await User.findOne({ matricula }).catch((err) => err);
+  if (resFind instanceof Error) {
+    return res.status(400).json({ msg: "Hubo un error al obtener usuario." });
+  }
+  if (resFind === null) {
+    return res.status(400).json({ msg: "No se encontró usuario registrado." });
+  }
 
-  // const matricula = '1010101'
-
-  const newUsuario = new User({
-    matricula,
-    nombre: 'Alejandra',
-    apellido: 'García' ,
-    correo: 'correo@correo',
-    urlFoto: 'https://twitter.com/alegayndra/photo',
-  });
-
-  return res.json(newUsuario);
+  return res.status(200).json(resFind);
 });
 
 // UPDATE
