@@ -43,9 +43,9 @@ export default function App() {
         <Header />
         <div className="spacer" />
         <Switch>
-          <Route path="/" exact component={PanelAdmin} />
-          <Route path="/planes" component={PlanesRoutes} />
-          <Route path="/usuarios" component={UsuariosIndex} />
+          <Route path="/" exact element={<PanelAdmin />} />
+          <Route path="planes/*" element={<PlanesRoutes />} />
+          <Route path="usuarios/" element={<UsuariosIndex />} />
         </Switch>
         <div className="spacer" />
         <Footer />
