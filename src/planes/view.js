@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes as Switch } from "react-router-dom";
 import "./_view/style.scss";
 
 import PlanesIndex from "./_view/index";

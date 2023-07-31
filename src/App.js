@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes as Switch } from "react-router-dom";
 import "./App.scss";
 
 import Header from "./header/view";
