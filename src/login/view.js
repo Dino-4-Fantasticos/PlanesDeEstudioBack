@@ -1,4 +1,4 @@
-import { GoogleLogin } from "react-google-login";
+import { GoogleLogin } from '@react-oauth/google';
 import { login, G_CLIENT_ID } from "../utils/auth";
 
 import "./style.scss";

@@ -9,10 +9,6 @@ const schema = new Schema({
     required: [true, "La matrícula es un campo obligatorio."],
     unique: true,
     uniqueCaseInsensitive: true,
-    match: [
-      /^[AL]0[0-9]{7}$/,
-      "La matrícula debe cumplir con el formato completo. [A0.......].",
-    ],
   },
 
   /** ¿El usuario tiene acceso a las funciones de administrador? */
@@ -27,10 +23,6 @@ const schema = new Schema({
     required: [true, "El correo electrónico es un campo obligatorio."],
     unique: true,
     uniqueCaseInsensitive: true,
-    match: [
-      /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@(?:tec.mx|itesm.mx)$/,
-      "El correo electrónico debe contener una dirección válida del ITESM. [@itesm.mx / @tec.mx].",
-    ],
   },
 
   /** Nombre(s) del usuario registrado. [Ej: Luis Alberto] */

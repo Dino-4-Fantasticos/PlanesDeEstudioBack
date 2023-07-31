@@ -43,7 +43,7 @@ router.get("/:matricula", cors(), async (req, res) => {
     return res.status(400).json({ msg: "No se encontró usuario registrado." });
   }
 
-  return res.json(resFind);
+  return res.status(200).json(resFind);
 });
 
 // UPDATE

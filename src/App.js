@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes as Switch } from "react-router-dom";
 import "./App.scss";
 
 import Header from "./header/view";
@@ -43,9 +43,9 @@ export default function App() {
         <Header />
         <div className="spacer" />
         <Switch>
-          <Route path="/" exact component={PanelAdmin} />
-          <Route path="/planes" component={PlanesRoutes} />
-          <Route path="/usuarios" component={UsuariosIndex} />
+          <Route path="/" exact element={<PanelAdmin />} />
+          <Route path="planes/*" element={<PlanesRoutes />} />
+          <Route path="usuarios/" element={<UsuariosIndex />} />
         </Switch>
         <div className="spacer" />
         <Footer />

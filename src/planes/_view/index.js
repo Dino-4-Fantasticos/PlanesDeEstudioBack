@@ -24,7 +24,7 @@ async function fetchPlanes(setPlanes) {
 
 /** Función para filtrar los planes de estudios. */
 function filtrarPlanes(planes, filtroNombre, filtroTec21) {
-  return planes.filter((p) => {
+  return planes?.filter((p) => {
     if (
       !stringsMatch(p.siglas, filtroNombre) &&
       !stringsMatch(p.nombre, filtroNombre)
@@ -37,7 +37,7 @@ function filtrarPlanes(planes, filtroNombre, filtroTec21) {
         return false;
     }
     return true;
-  });
+  }) || [];
 }
 
 /** Lista de todos los planes registrados. */
@@ -80,7 +80,7 @@ export default function PlanesIndex() {
           </select>
         </div>
       </form>
-      {planesFiltrados.map((plan, idx) => (
+      {planesFiltrados?.map((plan, idx) => (
         <PlanSummary key={`plan-${idx}`} {...{ plan }} />
       ))}
       <div className="text-right">
