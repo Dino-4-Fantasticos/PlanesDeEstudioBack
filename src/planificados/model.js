@@ -20,11 +20,21 @@ const etiquetaSchema = {
 };
 
 const materiaGuardadaSchema = {
-  // Color con el que se guarda la materia. [Ej. #00FFEE]
+  // Posición del color dentro de la lista de etiquetas con el que se guarda la materia. [Ej. 0]
   color: {
-    type: String,
+    type: Number,
     required: [true, "Es necesario asignar un color a la materia."],
-    match: colorMatch,
+  },
+
+  // Clave de la materia a la cual está relacionada en el plan de estudios
+  clave: {
+    type: String,
+    uppercase: true,
+    required: [true, "La clave de la materia es un campo obligatorio."],
+    match: [
+      /^[A-Z]{1,2}[0-9]{4}[A-Z]?$/,
+      "La clave de materia debe contener <1 o 2 letras><4 números>[0 o 1 letra al final].",
+    ],
   },
 };
 
@@ -62,9 +72,8 @@ const schema = new Schema({
 
   /** Personalizaciones a las distintas materias del plan de estudios. */
   materias: {
-    type: Map,
-    of: materiaGuardadaSchema,
-  },
+    type: [[materiaGuardadaSchema]],
+  }
 });
 
 /** Planificación específica de un plan de estudios. */

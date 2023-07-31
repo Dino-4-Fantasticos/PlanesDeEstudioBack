@@ -20,8 +20,10 @@ function optionalStringToJSON(jsonString) {
 /** Extraer los mensajes de error de un objeto estilo Error Mongoose */
 function extraerMensajesError({ errors }) {
   const returnErrors = {};
-  for (const [key, obj] of Object.entries(errors)) {
-    returnErrors[key] = optionalStringToJSON(obj.message);
+  if (errors) {
+    for (const [key, obj] of Object.entries(errors)) {
+      returnErrors[key] = optionalStringToJSON(obj.message);
+    }
   }
   return returnErrors;
 }

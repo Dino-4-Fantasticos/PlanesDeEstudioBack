@@ -8,6 +8,9 @@ app.use(express.json());
 const usersRouter = require("./src/users/router");
 app.use("/api/users", usersRouter);
 
+const materiasRouter = require("./src/materias/router");
+app.use("/api/materias", materiasRouter);
+
 const planesRouter = require("./src/planes/router");
 app.use("/api/planes", planesRouter);
 

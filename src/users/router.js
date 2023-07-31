@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const User = require("./model");
+const cors = require("cors");
 
 // CREATE
-router.post("/", async (req, res) => {
+router.post("/", cors(), async (req, res) => {
   const data = req.body || {};
   const newUser = new User(data);
   const resSave = await newUser.save().catch((err) => err);
@@ -19,9 +20,12 @@ router.post("/", async (req, res) => {
 });
 
 // READ
-router.get("/", async (req, res) => {
+router.get("/", cors(), async (req, res) => {
   const { query = {} } = req;
-  const resFind = await User.find(query).catch((err) => err);
+  const resFind = await User.find(query)
+    .sort("matricula")
+    .lean()
+    .catch((err) => err);
   if (resFind instanceof Error) {
     return res.status(400).json({ msg: "Hubo un error al obtener usuarios." });
   }
@@ -29,7 +33,7 @@ router.get("/", async (req, res) => {
   return res.json(resFind);
 });
 
-router.get("/:matricula", async (req, res) => {
+router.get("/:matricula", cors(), async (req, res) => {
   const { matricula } = req.params;
   const resFind = await User.findOne({ matricula }).catch((err) => err);
   if (resFind instanceof Error) {
@@ -43,7 +47,7 @@ router.get("/:matricula", async (req, res) => {
 });
 
 // UPDATE
-router.put("/:matricula", async (req, res) => {
+router.put("/:matricula", cors(), async (req, res) => {
   const { matricula } = req.params;
   const userToUpdate = await User.findOne({ matricula }).catch((err) => err);
   if (userToUpdate instanceof Error) {
@@ -74,7 +78,7 @@ router.put("/:matricula", async (req, res) => {
 });
 
 // DELETE
-router.delete("/:matricula", async (req, res) => {
+router.delete("/:matricula", cors(), async (req, res) => {
   const { matricula } = req.params;
   const resDelete = await User.findOneAndDelete({ matricula }).catch(
     (err) => err

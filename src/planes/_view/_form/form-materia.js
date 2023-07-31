@@ -1,8 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import PlanFormContext from "./context";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
+const DEFAULT_HORAS_CLASE = 3;
+const DEFAULT_HORAS_LABORATORIO = 0;
+const DEFAULT_UNIDADES = 8;
+const DEFAULT_CREDITOS_ACADEMICOS = 3;
+const DEFAULT_UNIDADES_DE_CARGA = 3.5;
 
 /** Función para editar la matriz de materias. */
 function agregarMateria(materia, setMaterias, semIdx) {
@@ -55,20 +61,24 @@ export default function FormMateria({
   const [errNombre, setErrNombre] = useState("");
   const [periodos, setPeriodos] = useState(materia.periodos || periodosDefault);
   const [errPeriodos, setErrPeriodos] = useState("");
-  const [horasClase, setHorasClase] = useState(materia.horasClase || "");
+  const [horasClase, setHorasClase] = useState(
+    materia.horasClase ?? DEFAULT_HORAS_CLASE
+  );
   const [errHorasClase, setErrHorasClase] = useState("");
   const [horasLaboratorio, setHorasLaboratorio] = useState(
-    materia.horasLaboratorio === 0 ? 0 : materia.horasLaboratorio || ""
+    materia.horasLaboratorio ?? DEFAULT_HORAS_LABORATORIO
   );
   const [errHorasLaboratorio, setErrHorasLaboratorio] = useState("");
-  const [unidades, setUnidades] = useState(materia.unidades || "");
+  const [unidades, setUnidades] = useState(
+    materia.unidades ?? DEFAULT_UNIDADES
+  );
   const [errUnidades, setErrUnidades] = useState("");
   const [creditosAcademicos, setCreditosAcademicos] = useState(
-    materia.creditosAcademicos || ""
+    materia.creditosAcademicos ?? DEFAULT_CREDITOS_ACADEMICOS
   );
   const [errCreditosAcademicos, setErrCreditosAcademicos] = useState("");
   const [unidadesDeCarga, setUnidadesDeCarga] = useState(
-    materia.unidadesDeCarga || ""
+    materia.unidadesDeCarga ?? DEFAULT_UNIDADES_DE_CARGA
   );
   const [errUnidadesDeCarga, setErrUnidadesDeCarga] = useState("");
 
@@ -94,6 +104,10 @@ export default function FormMateria({
       .post(`${BACKEND_URL}/planes/validate-materia`, postData)
       .catch((err) => err);
     if (resValidate instanceof Error) {
+      if (!resValidate.response) {
+        alert("Hubo un error comunicación con el servidor.");
+        return;
+      }
       const errors = resValidate.response.data.err;
       const { materias } = errors;
       if (materias) {
@@ -118,10 +132,28 @@ export default function FormMateria({
     }
   }
 
+  useEffect(() => {
+    async function fetchInfoMateria() {
+      if (!/^[A-Z]{1,2}[0-9]{4}[A-Z]?$/.test(clave)) return;
+      const resGet = await axios
+        .get(`${BACKEND_URL}/materias/${clave}`)
+        .catch((err) => err);
+      if (resGet instanceof Error) return;
+      const { data } = resGet;
+      setNombre(data.nombre);
+      setHorasClase(data.horasClase);
+      setHorasLaboratorio(data.horasLaboratorio);
+      setUnidades(data.unidades);
+      setCreditosAcademicos(data.creditosAcademicos);
+      setUnidadesDeCarga(data.unidadesDeCarga);
+      if (esTec21 && data.periodos) setPeriodos(data.periodos);
+    }
+    fetchInfoMateria();
+  }, [clave, esTec21]);
+
   return (
     <section className="card new-materia p-2 mt-1">
       <div className="form-group mb-1">
-        <label className="text-dark">Clave:</label>
         {editMode && (
           <input
             type="text"
@@ -142,6 +174,7 @@ export default function FormMateria({
             autoComplete="nope"
             className="form-control clave-form"
             placeholder="Ej. [TC1018]"
+            maxLength="7"
             value={clave}
             onChange={(e) => {
               setClave(e.target.value.toUpperCase());
@@ -149,11 +182,11 @@ export default function FormMateria({
             }}
           />
         )}
+        <label className="form-label">Clave:</label>
         <p className="text-danger">{errClave}</p>
       </div>
 
       <div className="form-group">
-        <label className="text-dark">Nombre:</label>
         <input
           type="text"
           autoComplete="nope"
@@ -165,6 +198,7 @@ export default function FormMateria({
             setErrNombre("");
           }}
         />
+        <label className="form-label">Nombre:</label>
         <p className="text-danger">{errNombre}</p>
       </div>
 
@@ -260,27 +294,36 @@ export default function FormMateria({
             <button
               type="button"
               className={`flex-grow-1 ${periodos[0] && "bg-primary"}`}
-              onClick={() => setPeriodos((p) => [!p[0], p[1], p[2]])}
+              onClick={() => {
+                setPeriodos((p) => [!p[0], p[1], p[2]]);
+                setErrPeriodos("");
+              }}
             ></button>
             <button
               type="button"
               className={`flex-grow-1 ${periodos[1] && "bg-primary"}`}
-              onClick={() => setPeriodos((p) => [p[0], !p[1], p[2]])}
+              onClick={() => {
+                setPeriodos((p) => [p[0], !p[1], p[2]]);
+                setErrPeriodos("");
+              }}
             ></button>
             <button
               type="button"
               className={`flex-grow-1 ${periodos[2] && "bg-primary"}`}
-              onClick={() => setPeriodos((p) => [p[0], p[1], !p[2]])}
+              onClick={() => {
+                setPeriodos((p) => [p[0], p[1], !p[2]]);
+                setErrPeriodos("");
+              }}
             ></button>
           </div>
-          <small className="text-danger">{errPeriodos}</small>
+          <p className="text-danger">{errPeriodos}</p>
         </div>
       )}
 
       <button
         type="button"
         onClick={guardarMateria}
-        className="btn btn-primary btn-guardar-materia mb-1"
+        className="btn btn-primary btn-guardar-materia mb-1 mt-2"
       >
         Guardar nueva materia
       </button>
