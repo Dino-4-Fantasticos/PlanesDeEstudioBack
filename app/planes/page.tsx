@@ -18,7 +18,8 @@ const filtroTec21Opciones = {
 };
 
 async function fetchPlanes(setPlanes) {
-  const resGet = await axios.get(`${BACKEND_URL}/planes`).catch((err) => err);
+  console.log(BACKEND_URL)
+  const resGet = await axios.get(`/api/planes`).catch((err) => err);
   if (resGet instanceof Error) {
     // alert(resGet.message);
     setPlanes(null);
