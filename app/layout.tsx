@@ -1,6 +1,6 @@
-import './globals.css'
-import "bootstrap/dist/css/bootstrap.min.css";
+// import './globals.css'
 import "../styles/App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import React, { useEffect, useState, useCallback } from "react";
 // import { SessionProvider } from "next-auth/react"
 import type { Metadata } from 'next'
