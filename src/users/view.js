@@ -3,8 +3,7 @@ import axios from "axios";
 import manageAccountsIcon from "../assets/manage_accounts_white_24dp.svg";
 import { stringsMatch } from "../utils/functions.es6";
 import "./style.scss";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+import { BACKEND_URL } from '../utils/auth';
 
 async function fetchUsuarios(setUsuarios) {
   const resGet = await axios.get(`${BACKEND_URL}/users`).catch((err) => err);
@@ -89,7 +88,9 @@ export default function UsuariosIndex() {
   const [usuarios, setUsuarios] = useState([]);
   const [filtro, setFiltro] = useState("");
 
-  useEffect(() => fetchUsuarios(setUsuarios), []);
+  useEffect(() => {
+    fetchUsuarios(setUsuarios)
+  }, []);
   const usuariosFiltrados = filtrarUsuarios(usuarios, filtro);
 
   return (

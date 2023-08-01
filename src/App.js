@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { BrowserRouter as Router, Route, Routes as Switch } from "react-router-dom";
 import "./App.scss";
 
@@ -12,22 +12,23 @@ import Footer from "./footer/view";
 import { UserContext } from "./utils/context";
 import { authenticate } from "./utils/auth";
 
-/** Función que verifica si la sesión está iniciada y cambia el loggedUser correspondientemente. */
-async function checkSession(setLoggedUser) {
-  const resAuth = await authenticate().catch((err) => err);
-  if (resAuth instanceof Error) {
-    alert(resAuth.message);
-    setLoggedUser(null);
-    return;
-  }
-  setLoggedUser(resAuth);
-}
-
 /** Componente principal de la aplicación. */
 export default function App() {
   const [loggedUser, setLoggedUser] = useState(undefined);
 
-  useEffect(() => checkSession(setLoggedUser), []);
+  const checkSession = useCallback(async () => {
+    await authenticate()
+      .then(resAuth => setLoggedUser(resAuth))
+      .catch((err) => {
+        console.error('error iniciando sesion', err);
+        alert(err.message);
+        setLoggedUser(null);
+      });
+  }, [setLoggedUser])
+
+  useEffect(() => {
+    checkSession()
+  }, [checkSession]);
 
   if (loggedUser === undefined) {
     return <div>Cargando...</div>;
