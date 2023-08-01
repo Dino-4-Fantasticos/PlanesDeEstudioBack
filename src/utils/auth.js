@@ -73,4 +73,4 @@ function logout() {
   window.location = "/login";
 }
 
-export { G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
+export { BACKEND_URL, G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
