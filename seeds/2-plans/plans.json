@@ -1,0 +1,9261 @@
+[
+  {
+    "siglas": "LCMD17",
+    "nombre": "Licenciatura en Comunicación y Medios Digitales",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "CO1008"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "OP1008"
+        },
+        {
+          "clave": "OP1008"
+        },
+        {
+          "clave": "OP1008"
+        },
+        {
+          "clave": "OP1008"
+        }
+      ],
+      [
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "H2003"
+        },
+        {
+          "clave": "OP1010"
+        },
+        {
+          "clave": "OP1010"
+        },
+        {
+          "clave": "OP1010"
+        }
+      ],
+      [
+        {
+          "clave": "AV1006"
+        },
+        {
+          "clave": "CC1014"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "OP1013"
+        },
+        {
+          "clave": "OP1013"
+        },
+        {
+          "clave": "OP1013"
+        },
+        {
+          "clave": "OP1013"
+        }
+      ],
+      [
+        {
+          "clave": "AV1007"
+        },
+        {
+          "clave": "AV2004"
+        },
+        {
+          "clave": "CO2004"
+        },
+        {
+          "clave": "CO2008"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "H1048"
+        },
+        {
+          "clave": "OP1016"
+        }
+      ],
+      [
+        {
+          "clave": "AV1005"
+        },
+        {
+          "clave": "AV3010"
+        },
+        {
+          "clave": "CO2006"
+        },
+        {
+          "clave": "CO2009"
+        },
+        {
+          "clave": "CR1000"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "TC1014"
+        }
+      ],
+      [
+        {
+          "clave": "AV3001"
+        },
+        {
+          "clave": "AV3009"
+        },
+        {
+          "clave": "CO3006"
+        },
+        {
+          "clave": "CR2003"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "TC1015"
+        }
+      ],
+      [
+        {
+          "clave": "OP3051"
+        },
+        {
+          "clave": "OP3052"
+        },
+        {
+          "clave": "OP3053"
+        },
+        {
+          "clave": "OP3054"
+        },
+        {
+          "clave": "OP3055"
+        },
+        {
+          "clave": "OP3056"
+        }
+      ],
+      [
+        {
+          "clave": "OP3061"
+        },
+        {
+          "clave": "OP3062"
+        },
+        {
+          "clave": "OP3063"
+        },
+        {
+          "clave": "OP3064"
+        },
+        {
+          "clave": "OP3065"
+        },
+        {
+          "clave": "OP3066"
+        }
+      ],
+      [
+        {
+          "clave": "CO3009"
+        },
+        {
+          "clave": "VA3101"
+        },
+        {
+          "clave": "VA3102"
+        },
+        {
+          "clave": "VA3103"
+        },
+        {
+          "clave": "VA3104"
+        },
+        {
+          "clave": "VA3105"
+        },
+        {
+          "clave": "VA3106"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "ITC11",
+    "nombre": "Ingeniería en Tecnologías Computacionales",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "TC1022"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "TC1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "TC1014"
+        }
+      ],
+      [
+        {
+          "clave": "TC1016"
+        },
+        {
+          "clave": "TC1015"
+        },
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "TC1016"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "H1040"
+        }
+      ],
+      [
+        {
+          "clave": "TC1018"
+        },
+        {
+          "clave": "TC1019"
+        },
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "H1018"
+        }
+      ],
+      [
+        {
+          "clave": "TC1020"
+        },
+        {
+          "clave": "TC2017"
+        },
+        {
+          "clave": "TC2021"
+        },
+        {
+          "clave": "TC2019"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "TC2018"
+        }
+      ],
+      [
+        {
+          "clave": "TC2004"
+        },
+        {
+          "clave": "TC2008"
+        },
+        {
+          "clave": "MA2019"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "TC2022"
+        },
+        {
+          "clave": "TC2020"
+        }
+      ],
+      [
+        {
+          "clave": "TC2025"
+        },
+        {
+          "clave": "TC2024"
+        },
+        {
+          "clave": "TC3045"
+        },
+        {
+          "clave": "TC3041"
+        },
+        {
+          "clave": "TI2011"
+        },
+        {
+          "clave": "EM1005"
+        }
+      ],
+      [
+        {
+          "clave": "TC2006"
+        },
+        {
+          "clave": "TC2026"
+        },
+        {
+          "clave": "TC3002"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "TC2027"
+        },
+        {
+          "clave": "HS2005"
+        }
+      ],
+      [
+        {
+          "clave": "TC2007"
+        },
+        {
+          "clave": "TC3022"
+        },
+        {
+          "clave": "TC3048"
+        },
+        {
+          "clave": "TC3049"
+        },
+        {
+          "clave": "TC3052"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "TC2011"
+        },
+        {
+          "clave": "TC3054"
+        },
+        {
+          "clave": "TI3035"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        },
+        {
+          "clave": "HS2006"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LEM11",
+    "nombre": "Licenciatura en Mercadotecnia",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "MT1004"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "AD1006"
+        },
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "D1022"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1018"
+        }
+      ],
+      [
+        {
+          "clave": "CD1003"
+        },
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "FZ1005"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "NI1001"
+        },
+        {
+          "clave": "RH1000"
+        }
+      ],
+      [
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "NI1002"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "CD2007"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MT2006"
+        },
+        {
+          "clave": "NI2017"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ2016"
+        },
+        {
+          "clave": "MT2007"
+        },
+        {
+          "clave": "MT2020"
+        },
+        {
+          "clave": "MT2021"
+        },
+        {
+          "clave": "NI2018"
+        }
+      ],
+      [
+        {
+          "clave": "CF2018"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MT2013"
+        },
+        {
+          "clave": "MT3019"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "MT2009"
+        },
+        {
+          "clave": "MT3020"
+        },
+        {
+          "clave": "MT3021"
+        },
+        {
+          "clave": "MT3022"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "MT3023"
+        },
+        {
+          "clave": "MT3024"
+        },
+        {
+          "clave": "MT3025"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IBT17",
+    "nombre": "Ingeniería en Biotecnología",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "BT1012"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "OP1008"
+        },
+        {
+          "clave": "OP1009"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "OP1010"
+        },
+        {
+          "clave": "OP1011"
+        },
+        {
+          "clave": "OP1012"
+        }
+      ],
+      [
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "OP1013"
+        },
+        {
+          "clave": "OP1014"
+        },
+        {
+          "clave": "OP1015"
+        },
+        {
+          "clave": "TC1017"
+        },
+        {
+          "clave": "VA1000"
+        }
+      ],
+      [
+        {
+          "clave": "BT1007"
+        },
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "OP1016"
+        },
+        {
+          "clave": "OP1017"
+        },
+        {
+          "clave": "OP1018"
+        }
+      ],
+      [
+        {
+          "clave": "BT2011"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "IQ2003"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "Q1010"
+        },
+        {
+          "clave": "Q2015"
+        }
+      ],
+      [
+        {
+          "clave": "BT2012"
+        },
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "IQ3006"
+        }
+      ],
+      [
+        {
+          "clave": "OP3051"
+        },
+        {
+          "clave": "OP3052"
+        },
+        {
+          "clave": "OP3053"
+        },
+        {
+          "clave": "OP3054"
+        },
+        {
+          "clave": "OP3055"
+        },
+        {
+          "clave": "OP3056"
+        }
+      ],
+      [
+        {
+          "clave": "UDC"
+        },
+        {
+          "clave": "OP3062"
+        },
+        {
+          "clave": "OP3063"
+        },
+        {
+          "clave": "OP3064"
+        },
+        {
+          "clave": "OP3065"
+        },
+        {
+          "clave": "OP3066"
+        }
+      ],
+      [
+        {
+          "clave": "BT3014"
+        },
+        {
+          "clave": "BT3025"
+        },
+        {
+          "clave": "VA3101"
+        },
+        {
+          "clave": "VA3102"
+        },
+        {
+          "clave": "VA3103"
+        },
+        {
+          "clave": "VA3104"
+        },
+        {
+          "clave": "VA3105"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IQA11",
+    "nombre": "Ingeniería Químico Administrador",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "IQ1004"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1014"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "IQ1001"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "Q1010"
+        }
+      ],
+      [
+        {
+          "clave": "IQ2000"
+        },
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "Q1007"
+        },
+        {
+          "clave": "Q2012"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "IN2004"
+        },
+        {
+          "clave": "IQ2003"
+        },
+        {
+          "clave": "IQ2004"
+        },
+        {
+          "clave": "IQ2005"
+        },
+        {
+          "clave": "Q2015"
+        },
+        {
+          "clave": "Q3001"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2022"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "IQ3003"
+        },
+        {
+          "clave": "IQ3006"
+        },
+        {
+          "clave": "IQ3007"
+        },
+        {
+          "clave": "IQ3013"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "IN2027"
+        },
+        {
+          "clave": "IQ2006"
+        },
+        {
+          "clave": "IQ3008"
+        },
+        {
+          "clave": "IQ3011"
+        },
+        {
+          "clave": "MR2012"
+        }
+      ],
+      [
+        {
+          "clave": "DL3016"
+        },
+        {
+          "clave": "IN3036"
+        },
+        {
+          "clave": "IQ3009"
+        },
+        {
+          "clave": "IQ3010"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "IN3035"
+        },
+        {
+          "clave": "IQ3016"
+        },
+        {
+          "clave": "IQ3017"
+        },
+        {
+          "clave": "IQ3039"
+        },
+        {
+          "clave": "MR2015"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IMA11",
+    "nombre": "Ingeniería Mecánico Administrador",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "M1007"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "M1003"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "M1005"
+        },
+        {
+          "clave": "M1006"
+        },
+        {
+          "clave": "M2023"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "Q1004"
+        }
+      ],
+      [
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2007"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "TE1013"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "IN2004"
+        },
+        {
+          "clave": "IN2018"
+        },
+        {
+          "clave": "M2010"
+        },
+        {
+          "clave": "M2026"
+        },
+        {
+          "clave": "MA1019"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2022"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "M2014"
+        },
+        {
+          "clave": "M2016"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2020"
+        },
+        {
+          "clave": "M2020"
+        },
+        {
+          "clave": "M2021"
+        },
+        {
+          "clave": "M2030"
+        },
+        {
+          "clave": "M3014"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "M2017"
+        },
+        {
+          "clave": "M3015"
+        },
+        {
+          "clave": "M3017"
+        },
+        {
+          "clave": "M3036"
+        },
+        {
+          "clave": "MR2013"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "IN2021"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "M3016"
+        },
+        {
+          "clave": "M3018"
+        },
+        {
+          "clave": "M3038"
+        },
+        {
+          "clave": "MR3030"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IMT11",
+    "nombre": "Ingeniería en Mecatrónica",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "MR1002"
+        },
+        {
+          "clave": "Q1001"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "M1003"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "MR1001"
+        },
+        {
+          "clave": "Q1004"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "M1005"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "TE1002"
+        }
+      ],
+      [
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "M1006"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA3002"
+        },
+        {
+          "clave": "MR2000"
+        },
+        {
+          "clave": "MR2002"
+        },
+        {
+          "clave": "TE2032"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2023"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MR2005"
+        },
+        {
+          "clave": "TE1003"
+        },
+        {
+          "clave": "TE2035"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "M2007"
+        },
+        {
+          "clave": "M2028"
+        },
+        {
+          "clave": "MR2003"
+        },
+        {
+          "clave": "MR2004"
+        },
+        {
+          "clave": "TE2033"
+        }
+      ],
+      [
+        {
+          "clave": "M2029"
+        },
+        {
+          "clave": "M2031"
+        },
+        {
+          "clave": "MR2007"
+        },
+        {
+          "clave": "MR2009"
+        },
+        {
+          "clave": "MR2019"
+        },
+        {
+          "clave": "TE2023"
+        },
+        {
+          "clave": "TE2034"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "MR3009"
+        },
+        {
+          "clave": "MR3012"
+        },
+        {
+          "clave": "MR3026"
+        },
+        {
+          "clave": "MR3029"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "MR3016"
+        },
+        {
+          "clave": "MR3031"
+        },
+        {
+          "clave": "MR3032"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IIA11",
+    "nombre": "Ingeniería en Industrias Alimentarias",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        },
+        {
+          "clave": "TA1002"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1007"
+        },
+        {
+          "clave": "Q1014"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "BT1003"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "IQ1001"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "Q2000"
+        }
+      ],
+      [
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "IQ2000"
+        },
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "Q1010"
+        },
+        {
+          "clave": "Q2001"
+        },
+        {
+          "clave": "TA2008"
+        }
+      ],
+      [
+        {
+          "clave": "BT1007"
+        },
+        {
+          "clave": "BT2003"
+        },
+        {
+          "clave": "BT2011"
+        },
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "TA2000"
+        },
+        {
+          "clave": "TA2009"
+        }
+      ],
+      [
+        {
+          "clave": "BT2012"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "TA2010"
+        },
+        {
+          "clave": "TA2011"
+        },
+        {
+          "clave": "TA2012"
+        },
+        {
+          "clave": "TA2013"
+        },
+        {
+          "clave": "TA2014"
+        }
+      ],
+      [
+        {
+          "clave": "BT3012"
+        },
+        {
+          "clave": "BT3013"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2004"
+        },
+        {
+          "clave": "TA3018"
+        },
+        {
+          "clave": "TA3019"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "BT3001"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "TA3020"
+        },
+        {
+          "clave": "TA3021"
+        },
+        {
+          "clave": "TA3022"
+        },
+        {
+          "clave": "TA3023"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "BT3014"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "TA3004"
+        },
+        {
+          "clave": "TA3024"
+        },
+        {
+          "clave": "TA3025"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LMC11",
+    "nombre": "Licenciatura en Mercadotecnia y Comunicación",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "MT1005"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "D1022"
+        },
+        {
+          "clave": "DL1002"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1018"
+        }
+      ],
+      [
+        {
+          "clave": "AV1004"
+        },
+        {
+          "clave": "CC1012"
+        },
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "AV1000"
+        },
+        {
+          "clave": "CD1003"
+        },
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MT2006"
+        }
+      ],
+      [
+        {
+          "clave": "AV1001"
+        },
+        {
+          "clave": "AV2002"
+        },
+        {
+          "clave": "AV2005"
+        },
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "H1031"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MT2019"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "AV2004"
+        },
+        {
+          "clave": "AV2006"
+        },
+        {
+          "clave": "AV2011"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "MT2007"
+        },
+        {
+          "clave": "NI2018"
+        }
+      ],
+      [
+        {
+          "clave": "AV2009"
+        },
+        {
+          "clave": "AV3001"
+        },
+        {
+          "clave": "AV3012"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MT2013"
+        },
+        {
+          "clave": "MT3019"
+        },
+        {
+          "clave": "NI2017"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "AV3011"
+        },
+        {
+          "clave": "MT3021"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "MT3023"
+        },
+        {
+          "clave": "MT3026"
+        },
+        {
+          "clave": "MT3027"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IID17",
+    "nombre": "Ingeniería en Innovación y Desarrollo",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "NN1000"
+        },
+        {
+          "clave": "OP1008"
+        },
+        {
+          "clave": "OP1009"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "OP1010"
+        },
+        {
+          "clave": "OP1011"
+        },
+        {
+          "clave": "OP1012"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "MR2005"
+        },
+        {
+          "clave": "OP1013"
+        },
+        {
+          "clave": "OP1014"
+        },
+        {
+          "clave": "VA1000"
+        }
+      ],
+      [
+        {
+          "clave": "M1005"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "NN1002"
+        },
+        {
+          "clave": "OP1015"
+        },
+        {
+          "clave": "OP1016"
+        },
+        {
+          "clave": "OP1017"
+        }
+      ],
+      [
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "IN2018"
+        },
+        {
+          "clave": "IN2022"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "MR2003"
+        },
+        {
+          "clave": "NN1003"
+        },
+        {
+          "clave": "NN2002"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "IN2024"
+        },
+        {
+          "clave": "M2007"
+        },
+        {
+          "clave": "M2023"
+        }
+      ],
+      [
+        {
+          "clave": "OP3051"
+        },
+        {
+          "clave": "OP3052"
+        },
+        {
+          "clave": "OP3053"
+        },
+        {
+          "clave": "OP3054"
+        },
+        {
+          "clave": "OP3055"
+        },
+        {
+          "clave": "OP3056"
+        }
+      ],
+      [
+        {
+          "clave": "OP3061"
+        },
+        {
+          "clave": "OP3062"
+        },
+        {
+          "clave": "OP3063"
+        },
+        {
+          "clave": "OP3064"
+        },
+        {
+          "clave": "OP3065"
+        },
+        {
+          "clave": "OP3066"
+        }
+      ],
+      [
+        {
+          "clave": "NN3003"
+        },
+        {
+          "clave": "VA3101"
+        },
+        {
+          "clave": "VA3102"
+        },
+        {
+          "clave": "VA3103"
+        },
+        {
+          "clave": "VA3104"
+        },
+        {
+          "clave": "VA3105"
+        },
+        {
+          "clave": "VA3106"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IBT11",
+    "nombre": "Ingeniería en Biotecnología",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "BT1010"
+        },
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "BT1002"
+        },
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1007"
+        },
+        {
+          "clave": "Q1014"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "BT1003"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "IQ1001"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "Q2000"
+        }
+      ],
+      [
+        {
+          "clave": "BT1007"
+        },
+        {
+          "clave": "BT2003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "IQ2000"
+        },
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA2010"
+        }
+      ],
+      [
+        {
+          "clave": "BT2001"
+        },
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "IQ2003"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "OP3028"
+        },
+        {
+          "clave": "Q1010"
+        }
+      ],
+      [
+        {
+          "clave": "BT2002"
+        },
+        {
+          "clave": "BT2004"
+        },
+        {
+          "clave": "BT2005"
+        },
+        {
+          "clave": "BT3002"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2004"
+        },
+        {
+          "clave": "OP3029"
+        }
+      ],
+      [
+        {
+          "clave": "BT2006"
+        },
+        {
+          "clave": "BT3000"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "OP3030"
+        },
+        {
+          "clave": "OP3031"
+        }
+      ],
+      [
+        {
+          "clave": "BT3001"
+        },
+        {
+          "clave": "BT3013"
+        },
+        {
+          "clave": "MR2012"
+        },
+        {
+          "clave": "MR2015"
+        },
+        {
+          "clave": "OP3032"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "BT3005"
+        },
+        {
+          "clave": "BT3014"
+        },
+        {
+          "clave": "BT3025"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "OP3033"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IDA11",
+    "nombre": "Ingeniería en Diseño Automotriz",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "M1007"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "M1003"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "M1005"
+        },
+        {
+          "clave": "M1006"
+        },
+        {
+          "clave": "M2023"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "Q1004"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "M2007"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "TE1012"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2001"
+        },
+        {
+          "clave": "M2026"
+        },
+        {
+          "clave": "MA1019"
+        },
+        {
+          "clave": "MR2005"
+        },
+        {
+          "clave": "TE1003"
+        }
+      ],
+      [
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "M2021"
+        },
+        {
+          "clave": "M2027"
+        },
+        {
+          "clave": "M2028"
+        },
+        {
+          "clave": "M3028"
+        },
+        {
+          "clave": "MR2003"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "M2030"
+        },
+        {
+          "clave": "M2031"
+        },
+        {
+          "clave": "M3017"
+        },
+        {
+          "clave": "M3035"
+        },
+        {
+          "clave": "MR2013"
+        }
+      ],
+      [
+        {
+          "clave": "M2017"
+        },
+        {
+          "clave": "M3014"
+        },
+        {
+          "clave": "M3029"
+        },
+        {
+          "clave": "M3030"
+        },
+        {
+          "clave": "MR3027"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "Va2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "M3037"
+        },
+        {
+          "clave": "M3038"
+        },
+        {
+          "clave": "MR3025"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "ISD11",
+    "nombre": "Ingeniería en Sistemas Digitales y Robótica",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        },
+        {
+          "clave": "TC1014"
+        },
+        {
+          "clave": "TE1015"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1004"
+        },
+        {
+          "clave": "TC2016"
+        },
+        {
+          "clave": "TE1010"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "TC1018"
+        },
+        {
+          "clave": "TE1002"
+        },
+        {
+          "clave": "TE1011"
+        },
+        {
+          "clave": "TE2030"
+        }
+      ],
+      [
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "TE1003"
+        },
+        {
+          "clave": "TE1014"
+        },
+        {
+          "clave": "TE2032"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "MA3002"
+        },
+        {
+          "clave": "TC2018"
+        },
+        {
+          "clave": "TE2023"
+        },
+        {
+          "clave": "TE2024"
+        },
+        {
+          "clave": "TE2033"
+        },
+        {
+          "clave": "TE2034"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "MR2018"
+        },
+        {
+          "clave": "TC2008"
+        },
+        {
+          "clave": "TC2022"
+        },
+        {
+          "clave": "TE2031"
+        },
+        {
+          "clave": "TE2035"
+        }
+      ],
+      [
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "MR2004"
+        },
+        {
+          "clave": "TC2028"
+        },
+        {
+          "clave": "TE2038"
+        },
+        {
+          "clave": "TE2041"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MR2007"
+        },
+        {
+          "clave": "MR3028"
+        },
+        {
+          "clave": "TC3050"
+        },
+        {
+          "clave": "TE3059"
+        },
+        {
+          "clave": "TE3060"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "TC2026"
+        },
+        {
+          "clave": "TE3045"
+        },
+        {
+          "clave": "TE3061"
+        },
+        {
+          "clave": "TE3065"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LPO11",
+    "nombre": "Licenciatura en Psicología Organizacional",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CC1010"
+        },
+        {
+          "clave": "CC1014"
+        },
+        {
+          "clave": "CC1015"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "AD1006"
+        },
+        {
+          "clave": "CC1011"
+        },
+        {
+          "clave": "CC1012"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MA1016"
+        }
+      ],
+      [
+        {
+          "clave": "CC1013"
+        },
+        {
+          "clave": "CC2009"
+        },
+        {
+          "clave": "CO2004"
+        },
+        {
+          "clave": "FZ1005"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "RI1004"
+        }
+      ],
+      [
+        {
+          "clave": "CC2010"
+        },
+        {
+          "clave": "CD1003"
+        },
+        {
+          "clave": "CO2003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "CC2011"
+        },
+        {
+          "clave": "CC2012"
+        },
+        {
+          "clave": "CC2013"
+        },
+        {
+          "clave": "CC2014"
+        },
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "CF1010"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "D1002"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "NI1002"
+        },
+        {
+          "clave": "RH3012"
+        }
+      ],
+      [
+        {
+          "clave": "CF2018"
+        },
+        {
+          "clave": "CH2006"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "RH3013"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "CH2007"
+        },
+        {
+          "clave": "RH3014"
+        },
+        {
+          "clave": "RH3015"
+        },
+        {
+          "clave": "RH3016"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "CC3001"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "RH3017"
+        },
+        {
+          "clave": "RH3018"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IMD11",
+    "nombre": "Ingeniería Biomédico",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "BI1001"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "MD1029"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "MD1030"
+        },
+        {
+          "clave": "TE1002"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "MD1031"
+        },
+        {
+          "clave": "TE1003"
+        },
+        {
+          "clave": "TE2032"
+        }
+      ],
+      [
+        {
+          "clave": "BI1000"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA3002"
+        },
+        {
+          "clave": "MD1036"
+        },
+        {
+          "clave": "TE1014"
+        }
+      ],
+      [
+        {
+          "clave": "BI2005"
+        },
+        {
+          "clave": "BI2006"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "MD1040"
+        },
+        {
+          "clave": "MD1041"
+        },
+        {
+          "clave": "TE2033"
+        }
+      ],
+      [
+        {
+          "clave": "BI2007"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MD1045"
+        },
+        {
+          "clave": "MR2004"
+        },
+        {
+          "clave": "TE1010"
+        },
+        {
+          "clave": "TE2034"
+        },
+        {
+          "clave": "TE2035"
+        }
+      ],
+      [
+        {
+          "clave": "BI3010"
+        },
+        {
+          "clave": "BI3011"
+        },
+        {
+          "clave": "BI3012"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "TE2023"
+        },
+        {
+          "clave": "TE2024"
+        }
+      ],
+      [
+        {
+          "clave": "BI2004"
+        },
+        {
+          "clave": "BI3005"
+        },
+        {
+          "clave": "BI3013"
+        },
+        {
+          "clave": "BI3014"
+        },
+        {
+          "clave": "BI3015"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "BI3002"
+        },
+        {
+          "clave": "BI3016"
+        },
+        {
+          "clave": "BI3017"
+        },
+        {
+          "clave": "BI3018"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LIN11",
+    "nombre": "Licenciatura en Negocios Internacionales",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "NI1003"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "D1022"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1018"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "CD1003"
+        },
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "FZ1005"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "RH1000"
+        },
+        {
+          "clave": "RI1004"
+        }
+      ],
+      [
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "NI2015"
+        },
+        {
+          "clave": "RI2031"
+        }
+      ],
+      [
+        {
+          "clave": "CD2007"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "NI1002"
+        },
+        {
+          "clave": "NI2016"
+        },
+        {
+          "clave": "NI2017"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "EC2026"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ2016"
+        },
+        {
+          "clave": "NI2018"
+        },
+        {
+          "clave": "NI3035"
+        }
+      ],
+      [
+        {
+          "clave": "CF2018"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "NI2019"
+        },
+        {
+          "clave": "NI2020"
+        },
+        {
+          "clave": "NI3036"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "AD2013"
+        },
+        {
+          "clave": "FZ3029"
+        },
+        {
+          "clave": "NI3037"
+        },
+        {
+          "clave": "NI3038"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "NI3039"
+        },
+        {
+          "clave": "NI3040"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IFI11",
+    "nombre": "Ingeniería Físico Industrial",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "F1006"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1004"
+        },
+        {
+          "clave": "Q1005"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "F2010"
+        },
+        {
+          "clave": "F3016"
+        },
+        {
+          "clave": "MA1019"
+        },
+        {
+          "clave": "Q2002"
+        },
+        {
+          "clave": "TE1012"
+        }
+      ],
+      [
+        {
+          "clave": "F2003"
+        },
+        {
+          "clave": "F2011"
+        },
+        {
+          "clave": "F2012"
+        },
+        {
+          "clave": "F3007"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "MR2000"
+        },
+        {
+          "clave": "TE1014"
+        }
+      ],
+      [
+        {
+          "clave": "F2004"
+        },
+        {
+          "clave": "F2013"
+        },
+        {
+          "clave": "F3020"
+        },
+        {
+          "clave": "F3023"
+        },
+        {
+          "clave": "F3024"
+        },
+        {
+          "clave": "MR2002"
+        },
+        {
+          "clave": "TE1003"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "F3013"
+        },
+        {
+          "clave": "F3025"
+        },
+        {
+          "clave": "F3026"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "F3027"
+        },
+        {
+          "clave": "F3028"
+        },
+        {
+          "clave": "F3029"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ],
+      [
+        {
+          "clave": "F3030"
+        },
+        {
+          "clave": "F3032"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "Q2016"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LCPF11",
+    "nombre": "Licenciatura en Contaduría Pública y Finanzas",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "CF1014"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "D1022"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1018"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "CD1003"
+        },
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "FZ1005"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "RH1000"
+        }
+      ],
+      [
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "NI1002"
+        }
+      ],
+      [
+        {
+          "clave": "CD2007"
+        },
+        {
+          "clave": "CF1012"
+        },
+        {
+          "clave": "CF2006"
+        },
+        {
+          "clave": "CF2016"
+        },
+        {
+          "clave": "FZ2006"
+        },
+        {
+          "clave": "HS2000"
+        }
+      ],
+      [
+        {
+          "clave": "AD2013"
+        },
+        {
+          "clave": "CF2007"
+        },
+        {
+          "clave": "CF2018"
+        },
+        {
+          "clave": "CF3018"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ2016"
+        }
+      ],
+      [
+        {
+          "clave": "CF2017"
+        },
+        {
+          "clave": "CF3019"
+        },
+        {
+          "clave": "CF3020"
+        },
+        {
+          "clave": "FZ2015"
+        },
+        {
+          "clave": "FZ3027"
+        },
+        {
+          "clave": "HS2005"
+        }
+      ],
+      [
+        {
+          "clave": "CF2019"
+        },
+        {
+          "clave": "CF3021"
+        },
+        {
+          "clave": "CF3022"
+        },
+        {
+          "clave": "FZ3009"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "CF3006"
+        },
+        {
+          "clave": "CF3008"
+        },
+        {
+          "clave": "CF3025"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LEC11",
+    "nombre": "Licenciatura en Economía",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "EC1007"
+        },
+        {
+          "clave": "EC1011"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "P1002"
+        }
+      ],
+      [
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "RI2029"
+        }
+      ],
+      [
+        {
+          "clave": "CF1010"
+        },
+        {
+          "clave": "EC2007"
+        },
+        {
+          "clave": "EC2009"
+        },
+        {
+          "clave": "EC2023"
+        },
+        {
+          "clave": "MA1020"
+        },
+        {
+          "clave": "MA2000"
+        }
+      ],
+      [
+        {
+          "clave": "CO2003"
+        },
+        {
+          "clave": "EC2024"
+        },
+        {
+          "clave": "EC3021"
+        },
+        {
+          "clave": "EC3022"
+        },
+        {
+          "clave": "MA2011"
+        },
+        {
+          "clave": "MA3001"
+        }
+      ],
+      [
+        {
+          "clave": "EC2013"
+        },
+        {
+          "clave": "EC2016"
+        },
+        {
+          "clave": "EC3023"
+        },
+        {
+          "clave": "EC3024"
+        },
+        {
+          "clave": "EC3025"
+        },
+        {
+          "clave": "EM1005"
+        }
+      ],
+      [
+        {
+          "clave": "EC3002"
+        },
+        {
+          "clave": "EC3009"
+        },
+        {
+          "clave": "EC3026"
+        },
+        {
+          "clave": "EC3027"
+        },
+        {
+          "clave": "EC3032"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "EC3008"
+        },
+        {
+          "clave": "EC3028"
+        },
+        {
+          "clave": "EC3029"
+        },
+        {
+          "clave": "EC3030"
+        },
+        {
+          "clave": "EC3031"
+        },
+        {
+          "clave": "HS2005"
+        }
+      ],
+      [
+        {
+          "clave": "EC3010"
+        },
+        {
+          "clave": "EC3012"
+        },
+        {
+          "clave": "EC3014"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "EC3016"
+        },
+        {
+          "clave": "EC3033"
+        },
+        {
+          "clave": "EC3034"
+        },
+        {
+          "clave": "EC3035"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "BCT11",
+    "nombre": "Ingeniería en Tecnologías Computacionales",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "TC1022"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "TC1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "TC1014"
+        },
+        {
+          "clave": "OP2000"
+        }
+      ],
+      [
+        {
+          "clave": "TC1016"
+        },
+        {
+          "clave": "TC1015"
+        },
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "TC1016"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "OP2001"
+        }
+      ],
+      [
+        {
+          "clave": "TC1018"
+        },
+        {
+          "clave": "TC1019"
+        },
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "OP2002"
+        }
+      ],
+      [
+        {
+          "clave": "TC1020"
+        },
+        {
+          "clave": "TC2017"
+        },
+        {
+          "clave": "TC2021"
+        },
+        {
+          "clave": "TC2019"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "TC2018"
+        },
+        {
+          "clave": "OP2003"
+        }
+      ],
+      [
+        {
+          "clave": "TC2004"
+        },
+        {
+          "clave": "TC2008"
+        },
+        {
+          "clave": "MA2019"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "TC2022"
+        },
+        {
+          "clave": "TC2020"
+        },
+        {
+          "clave": "OP2004"
+        }
+      ],
+      [
+        {
+          "clave": "TC2025"
+        },
+        {
+          "clave": "TC2024"
+        },
+        {
+          "clave": "TC3045"
+        },
+        {
+          "clave": "TC3041"
+        },
+        {
+          "clave": "TI2011"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "OP2005"
+        }
+      ],
+      [
+        {
+          "clave": "TC2006"
+        },
+        {
+          "clave": "TC2026"
+        },
+        {
+          "clave": "TC3002"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "TC2027"
+        },
+        {
+          "clave": "HS2005"
+        }
+      ],
+      [
+        {
+          "clave": "TC2007"
+        },
+        {
+          "clave": "TC3022"
+        },
+        {
+          "clave": "TC3048"
+        },
+        {
+          "clave": "TC3049"
+        },
+        {
+          "clave": "TC3052"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "TC2011"
+        },
+        {
+          "clave": "TC3054"
+        },
+        {
+          "clave": "TI3035"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "OP2006"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IID12",
+    "nombre": "Ingeniería en Innovación y Desarrollo",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1005"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "NN1000"
+        },
+        {
+          "clave": "OP1004"
+        }
+      ],
+      [
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "NN1001"
+        },
+        {
+          "clave": "OP1005"
+        },
+        {
+          "clave": "OP1006"
+        },
+        {
+          "clave": "OP2037"
+        },
+        {
+          "clave": "OP2041"
+        }
+      ],
+      [
+        {
+          "clave": "CF1010"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "NN1002"
+        },
+        {
+          "clave": "OP2038"
+        },
+        {
+          "clave": "OP2042"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "NN2000"
+        },
+        {
+          "clave": "OP2039"
+        },
+        {
+          "clave": "OP2043"
+        },
+        {
+          "clave": "OP2044"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "NN2001"
+        },
+        {
+          "clave": "NN2002"
+        },
+        {
+          "clave": "OP2040"
+        },
+        {
+          "clave": "OP2045"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "NN2003"
+        },
+        {
+          "clave": "OP2046"
+        },
+        {
+          "clave": "OP2047"
+        },
+        {
+          "clave": "OP2048"
+        },
+        {
+          "clave": "OP2049"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "NN3000"
+        },
+        {
+          "clave": "OP2050"
+        },
+        {
+          "clave": "OP2051"
+        },
+        {
+          "clave": "OP2052"
+        },
+        {
+          "clave": "OP2055"
+        }
+      ],
+      [
+        {
+          "clave": "IN3041"
+        },
+        {
+          "clave": "NN3001"
+        },
+        {
+          "clave": "OP2053"
+        },
+        {
+          "clave": "OP2054"
+        },
+        {
+          "clave": "OP2056"
+        },
+        {
+          "clave": "OP3042"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "NN3002"
+        },
+        {
+          "clave": "NN3003"
+        },
+        {
+          "clave": "OP2057"
+        },
+        {
+          "clave": "OP3043"
+        },
+        {
+          "clave": "OP3044"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LPM12",
+    "nombre": "Licenciatura en Publicidad y Comunicación de Mercados",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "MT1007"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "D1022"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "H2033"
+        },
+        {
+          "clave": "MA1008"
+        }
+      ],
+      [
+        {
+          "clave": "CC1014"
+        },
+        {
+          "clave": "DL1002"
+        },
+        {
+          "clave": "DL1009"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "P1000"
+        }
+      ],
+      [
+        {
+          "clave": "A1001"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MT2006"
+        },
+        {
+          "clave": "MT2007"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "AV1000"
+        },
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "CO2003"
+        },
+        {
+          "clave": "CO2008"
+        },
+        {
+          "clave": "H1048"
+        },
+        {
+          "clave": "MT2023"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "AV1004"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MT2019"
+        },
+        {
+          "clave": "MT2024"
+        }
+      ],
+      [
+        {
+          "clave": "AV2006"
+        },
+        {
+          "clave": "AV3001"
+        },
+        {
+          "clave": "CO3006"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MT2005"
+        },
+        {
+          "clave": "MT3029"
+        }
+      ],
+      [
+        {
+          "clave": "CR2002"
+        },
+        {
+          "clave": "D1025"
+        },
+        {
+          "clave": "MT3030"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "MT3028"
+        },
+        {
+          "clave": "MT3031"
+        },
+        {
+          "clave": "MT3032"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IME11",
+    "nombre": "Ingeniería Mecánico Electricista",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "M1007"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "M1003"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1004"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "M1005"
+        },
+        {
+          "clave": "M1006"
+        },
+        {
+          "clave": "M2023"
+        },
+        {
+          "clave": "MA2009"
+        }
+      ],
+      [
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2007"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "TE1002"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "M2016"
+        },
+        {
+          "clave": "M2026"
+        },
+        {
+          "clave": "M2028"
+        },
+        {
+          "clave": "MA1019"
+        },
+        {
+          "clave": "TE1014"
+        },
+        {
+          "clave": "TE2032"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "M2021"
+        },
+        {
+          "clave": "M3035"
+        },
+        {
+          "clave": "TE2036"
+        },
+        {
+          "clave": "TE2039"
+        },
+        {
+          "clave": "TE2043"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "M2020"
+        },
+        {
+          "clave": "M2030"
+        },
+        {
+          "clave": "M3017"
+        },
+        {
+          "clave": "MR2004"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "M2017"
+        },
+        {
+          "clave": "M3014"
+        },
+        {
+          "clave": "M3015"
+        },
+        {
+          "clave": "MR3033"
+        },
+        {
+          "clave": "TE3027"
+        },
+        {
+          "clave": "VA2011"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "M3019"
+        },
+        {
+          "clave": "M3038"
+        },
+        {
+          "clave": "MR2020"
+        },
+        {
+          "clave": "MR3028"
+        },
+        {
+          "clave": "TE3028"
+        },
+        {
+          "clave": "TE3066"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "INCQ13",
+    "nombre": "Ingeniería en Nanotecnología y Ciencias Químicas",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        },
+        {
+          "clave": "Q1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1007"
+        },
+        {
+          "clave": "Q1014"
+        },
+        {
+          "clave": "Q1018"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "Q1010"
+        },
+        {
+          "clave": "Q1011"
+        },
+        {
+          "clave": "Q1015"
+        }
+      ],
+      [
+        {
+          "clave": "BT1003"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "Q1009"
+        },
+        {
+          "clave": "Q2000"
+        },
+        {
+          "clave": "Q2002"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "Q1013"
+        },
+        {
+          "clave": "Q2013"
+        },
+        {
+          "clave": "Q2014"
+        },
+        {
+          "clave": "Q2018"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "Q2003"
+        },
+        {
+          "clave": "Q2019"
+        },
+        {
+          "clave": "Q3002"
+        },
+        {
+          "clave": "Q3005"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "Q3016"
+        },
+        {
+          "clave": "Q3017"
+        },
+        {
+          "clave": "Q3018"
+        },
+        {
+          "clave": "Q3024"
+        }
+      ],
+      [
+        {
+          "clave": "Q3025"
+        },
+        {
+          "clave": "Q3026"
+        },
+        {
+          "clave": "Q3027"
+        },
+        {
+          "clave": "Q3028"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "Q3021"
+        },
+        {
+          "clave": "Q3029"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LPS11",
+    "nombre": "Licenciatura en Psicología Clínica y de la Salud",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CC1000"
+        },
+        {
+          "clave": "CC1003"
+        },
+        {
+          "clave": "CC1016"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MD1029"
+        },
+        {
+          "clave": "MD1031"
+        }
+      ],
+      [
+        {
+          "clave": "CC1001"
+        },
+        {
+          "clave": "CC1007"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "MD1034"
+        },
+        {
+          "clave": "MD1036"
+        }
+      ],
+      [
+        {
+          "clave": "AD1006"
+        },
+        {
+          "clave": "CC1011"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MD1032"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "CC1005"
+        },
+        {
+          "clave": "CC2015"
+        },
+        {
+          "clave": "CO2004"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2033"
+        },
+        {
+          "clave": "MA1008"
+        }
+      ],
+      [
+        {
+          "clave": "CC2001"
+        },
+        {
+          "clave": "CC2012"
+        },
+        {
+          "clave": "CC2016"
+        },
+        {
+          "clave": "CO2003"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MD1050"
+        }
+      ],
+      [
+        {
+          "clave": "AD3018"
+        },
+        {
+          "clave": "CC2010"
+        },
+        {
+          "clave": "CC2011"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "RH1000"
+        },
+        {
+          "clave": "RI2034"
+        }
+      ],
+      [
+        {
+          "clave": "CC2007"
+        },
+        {
+          "clave": "CC2013"
+        },
+        {
+          "clave": "CC2014"
+        },
+        {
+          "clave": "CC3004"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "RH3006"
+        }
+      ],
+      [
+        {
+          "clave": "CC3005"
+        },
+        {
+          "clave": "CC3006"
+        },
+        {
+          "clave": "CC3007"
+        },
+        {
+          "clave": "CC3008"
+        },
+        {
+          "clave": "MC3096"
+        }
+      ],
+      [
+        {
+          "clave": "CC3009"
+        },
+        {
+          "clave": "CC3010"
+        },
+        {
+          "clave": "CC3011"
+        },
+        {
+          "clave": "CC3012"
+        },
+        {
+          "clave": "MC3096"
+        }
+      ],
+      [
+        {
+          "clave": "OP3024"
+        },
+        {
+          "clave": "OP3025"
+        },
+        {
+          "clave": "OP3026"
+        },
+        {
+          "clave": "OP3027"
+        }
+      ],
+      [
+        {
+          "clave": "CC3003"
+        },
+        {
+          "clave": "CC3013"
+        },
+        {
+          "clave": "CC3014"
+        },
+        {
+          "clave": "CC3015"
+        },
+        {
+          "clave": "CC3016"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LAE16",
+    "nombre": "Licenciatura en Estrategia y Transformación de Negocios",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1011 "
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "OP1008"
+        },
+        {
+          "clave": "OP1009"
+        }
+      ],
+      [
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1018"
+        },
+        {
+          "clave": "OP1010"
+        },
+        {
+          "clave": "OP1011"
+        },
+        {
+          "clave": "OP1012"
+        }
+      ],
+      [
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "OP1013"
+        },
+        {
+          "clave": "OP1014"
+        },
+        {
+          "clave": "OP1015"
+        },
+        {
+          "clave": "VA1000"
+        }
+      ],
+      [
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MT2025"
+        },
+        {
+          "clave": "OP1016"
+        },
+        {
+          "clave": "OP1017"
+        },
+        {
+          "clave": "OP1018"
+        }
+      ],
+      [
+        {
+          "clave": "AD3018"
+        },
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "CH2007"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "FZ2016"
+        },
+        {
+          "clave": "HS2000"
+        }
+      ],
+      [
+        {
+          "clave": "CD2007"
+        },
+        {
+          "clave": "CF2019"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "NI2018"
+        }
+      ],
+      [
+        {
+          "clave": "OP3051"
+        },
+        {
+          "clave": "OP3052"
+        },
+        {
+          "clave": "OP3053"
+        },
+        {
+          "clave": "OP3054"
+        },
+        {
+          "clave": "OP3055"
+        },
+        {
+          "clave": "OP3056"
+        }
+      ],
+      [
+        {
+          "clave": "OP3061"
+        },
+        {
+          "clave": "OP3062"
+        },
+        {
+          "clave": "OP3063"
+        },
+        {
+          "clave": "OP3064"
+        },
+        {
+          "clave": "OP3065"
+        },
+        {
+          "clave": "OP3066"
+        }
+      ],
+      [
+        {
+          "clave": "AD3025"
+        },
+        {
+          "clave": "VA3101"
+        },
+        {
+          "clave": "VA3102"
+        },
+        {
+          "clave": "VA3103"
+        },
+        {
+          "clave": "VA3104"
+        },
+        {
+          "clave": "VA3105"
+        },
+        {
+          "clave": "VA3106"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IQP11",
+    "nombre": "Ingeniería Químico en Procesos Sustentables",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "IQ1004"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        }
+      ],
+      [
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1014"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "IQ1001"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        },
+        {
+          "clave": "Q1010"
+        }
+      ],
+      [
+        {
+          "clave": "IQ2000"
+        },
+        {
+          "clave": "IQ2001"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        },
+        {
+          "clave": "Q1007"
+        },
+        {
+          "clave": "Q2012"
+        }
+      ],
+      [
+        {
+          "clave": "EC1010"
+        },
+        {
+          "clave": "F3024"
+        },
+        {
+          "clave": "IQ2003"
+        },
+        {
+          "clave": "IQ2004"
+        },
+        {
+          "clave": "IQ2005"
+        },
+        {
+          "clave": "OP2018"
+        },
+        {
+          "clave": "Q2015"
+        }
+      ],
+      [
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "IN2023"
+        },
+        {
+          "clave": "IQ3003"
+        },
+        {
+          "clave": "IQ3004"
+        },
+        {
+          "clave": "IQ3006"
+        },
+        {
+          "clave": "IQ3007"
+        },
+        {
+          "clave": "IQ3032"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "IN2025"
+        },
+        {
+          "clave": "IQ2006"
+        },
+        {
+          "clave": "IQ3008"
+        },
+        {
+          "clave": "IQ3011"
+        },
+        {
+          "clave": "IQ3018"
+        },
+        {
+          "clave": "MR2012"
+        }
+      ],
+      [
+        {
+          "clave": "IQ3009"
+        },
+        {
+          "clave": "IQ3010"
+        },
+        {
+          "clave": "IQ3037"
+        },
+        {
+          "clave": "IQ3038"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "IQ3016"
+        },
+        {
+          "clave": "IQ3036"
+        },
+        {
+          "clave": "IQ3039"
+        },
+        {
+          "clave": "IQ3040"
+        },
+        {
+          "clave": "MR2015"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LDF11",
+    "nombre": "Licenciatura en Derecho y Finanzas",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1005"
+        },
+        {
+          "clave": "D1023"
+        },
+        {
+          "clave": "D1026"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1015"
+        }
+      ],
+      [
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "D1010"
+        },
+        {
+          "clave": "D1012"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "RI1004"
+        }
+      ],
+      [
+        {
+          "clave": "D1003"
+        },
+        {
+          "clave": "D1007"
+        },
+        {
+          "clave": "D1019"
+        },
+        {
+          "clave": "D2009"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "FZ1005"
+        }
+      ],
+      [
+        {
+          "clave": "D2013"
+        },
+        {
+          "clave": "D2021"
+        },
+        {
+          "clave": "D3017"
+        },
+        {
+          "clave": "D3018"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        }
+      ],
+      [
+        {
+          "clave": "D2010"
+        },
+        {
+          "clave": "D2016"
+        },
+        {
+          "clave": "D2022"
+        },
+        {
+          "clave": "D2023"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ2013"
+        }
+      ],
+      [
+        {
+          "clave": "D3019"
+        },
+        {
+          "clave": "D3020"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "FZ2006"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "D1015"
+        },
+        {
+          "clave": "D2004"
+        },
+        {
+          "clave": "D2015"
+        },
+        {
+          "clave": "D2024"
+        },
+        {
+          "clave": "D3010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "D2017"
+        },
+        {
+          "clave": "D3023"
+        },
+        {
+          "clave": "D3024"
+        },
+        {
+          "clave": "FZ2015"
+        },
+        {
+          "clave": "FZ2016"
+        },
+        {
+          "clave": "HS2005"
+        }
+      ],
+      [
+        {
+          "clave": "D3026"
+        },
+        {
+          "clave": "D3027"
+        },
+        {
+          "clave": "D3028"
+        },
+        {
+          "clave": "D3029"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LMI11",
+    "nombre": "Licenciatura en Periodismo y Medios de Información",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1045"
+        },
+        {
+          "clave": "MA1016"
+        },
+        {
+          "clave": "MI1003"
+        },
+        {
+          "clave": "P1002"
+        },
+        {
+          "clave": "RI2028"
+        }
+      ],
+      [
+        {
+          "clave": "AV1005"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "H2033"
+        },
+        {
+          "clave": "MA1008"
+        },
+        {
+          "clave": "RI1004"
+        },
+        {
+          "clave": "RI2029"
+        }
+      ],
+      [
+        {
+          "clave": "AV1004"
+        },
+        {
+          "clave": "AV1006"
+        },
+        {
+          "clave": "CC1014"
+        },
+        {
+          "clave": "CO2003"
+        },
+        {
+          "clave": "CO2008"
+        },
+        {
+          "clave": "H1031"
+        },
+        {
+          "clave": "P1000"
+        }
+      ],
+      [
+        {
+          "clave": "AV1007"
+        },
+        {
+          "clave": "CO2004"
+        },
+        {
+          "clave": "D1012"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MI1002"
+        },
+        {
+          "clave": "RI2030"
+        }
+      ],
+      [
+        {
+          "clave": "H1026"
+        },
+        {
+          "clave": "H2019"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "MI2005"
+        },
+        {
+          "clave": "P2010"
+        },
+        {
+          "clave": "RI2012"
+        }
+      ],
+      [
+        {
+          "clave": "CO3006"
+        },
+        {
+          "clave": "MI2006"
+        },
+        {
+          "clave": "MI3001"
+        },
+        {
+          "clave": "MI3008"
+        },
+        {
+          "clave": "RI2008"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "AV3013"
+        },
+        {
+          "clave": "D1025"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "MI3009"
+        },
+        {
+          "clave": "RI2013"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "MI3004"
+        },
+        {
+          "clave": "MI3010"
+        },
+        {
+          "clave": "RI2016"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ],
+      [
+        {
+          "clave": "AV3008"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "MI3011"
+        },
+        {
+          "clave": "MI3012"
+        },
+        {
+          "clave": "MI3013"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LCDE11",
+    "nombre": "Licenciatura en Creación y Desarrollo de Empresas",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "DE1005"
+        },
+        {
+          "clave": "DL1009"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1016"
+        }
+      ],
+      [
+        {
+          "clave": "AD1006"
+        },
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "DE1004"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA1018"
+        }
+      ],
+      [
+        {
+          "clave": "CD1003"
+        },
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "FZ1005"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "CD2006"
+        },
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MT2006"
+        },
+        {
+          "clave": "RH1000"
+        }
+      ],
+      [
+        {
+          "clave": "CD2007"
+        },
+        {
+          "clave": "DE2002"
+        },
+        {
+          "clave": "EC1009"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "IN3035"
+        }
+      ],
+      [
+        {
+          "clave": "AD3017"
+        },
+        {
+          "clave": "DE3013"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ2016"
+        },
+        {
+          "clave": "NI1002"
+        },
+        {
+          "clave": "NI2018"
+        }
+      ],
+      [
+        {
+          "clave": "AD2013"
+        },
+        {
+          "clave": "CF2018"
+        },
+        {
+          "clave": "DE3014"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "NI2017"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "DE3015"
+        },
+        {
+          "clave": "DE3016"
+        },
+        {
+          "clave": "FZ3029"
+        },
+        {
+          "clave": "IN3039"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "DE3017"
+        },
+        {
+          "clave": "DE3018"
+        },
+        {
+          "clave": "DE3019"
+        },
+        {
+          "clave": "DE3020"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LAF11",
+    "nombre": "Licenciatura en Administración Financiera",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "AD1005"
+        },
+        {
+          "clave": "CF1008"
+        },
+        {
+          "clave": "D1021"
+        },
+        {
+          "clave": "FZ1007"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "TI1012"
+        }
+      ],
+      [
+        {
+          "clave": "CF1009"
+        },
+        {
+          "clave": "D1022"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "FZ1005"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1017"
+        }
+      ],
+      [
+        {
+          "clave": "AD1006"
+        },
+        {
+          "clave": "CF1011"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MA1020"
+        },
+        {
+          "clave": "MT1003"
+        },
+        {
+          "clave": "NI1001"
+        }
+      ],
+      [
+        {
+          "clave": "AD2011"
+        },
+        {
+          "clave": "CD2007"
+        },
+        {
+          "clave": "CF2015"
+        },
+        {
+          "clave": "FZ2006"
+        },
+        {
+          "clave": "FZ2013"
+        },
+        {
+          "clave": "H2001"
+        }
+      ],
+      [
+        {
+          "clave": "EC2003"
+        },
+        {
+          "clave": "FZ1006"
+        },
+        {
+          "clave": "FZ2014"
+        },
+        {
+          "clave": "FZ2015"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "VA2010"
+        }
+      ],
+      [
+        {
+          "clave": "EC2004"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "FZ2016"
+        },
+        {
+          "clave": "FZ3027"
+        },
+        {
+          "clave": "NI2018"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "CF2018"
+        },
+        {
+          "clave": "FZ2017"
+        },
+        {
+          "clave": "FZ3009"
+        },
+        {
+          "clave": "FZ3025"
+        },
+        {
+          "clave": "FZ3026"
+        },
+        {
+          "clave": "VA2012"
+        }
+      ],
+      [
+        {
+          "clave": "AD2013"
+        },
+        {
+          "clave": "FZ3028"
+        },
+        {
+          "clave": "FZ3030"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "VA2013"
+        },
+        {
+          "clave": "VA2014"
+        }
+      ],
+      [
+        {
+          "clave": "AD3024"
+        },
+        {
+          "clave": "CF1013"
+        },
+        {
+          "clave": "FZ3031"
+        },
+        {
+          "clave": "FZ3032"
+        },
+        {
+          "clave": "FZ3033"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "IC11",
+    "nombre": "Ingeniería Civil",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "CV1004"
+        },
+        {
+          "clave": "CV2001"
+        },
+        {
+          "clave": "F1002"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "MA1015"
+        },
+        {
+          "clave": "Q1001"
+        },
+        {
+          "clave": "TC1017"
+        }
+      ],
+      [
+        {
+          "clave": "AR1017"
+        },
+        {
+          "clave": "CV2021"
+        },
+        {
+          "clave": "DS1003"
+        },
+        {
+          "clave": "F1003"
+        },
+        {
+          "clave": "H1040"
+        },
+        {
+          "clave": "MA1017"
+        },
+        {
+          "clave": "Q1004"
+        }
+      ],
+      [
+        {
+          "clave": "CV2022"
+        },
+        {
+          "clave": "CV2023"
+        },
+        {
+          "clave": "CV2024"
+        },
+        {
+          "clave": "F1005"
+        },
+        {
+          "clave": "H1018"
+        },
+        {
+          "clave": "MA2009"
+        },
+        {
+          "clave": "MA2010"
+        }
+      ],
+      [
+        {
+          "clave": "AR2021"
+        },
+        {
+          "clave": "CV2025"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "HS2000"
+        },
+        {
+          "clave": "M2025"
+        },
+        {
+          "clave": "MA1006"
+        }
+      ],
+      [
+        {
+          "clave": "CV2006"
+        },
+        {
+          "clave": "CV2007"
+        },
+        {
+          "clave": "CV2010"
+        },
+        {
+          "clave": "CV2026"
+        },
+        {
+          "clave": "EM1005"
+        },
+        {
+          "clave": "M2021"
+        },
+        {
+          "clave": "MA1019"
+        }
+      ],
+      [
+        {
+          "clave": "CV2013"
+        },
+        {
+          "clave": "CV2027"
+        },
+        {
+          "clave": "CV3004"
+        },
+        {
+          "clave": "CV3005"
+        },
+        {
+          "clave": "CV3006"
+        },
+        {
+          "clave": "CV3016"
+        },
+        {
+          "clave": "CV3017"
+        }
+      ],
+      [
+        {
+          "clave": "CV2016"
+        },
+        {
+          "clave": "CV2028"
+        },
+        {
+          "clave": "CV2029"
+        },
+        {
+          "clave": "CV2030"
+        },
+        {
+          "clave": "CV3018"
+        },
+        {
+          "clave": "CV3019"
+        },
+        {
+          "clave": "HS2005"
+        }
+      ],
+      [
+        {
+          "clave": "AR3019"
+        },
+        {
+          "clave": "CV2031"
+        },
+        {
+          "clave": "CV3020"
+        },
+        {
+          "clave": "CV3021"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "CV3007"
+        },
+        {
+          "clave": "CV3022"
+        },
+        {
+          "clave": "CV3023"
+        },
+        {
+          "clave": "CV3024"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ]
+    ]
+  },
+  {
+    "siglas": "LED11",
+    "nombre": "Licenciatura en Derecho",
+    "esVigente": true,
+    "esTec21": false,
+    "materias": [
+      [
+        {
+          "clave": "D1005"
+        },
+        {
+          "clave": "D1013"
+        },
+        {
+          "clave": "D1023"
+        },
+        {
+          "clave": "D1026"
+        },
+        {
+          "clave": "H1016"
+        },
+        {
+          "clave": "P1000"
+        },
+        {
+          "clave": "RI1004"
+        }
+      ],
+      [
+        {
+          "clave": "CO2004"
+        },
+        {
+          "clave": "D1010"
+        },
+        {
+          "clave": "D1011"
+        },
+        {
+          "clave": "D1012"
+        },
+        {
+          "clave": "D2006"
+        },
+        {
+          "clave": "H1040"
+        }
+      ],
+      [
+        {
+          "clave": "D1003"
+        },
+        {
+          "clave": "D1007"
+        },
+        {
+          "clave": "D2009"
+        },
+        {
+          "clave": "D2012"
+        },
+        {
+          "clave": "H2001"
+        },
+        {
+          "clave": "MA1016"
+        }
+      ],
+      [
+        {
+          "clave": "D2013"
+        },
+        {
+          "clave": "D2021"
+        },
+        {
+          "clave": "D3017"
+        },
+        {
+          "clave": "D3018"
+        },
+        {
+          "clave": "EC1008"
+        },
+        {
+          "clave": "H1018"
+        }
+      ],
+      [
+        {
+          "clave": "D2004"
+        },
+        {
+          "clave": "D2010"
+        },
+        {
+          "clave": "D2016"
+        },
+        {
+          "clave": "D2022"
+        },
+        {
+          "clave": "D2023"
+        },
+        {
+          "clave": "HS2000"
+        }
+      ],
+      [
+        {
+          "clave": "D2011"
+        },
+        {
+          "clave": "D3000"
+        },
+        {
+          "clave": "D3010"
+        },
+        {
+          "clave": "D3020"
+        },
+        {
+          "clave": "D3021"
+        },
+        {
+          "clave": "EM1005"
+        }
+      ],
+      [
+        {
+          "clave": "D1015"
+        },
+        {
+          "clave": "D2015"
+        },
+        {
+          "clave": "D2024"
+        },
+        {
+          "clave": "D3025"
+        },
+        {
+          "clave": "VA2010"
+        },
+        {
+          "clave": "VA2011"
+        }
+      ],
+      [
+        {
+          "clave": "D2017"
+        },
+        {
+          "clave": "D3023"
+        },
+        {
+          "clave": "D3024"
+        },
+        {
+          "clave": "HS2005"
+        },
+        {
+          "clave": "VA2012"
+        },
+        {
+          "clave": "VA2013"
+        }
+      ],
+      [
+        {
+          "clave": "D3026"
+        },
+        {
+          "clave": "D3027"
+        },
+        {
+          "clave": "D3028"
+        },
+        {
+          "clave": "D3029"
+        },
+        {
+          "clave": "HS2006"
+        },
+        {
+          "clave": "VA2014"
+        },
+        {
+          "clave": "VA2015"
+        }
+      ]
+    ]
+  },
+  {
+   "siglas": "IMI11",
+   "nombre": "Ingeniero en Producción Musical Digital",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AD1005"
+       },
+       {
+         "clave": "F1002"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "H1041"
+       },
+       {
+         "clave": "H1042"
+       },
+       {
+         "clave": "IM1001"
+       },
+       {
+         "clave": "MA1015"
+       }
+     ],
+     [
+       {
+         "clave": "CO1007"
+       },
+       {
+         "clave": "DS1003"
+       },
+       {
+         "clave": "F1003"
+       },
+       {
+         "clave": "H1040"
+       },
+       {
+         "clave": "H1044"
+       },
+       {
+         "clave": "IM1002"
+       },
+       {
+         "clave": "MA1017"
+       }
+     ],
+     [
+       {
+         "clave": "F1005"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "H2035"
+       },
+       {
+         "clave": "IM2004"
+       },
+       {
+         "clave": "MA2009"
+       },
+       {
+         "clave": "TC1017"
+       }
+     ],
+     [
+       {
+         "clave": "AT2006"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "IM2005"
+       },
+       {
+         "clave": "MA1006"
+       },
+       {
+         "clave": "MA2010"
+       },
+       {
+         "clave": "TE1012"
+       }
+     ],
+     [
+       {
+         "clave": "AV1004"
+       },
+       {
+         "clave": "CF1010"
+       },
+       {
+         "clave": "F2009"
+       },
+       {
+         "clave": "MT1003"
+       },
+       {
+         "clave": "TC1015"
+       },
+       {
+         "clave": "TE1010"
+       }
+     ],
+     [
+       {
+         "clave": "AV2006"
+       },
+       {
+         "clave": "EC1010"
+       },
+       {
+         "clave": "EM1005"
+       },
+       {
+         "clave": "HS2000"
+       },
+       {
+         "clave": "IM2006"
+       },
+       {
+         "clave": "TE1003"
+       }
+     ],
+     [
+       {
+         "clave": "AD2014"
+       },
+       {
+         "clave": "AV2009"
+       },
+       {
+         "clave": "HS2005"
+       },
+       {
+         "clave": "IM2007"
+       },
+       {
+         "clave": "IM3006"
+       },
+       {
+         "clave": "IM3007"
+       }
+     ],
+     [
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "IM3008"
+       },
+       {
+         "clave": "IM3009"
+       },
+       {
+         "clave": "VA2010"
+       },
+       {
+         "clave": "VA2011"
+       },
+       {
+         "clave": "VA2012"
+       }
+     ],
+     [
+       {
+         "clave": "CO3007"
+       },
+       {
+         "clave": "IM3010"
+       },
+       {
+         "clave": "IM3011"
+       },
+       {
+         "clave": "IM3012"
+       },
+       {
+         "clave": "VA2013"
+       },
+       {
+         "clave": "VA2014"
+       },
+       {
+         "clave": "VA2015"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "IMI10",
+   "nombre": "Ingeniero en Producción Musical Digital",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AD1000"
+       },
+       {
+         "clave": "EH1005"
+       },
+       {
+         "clave": "F1002"
+       },
+       {
+         "clave": "H1017"
+       },
+       {
+         "clave": "H2000"
+       },
+       {
+         "clave": "IM1000"
+       },
+       {
+         "clave": "MA1002"
+       }
+     ],
+     [
+       {
+         "clave": "EC1001"
+       },
+       {
+         "clave": "F1003"
+       },
+       {
+         "clave": "H1014"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "H1031"
+       },
+       {
+         "clave": "MA1004"
+       }
+     ],
+     [
+       {
+         "clave": "F1004"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "H2029"
+       },
+       {
+         "clave": "IM2000"
+       },
+       {
+         "clave": "MA2002"
+       },
+       {
+         "clave": "TC1002"
+       }
+     ],
+     [
+       {
+         "clave": "AT2002"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "IB2001"
+       },
+       {
+         "clave": "IM2001"
+       },
+       {
+         "clave": "MA2001"
+       },
+       {
+         "clave": "TE1002"
+       }
+     ],
+     [
+       {
+         "clave": "AV1002"
+       },
+       {
+         "clave": "CF1007"
+       },
+       {
+         "clave": "F2009"
+       },
+       {
+         "clave": "H1029"
+       },
+       {
+         "clave": "TC3028"
+       },
+       {
+         "clave": "TE2001"
+       }
+     ],
+     [
+       {
+         "clave": "AV2001"
+       },
+       {
+         "clave": "EM1001"
+       },
+       {
+         "clave": "IM2002"
+       },
+       {
+         "clave": "MA1000"
+       },
+       {
+         "clave": "MT1001"
+       },
+       {
+         "clave": "TE1003"
+       }
+     ],
+     [
+       {
+         "clave": "AD3016"
+       },
+       {
+         "clave": "HS2009"
+       },
+       {
+         "clave": "IM2003"
+       },
+       {
+         "clave": "IM3000"
+       },
+       {
+         "clave": "IM3001"
+       },
+       {
+         "clave": "IN2006"
+       }
+     ],
+     [
+       {
+         "clave": "H2002"
+       },
+       {
+         "clave": "IM3002"
+       },
+       {
+         "clave": "IM3003"
+       },
+       {
+         "clave": "VA2010"
+       },
+       {
+         "clave": "VA2011"
+       },
+       {
+         "clave": "VA2012"
+       }
+     ],
+     [
+       {
+         "clave": "CO3003"
+       },
+       {
+         "clave": "IM3004"
+       },
+       {
+         "clave": "IM3005"
+       },
+       {
+         "clave": "VA2013"
+       },
+       {
+         "clave": "VA2014"
+       },
+       {
+         "clave": "VA2015"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "LRI11",
+   "nombre": "Licenciado en Relaciones Internacionales",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AD1005"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "MA1016"
+       },
+       {
+         "clave": "P1002"
+       },
+       {
+         "clave": "RI1008"
+       },
+       {
+         "clave": "RI1009"
+       },
+       {
+         "clave": "RI2028"
+       }
+     ],
+     [
+       {
+         "clave": "H1040"
+       },
+       {
+         "clave": "H2033"
+       },
+       {
+         "clave": "MA1008"
+       },
+       {
+         "clave": "RI1004"
+       },
+       {
+         "clave": "RI2029"
+       },
+       {
+         "clave": "RI2030"
+       }
+     ],
+     [
+       {
+         "clave": "CO2003"
+       },
+       {
+         "clave": "EC1008"
+       },
+       {
+         "clave": "H1045"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "P1000"
+       },
+       {
+         "clave": "RI2031"
+       }
+     ],
+     [
+       {
+         "clave": "CO2004"
+       },
+       {
+         "clave": "D1012"
+       },
+       {
+         "clave": "EC1009"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "MT1003"
+       },
+       {
+         "clave": "P2009"
+       }
+     ],
+     [
+       {
+         "clave": "H1026"
+       },
+       {
+         "clave": "HS2000"
+       },
+       {
+         "clave": "P2001"
+       },
+       {
+         "clave": "RI2007"
+       },
+       {
+         "clave": "RI2012"
+       },
+       {
+         "clave": "RI2032"
+       }
+     ],
+     [
+       {
+         "clave": "EC2025"
+       },
+       {
+         "clave": "EM1005"
+       },
+       {
+         "clave": "RI2008"
+       },
+       {
+         "clave": "RI2013"
+       },
+       {
+         "clave": "RI3016"
+       },
+       {
+         "clave": "VA2010"
+       }
+     ],
+     [
+       {
+         "clave": "NI3036"
+       },
+       {
+         "clave": "P3011"
+       },
+       {
+         "clave": "RI2014"
+       },
+       {
+         "clave": "RI2016"
+       },
+       {
+         "clave": "RI2033"
+       },
+       {
+         "clave": "VA2011"
+       }
+     ],
+     [
+       {
+         "clave": "P3014"
+       },
+       {
+         "clave": "RI2015"
+       },
+       {
+         "clave": "RI3002"
+       },
+       {
+         "clave": "RI3005"
+       },
+       {
+         "clave": "VA2012"
+       },
+       {
+         "clave": "VA2013"
+       }
+     ],
+     [
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "RI2017"
+       },
+       {
+         "clave": "RI2034"
+       },
+       {
+         "clave": "RI3006"
+       },
+       {
+         "clave": "RI3019"
+       },
+       {
+         "clave": "VA2014"
+       },
+       {
+         "clave": "VA2015"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "IIS19",
+   "nombre": "Ingeniero Industrial y de Sistemas",
+   "esVigente": true,
+   "esTec21": true,
+   "materias": [
+     [
+       {
+         "clave": "EG1001",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "F1001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1006B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "F1007B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1028",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "Q1019",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC1028",
+         "periodos": [true, true, false]
+       }
+     ],
+     [
+       {
+         "clave": "EG1002",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "F1008",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1015B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1016B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "F1017B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1029",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "MA1030",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1031",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "Q1021",
+         "periodos": [false, true, false]
+       }
+     ],
+     [
+       {
+         "clave": "EG1003",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "IN1001B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN1002B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "M1011",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "MA1034",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "MA1035",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "TE1020",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
+       }
+     ],
+     [
+       {
+         "clave": "EG1004",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "IN2001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "IN2002B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN2003B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "IN2032",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "IN2037",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN2038",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "EG1005",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "IN2004B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "IN2005B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN2006B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "IN2039",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "IN2040",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN2041",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "IN2007B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "IN2008B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN2009B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "IN2042",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "IN2043",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "IN2044",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "OP3091",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3092",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3093",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3094",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3095",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3096",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "IN3001B",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "ITC19",
+   "nombre": "Ingeniería en Tecnologías Computacionales",
+   "esVigente": true,
+   "esTec21": true,
+   "materias": [
+     [
+       {
+         "clave": "EG1001",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "F1001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1004B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "F1005B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1028",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "Q1020",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC1029",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "BT1013",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "EG1002",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "F1008",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1013B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "F1014B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1029",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "MA1031",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC1003B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TC1030",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "EG1003",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MA1033",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TC1004B",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "TC1031",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "TC1032",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "TI1015",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
+       }
+     ],
+     [
+       {
+         "clave": "EG1004",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "TC2005B",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "TC2006B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC2037",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "EG1005",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "TC2007B",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "TC2008B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC2038",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "TC3001B",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "OP3091",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3092",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3093",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3094",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3095",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3096",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TC3002B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "TC3003B",
+         "periodos": [false, false, true]
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "LDI11",
+   "nombre": "Licenciado en Diseño Industrial",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AR1013"
+       },
+       {
+         "clave": "AR1014"
+       },
+       {
+         "clave": "DL1002"
+       },
+       {
+         "clave": "DL1008"
+       },
+       {
+         "clave": "DL1014"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "MA1009"
+       }
+     ],
+     [
+       {
+         "clave": "AR1016"
+       },
+       {
+         "clave": "AT1001"
+       },
+       {
+         "clave": "DL1004"
+       },
+       {
+         "clave": "DL1009"
+       },
+       {
+         "clave": "DL1010"
+       },
+       {
+         "clave": "H1040"
+       }
+     ],
+     [
+       {
+         "clave": "DL1011"
+       },
+       {
+         "clave": "DL1012"
+       },
+       {
+         "clave": "DL1013"
+       },
+       {
+         "clave": "DS1003"
+       },
+       {
+         "clave": "F2001"
+       },
+       {
+         "clave": "M1006"
+       }
+     ],
+     [
+       {
+         "clave": "AT2000"
+       },
+       {
+         "clave": "AV1004"
+       },
+       {
+         "clave": "DL2019"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "M2024"
+       }
+     ],
+     [
+       {
+         "clave": "DL2020"
+       },
+       {
+         "clave": "DL2021"
+       },
+       {
+         "clave": "DL2022"
+       },
+       {
+         "clave": "DL2023"
+       },
+       {
+         "clave": "H1032"
+       },
+       {
+         "clave": "M2032"
+       }
+     ],
+     [
+       {
+         "clave": "DL2024"
+       },
+       {
+         "clave": "DL2025"
+       },
+       {
+         "clave": "DL2026"
+       },
+       {
+         "clave": "HS2005"
+       },
+       {
+         "clave": "M3034"
+       },
+       {
+         "clave": "VA2010"
+       }
+     ],
+     [
+       {
+         "clave": "DL2027"
+       },
+       {
+         "clave": "DL3014"
+       },
+       {
+         "clave": "EM1005"
+       },
+       {
+         "clave": "IN2030"
+       },
+       {
+         "clave": "VA2011"
+       },
+       {
+         "clave": "VA2012"
+       }
+     ],
+     [
+       {
+         "clave": "AD3024"
+       },
+       {
+         "clave": "DL3015"
+       },
+       {
+         "clave": "DL3016"
+       },
+       {
+         "clave": "IN2025"
+       },
+       {
+         "clave": "VA2013"
+       },
+       {
+         "clave": "VA2014"
+       }
+     ],
+     [
+       {
+         "clave": "AD2012"
+       },
+       {
+         "clave": "AD3023"
+       },
+       {
+         "clave": "DL3017"
+       },
+       {
+         "clave": "DL3018"
+       },
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "MT3023"
+       },
+       {
+         "clave": "VA2015"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "ARQ11",
+   "nombre": "Arquitectura",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AR1013"
+       },
+       {
+         "clave": "AR1014"
+       },
+       {
+         "clave": "AR1019"
+       },
+       {
+         "clave": "DL1002"
+       },
+       {
+         "clave": "DL1008"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "MA1009"
+       }
+     ],
+     [
+       {
+         "clave": "AR1015"
+       },
+       {
+         "clave": "AR1016"
+       },
+       {
+         "clave": "DL1004"
+       },
+       {
+         "clave": "DL1009"
+       },
+       {
+         "clave": "DS1003"
+       },
+       {
+         "clave": "H1040"
+       }
+     ],
+     [
+       {
+         "clave": "AR1007"
+       },
+       {
+         "clave": "AR1017"
+       },
+       {
+         "clave": "AR1018"
+       },
+       {
+         "clave": "AR2017"
+       },
+       {
+         "clave": "AR2018"
+       },
+       {
+         "clave": "CV2024"
+       }
+     ],
+     [
+       {
+         "clave": "AR1010"
+       },
+       {
+         "clave": "AR2004"
+       },
+       {
+         "clave": "AR2019"
+       },
+       {
+         "clave": "CV2023"
+       },
+       {
+         "clave": "CV2025"
+       },
+       {
+         "clave": "H1018"
+       }
+     ],
+     [
+       {
+         "clave": "AR2005"
+       },
+       {
+         "clave": "AR2020"
+       },
+       {
+         "clave": "AR2021"
+       },
+       {
+         "clave": "AR2022"
+       },
+       {
+         "clave": "CV2026"
+       },
+       {
+         "clave": "H2001"
+       }
+     ],
+     [
+       {
+         "clave": "AR2007"
+       },
+       {
+         "clave": "AR2023"
+       },
+       {
+         "clave": "AR2024"
+       },
+       {
+         "clave": "CV3017"
+       },
+       {
+         "clave": "EM1005"
+       }
+     ],
+     [
+       {
+         "clave": "AR2025"
+       },
+       {
+         "clave": "AR2026"
+       },
+       {
+         "clave": "AR3014"
+       },
+       {
+         "clave": "CV2027"
+       },
+       {
+         "clave": "CV3018"
+       }
+     ],
+     [
+       {
+         "clave": "AR3015"
+       },
+       {
+         "clave": "AR3016"
+       },
+       {
+         "clave": "AR3017"
+       },
+       {
+         "clave": "AR3018"
+       },
+       {
+         "clave": "CV2016"
+       },
+       {
+         "clave": "HS2005"
+       }
+     ],
+     [
+       {
+         "clave": "AR3006"
+       },
+       {
+         "clave": "AR3019"
+       },
+       {
+         "clave": "AR3020"
+       },
+       {
+         "clave": "VA2010"
+       },
+       {
+         "clave": "VA2011"
+       }
+     ],
+     [
+       {
+         "clave": "AR3021"
+       },
+       {
+         "clave": "AR3022"
+       },
+       {
+         "clave": "CV3022"
+       },
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "VA2012"
+       },
+       {
+         "clave": "VA2013"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "IDS11",
+   "nombre": "Ingeniero en Desarrollo Sustentable",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "DS1003"
+       },
+       {
+         "clave": "DS1006"
+       },
+       {
+         "clave": "F1002"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "H1040"
+       },
+       {
+         "clave": "MA1015"
+       },
+       {
+         "clave": "Q1001"
+       }
+     ],
+     [
+       {
+         "clave": "DS1002"
+       },
+       {
+         "clave": "F1003"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "MA1017"
+       },
+       {
+         "clave": "Q1004"
+       },
+       {
+         "clave": "TC1017"
+       }
+     ],
+     [
+       {
+         "clave": "DS1004"
+       },
+       {
+         "clave": "F1005"
+       },
+       {
+         "clave": "HS2000"
+       },
+       {
+         "clave": "IQ1001"
+       },
+       {
+         "clave": "MA1006"
+       },
+       {
+         "clave": "MA2009"
+       }
+     ],
+     [
+       {
+         "clave": "IQ2000"
+       },
+       {
+         "clave": "IQ2001"
+       },
+       {
+         "clave": "M1003"
+       },
+       {
+         "clave": "M2025"
+       },
+       {
+         "clave": "MA2010"
+       },
+       {
+         "clave": "TE1002"
+       }
+     ],
+     [
+       {
+         "clave": "CV2030"
+       },
+       {
+         "clave": "EC1010"
+       },
+       {
+         "clave": "IN2023"
+       },
+       {
+         "clave": "IQ2005"
+       },
+       {
+         "clave": "RH1000"
+       },
+       {
+         "clave": "TE1014"
+       },
+       {
+         "clave": "TE2032"
+       }
+     ],
+     [
+       {
+         "clave": "DS2001"
+       },
+       {
+         "clave": "DS3002"
+       },
+       {
+         "clave": "IN2025"
+       },
+       {
+         "clave": "IQ2004"
+       },
+       {
+         "clave": "RI2034"
+       },
+       {
+         "clave": "VA2010"
+       }
+     ],
+     [
+       {
+         "clave": "DS3003"
+       },
+       {
+         "clave": "EM1005"
+       },
+       {
+         "clave": "F3024"
+       },
+       {
+         "clave": "IQ3004"
+       },
+       {
+         "clave": "M2003"
+       },
+       {
+         "clave": "VA2011"
+       }
+     ],
+     [
+       {
+         "clave": "DS3004"
+       },
+       {
+         "clave": "HS2005"
+       },
+       {
+         "clave": "IQ3032"
+       },
+       {
+         "clave": "TE2029"
+       },
+       {
+         "clave": "TE3053"
+       },
+       {
+         "clave": "VA2012"
+       },
+       {
+         "clave": "VA2013"
+       }
+     ],
+     [
+       {
+         "clave": "DS3005"
+       },
+       {
+         "clave": "DS3006"
+       },
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "TE2042"
+       },
+       {
+         "clave": "TE3052"
+       },
+       {
+         "clave": "VA2014"
+       },
+       {
+         "clave": "VA2015"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "LRI19",
+   "nombre": "Licenciatura en Relaciones internacionales",
+   "esVigente": true,
+   "esTec21": true,
+   "materias": [
+     [
+       {
+         "clave": "EC1001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "EG1001",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MA1022",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "P1010",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "P1011",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "RI1001B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "TC1001B",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "D1001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "EC1002B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "EC1013",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "EC1014",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "EG1002",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MA1023",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "MA1024",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TC1002B",
+         "periodos": [false, true, false]
+       }
+     ],
+     [
+       {
+         "clave": "EC1003B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "EC1015",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "EC1016",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "EG1003",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1025",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MA1026",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "P1001B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
+       }
+     ],
+     [
+       {
+         "clave": "EG1004",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "RI2001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "RI2002B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "RI2003B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "RI2039",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "RI2040",
+         "periodos": [false, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "EG1005",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "RI2004B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "RI2005B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "RI2006B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "RI2041",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "RI2042",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "RI2043",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "VA3111",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "VA3112",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "VA3113",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "VA3114",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "VA3115",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "VA3116",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "OP3091",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3092",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3093",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3094",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3095",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3096",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "RI3002B",
+         "periodos": [false, true, true]
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "INT11",
+   "nombre": "Ingeniero en Negocios y Tecnologías de la Información",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AD1005"
+       },
+       {
+         "clave": "DS1003"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "H1040"
+       },
+       {
+         "clave": "MA1015"
+       },
+       {
+         "clave": "TC1014"
+       },
+       {
+         "clave": "TI1013"
+       }
+     ],
+     [
+       {
+         "clave": "F1002"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "MA1017"
+       },
+       {
+         "clave": "RH1000"
+       },
+       {
+         "clave": "TC2016"
+       }
+     ],
+     [
+       {
+         "clave": "CF1010"
+       },
+       {
+         "clave": "MA1006"
+       },
+       {
+         "clave": "MA2009"
+       },
+       {
+         "clave": "TC1016"
+       },
+       {
+         "clave": "TC1019"
+       },
+       {
+         "clave": "TI1010"
+       }
+     ],
+     [
+       {
+         "clave": "FZ1005"
+       },
+       {
+         "clave": "MA2010"
+       },
+       {
+         "clave": "TC1020"
+       },
+       {
+         "clave": "TC2018"
+       },
+       {
+         "clave": "TC2019"
+       },
+       {
+         "clave": "TI1011"
+       }
+     ],
+     [
+       {
+         "clave": "EM1005"
+       },
+       {
+         "clave": "HS2000"
+       },
+       {
+         "clave": "IN2004"
+       },
+       {
+         "clave": "IN2022"
+       },
+       {
+         "clave": "TC2009"
+       },
+       {
+         "clave": "TI2002"
+       }
+     ],
+     [
+       {
+         "clave": "FZ1006"
+       },
+       {
+         "clave": "IN1002"
+       },
+       {
+         "clave": "IN2020"
+       },
+       {
+         "clave": "IN2023"
+       },
+       {
+         "clave": "TI2010"
+       },
+       {
+         "clave": "TI2011"
+       },
+       {
+         "clave": "TI3030"
+       }
+     ],
+     [
+       {
+         "clave": "HS2005"
+       },
+       {
+         "clave": "IN2005"
+       },
+       {
+         "clave": "IN2021"
+       },
+       {
+         "clave": "TC2007"
+       },
+       {
+         "clave": "TI3031"
+       },
+       {
+         "clave": "TI3032"
+       }
+     ],
+     [
+       {
+         "clave": "AD3002"
+       },
+       {
+         "clave": "IN3039"
+       },
+       {
+         "clave": "TI3028"
+       },
+       {
+         "clave": "TI3033"
+       },
+       {
+         "clave": "VA2010"
+       },
+       {
+         "clave": "VA2011"
+       }
+     ],
+     [
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "TC3011"
+       },
+       {
+         "clave": "TI3029"
+       },
+       {
+         "clave": "TI3034"
+       },
+       {
+         "clave": "TI3035"
+       },
+       {
+         "clave": "VA2012"
+       },
+       {
+         "clave": "VA2013"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "IRS19",
+   "nombre": "Ingeniero en Robótica y Sistemas Digitales",
+   "esVigente": true,
+   "esTec21": true,
+   "materias": [
+     [
+       {
+         "clave": "EG1001",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "F1001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1004B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "F1005B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1028",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "Q1020",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC1029",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "BT1013",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "EG1002",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "F1008",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "F1013B",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "F1014B",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "MA1029",
+         "periodos": [true, true, false]
+       },
+       {
+         "clave": "MA1031",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC1003B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TC1030",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "EG1003",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MA1033",
+         "periodos": [false, false, true]
+       },
+       {
+         "clave": "TC1004B",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "TC1031",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "TC1032",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "TE1019",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "VA1001B",
+         "periodos": [true, false, false]
+       }
+     ],
+     [
+       {
+         "clave": "EG1004",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MA2016",
+         "periodos": [false, true, false]
+       },
+       {
+         "clave": "TE2002B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TE2003B",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "TE2044",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TE2045",
+         "periodos": [false, false, true]
+       }
+     ],
+     [
+       {
+         "clave": "EG1005",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "MR2002B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TC2036",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "TE2004B",
+         "periodos": [false, true, true]
+       },
+       {
+         "clave": "TE2046",
+         "periodos": [true, false, false]
+       }
+     ],
+     [
+       {
+         "clave": "OP3091",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3092",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3093",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3094",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3095",
+         "periodos": [true, true, true]
+       },
+       {
+         "clave": "OP3096",
+         "periodos": [true, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "TE3001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TE3002B",
+         "periodos": [false, true, true]
+       }
+     ],
+     [
+       {
+         "clave": "OP3001B",
+         "periodos": [true, false, false]
+       },
+       {
+         "clave": "TE3003B",
+         "periodos": [false, true, true]
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "LAD11",
+   "nombre": "Licenciado en Animación y Arte Digital",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "AR1013"
+       },
+       {
+         "clave": "AR1014"
+       },
+       {
+         "clave": "AT1003"
+       },
+       {
+         "clave": "DL1002"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "TC1003"
+       },
+       {
+         "clave": "TC1014"
+       }
+     ],
+     [
+       {
+         "clave": "AT1001"
+       },
+       {
+         "clave": "CO1007"
+       },
+       {
+         "clave": "DL1004"
+       },
+       {
+         "clave": "H1040"
+       },
+       {
+         "clave": "MA1009"
+       },
+       {
+         "clave": "TC2016"
+       }
+     ],
+     [
+       {
+         "clave": "A1000"
+       },
+       {
+         "clave": "AT1002"
+       },
+       {
+         "clave": "AV1000"
+       },
+       {
+         "clave": "DL1009"
+       },
+       {
+         "clave": "F2001"
+       },
+       {
+         "clave": "TC1018"
+       }
+     ],
+     [
+       {
+         "clave": "A2001"
+       },
+       {
+         "clave": "AT2000"
+       },
+       {
+         "clave": "AV1004"
+       },
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "MA1021"
+       },
+       {
+         "clave": "TC1015"
+       }
+     ],
+     [
+       {
+         "clave": "A1002"
+       },
+       {
+         "clave": "AT2005"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "H1032"
+       },
+       {
+         "clave": "H1048"
+       },
+       {
+         "clave": "TC1021"
+       }
+     ],
+     [
+       {
+         "clave": "AT2006"
+       },
+       {
+         "clave": "AT3001"
+       },
+       {
+         "clave": "AV2004"
+       },
+       {
+         "clave": "DL2026"
+       },
+       {
+         "clave": "H2003"
+       },
+       {
+         "clave": "TC3022"
+       }
+     ],
+     [
+       {
+         "clave": "AD2014"
+       },
+       {
+         "clave": "AT2007"
+       },
+       {
+         "clave": "AT3002"
+       },
+       {
+         "clave": "AT3003"
+       },
+       {
+         "clave": "AV2006"
+       },
+       {
+         "clave": "EM1005"
+       }
+     ],
+     [
+       {
+         "clave": "AV2009"
+       },
+       {
+         "clave": "HS2005"
+       },
+       {
+         "clave": "TC3028"
+       },
+       {
+         "clave": "VA2010"
+       },
+       {
+         "clave": "VA2011"
+       },
+       {
+         "clave": "VA2012"
+       }
+     ],
+     [
+       {
+         "clave": "AT3004"
+       },
+       {
+         "clave": "AT3005"
+       },
+       {
+         "clave": "AV3010"
+       },
+       {
+         "clave": "D1025"
+       },
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "VA2013"
+       },
+       {
+         "clave": "VA2014"
+       }
+     ]
+   ]
+ },
+ {
+   "siglas": "IIS11",
+   "nombre": "Ingeniero Industrial y de Sistemas",
+   "esVigente": true,
+   "esTec21": false,
+   "materias": [
+     [
+       {
+         "clave": "DS1003"
+       },
+       {
+         "clave": "F1002"
+       },
+       {
+         "clave": "H1016"
+       },
+       {
+         "clave": "H1040"
+       },
+       {
+         "clave": "IN1003"
+       },
+       {
+         "clave": "MA1015"
+       },
+       {
+         "clave": "Q1001"
+       }
+     ],
+     [
+       {
+         "clave": "F1003"
+       },
+       {
+         "clave": "H1018"
+       },
+       {
+         "clave": "HS2000"
+       },
+       {
+         "clave": "M1003"
+       },
+       {
+         "clave": "MA1017"
+       },
+       {
+         "clave": "Q1004"
+       },
+       {
+         "clave": "TC1017"
+       }
+     ],
+     [
+       {
+         "clave": "F1005"
+       },
+       {
+         "clave": "IQ1001"
+       },
+       {
+         "clave": "M1006"
+       },
+       {
+         "clave": "M2024"
+       },
+       {
+         "clave": "MA1020"
+       },
+       {
+         "clave": "MA2009"
+       }
+     ],
+     [
+       {
+         "clave": "H2001"
+       },
+       {
+         "clave": "IN2017"
+       },
+       {
+         "clave": "IN2018"
+       },
+       {
+         "clave": "IN2019"
+       },
+       {
+         "clave": "M2025"
+       },
+       {
+         "clave": "MA2010"
+       },
+       {
+         "clave": "MA2011"
+       }
+     ],
+     [
+       {
+         "clave": "CF1010"
+       },
+       {
+         "clave": "EC1010"
+       },
+       {
+         "clave": "IN2004"
+       },
+       {
+         "clave": "IN2020"
+       },
+       {
+         "clave": "IN2021"
+       },
+       {
+         "clave": "IN2022"
+       }
+     ],
+     [
+       {
+         "clave": "EM1005"
+       },
+       {
+         "clave": "IN1002"
+       },
+       {
+         "clave": "IN2023"
+       },
+       {
+         "clave": "IN2024"
+       },
+       {
+         "clave": "IN3013"
+       },
+       {
+         "clave": "IN3015"
+       },
+       {
+         "clave": "IN3035"
+       }
+     ],
+     [
+       {
+         "clave": "HS2005"
+       },
+       {
+         "clave": "IN2005"
+       },
+       {
+         "clave": "IN2025"
+       },
+       {
+         "clave": "IN2026"
+       },
+       {
+         "clave": "IN2027"
+       },
+       {
+         "clave": "IN2028"
+       }
+     ],
+     [
+       {
+         "clave": "IN3037"
+       },
+       {
+         "clave": "IN3038"
+       },
+       {
+         "clave": "IN3039"
+       },
+       {
+         "clave": "IN3040"
+       },
+       {
+         "clave": "IN3041"
+       },
+       {
+         "clave": "VA2010"
+       },
+       {
+         "clave": "VA2011"
+       }
+     ],
+     [
+       {
+         "clave": "HS2006"
+       },
+       {
+         "clave": "IN3020"
+       },
+       {
+         "clave": "IN3043"
+       },
+       {
+         "clave": "IN3044"
+       },
+       {
+         "clave": "IN3045"
+       },
+       {
+         "clave": "VA2012"
+       },
+       {
+         "clave": "VA2013"
+       }
+     ]
+   ]
+ }
+]

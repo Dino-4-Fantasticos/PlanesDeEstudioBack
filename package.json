@@ -12,6 +12,7 @@
     "test-server": "jest --config=server.jest.config.js",
     "test-client": "react-scripts test --watchAll=false",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-build",
+    "seed": "mongod & seed",
     "dev": "concurrently \"npm run start-server\" \"npm run start-client\""
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^9.0.1",
     "jwt-decode": "^3.1.2",
+    "mongo-seeding": "^3.7.2",
     "mongoose": "^7.4.1",
     "mongoose-unique-validator": "^4.0.0",
     "node-sass": "^8.0.0",
