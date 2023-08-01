@@ -1,4 +1,4 @@
-
+import '../styles/panel_admin.scss';
 
 export default function Home() {
   return (

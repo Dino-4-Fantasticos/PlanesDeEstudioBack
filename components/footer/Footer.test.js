@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 // import { act } from "react-dom/test-utils";
 
-import Footer from "./view";
+import Footer from "./Footer";
 
 it("renderea texto del footer", () => {
   render(<Footer />);

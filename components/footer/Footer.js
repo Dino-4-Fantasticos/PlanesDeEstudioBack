@@ -1,65 +1,74 @@
+"use client"
+
 import React from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import githubIcon from "./github-icon.png";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <Container className="text-center">
+    <div className="container text-center">
       <Col>
         <Row>
           <Col>
             <p>
               Creada por:
-              <a
+              <Link
                 rel="noreferrer"
                 href="https://github.com/Adrian-Garcia"
                 target="_blank"
               >
                 {" "}
                 Adrián García
-              </a>
+              </Link>
               ,
-              <a
+              <Link
                 rel="noreferrer"
                 href="https://github.com/alegayndra"
                 target="_blank"
               >
                 {" "}
                 Alejandra García
-              </a>
+              </Link>
               ,
-              <a
+              <Link
                 rel="noreferrer"
                 href="https://github.com/EstradaDiego99"
                 target="_blank"
               >
                 {" "}
                 Diego Estrada
-              </a>
+              </Link>
               , &
-              <a
+              <Link
                 rel="noreferrer"
                 href="https://github.com/luispc111"
                 target="_blank"
               >
                 {" "}
                 Luis Alberto Pérez{" "}
-              </a>
+              </Link>
             </p>
           </Col>
         </Row>
         <Row className="p-2">
           <Col>
-            <a
+            <Link
               rel="noreferrer"
               href="https://github.com/luispc111/PlanesDeEstudio"
               target="_blank"
             >
-              <Image src={githubIcon} alt="Github link" />
-            </a>
+              <Image
+                src={githubIcon}
+                alt="Github link"
+                width={25}
+                height={25}
+              />
+            </Link>
           </Col>
         </Row>
       </Col>
-    </Container>
+    </div>
   );
 }

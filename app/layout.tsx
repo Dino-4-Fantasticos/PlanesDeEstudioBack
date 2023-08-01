@@ -1,10 +1,13 @@
 import './globals.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/App.scss";
 // import React, { useEffect, useState, useCallback } from "react";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { G_CLIENT_ID, authenticate } from '../utils/auth';
 // import { UserContext } from "../utils/context";
+import Footer from '../components/footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,11 +48,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <GoogleOAuthProvider clientId={G_CLIENT_ID || ""}>
+      {/* <GoogleOAuthProvider clientId={G_CLIENT_ID || ""}> */}
         {/* <UserContext.Provider value={loggedUser}> */}
           {children}
+          <div className="spacer" />
+          <Footer />
         {/* </UserContext.Provider> */}
-      </GoogleOAuthProvider>
+      {/* </GoogleOAuthProvider> */}
       </body>
     </html>
   )

@@ -7,7 +7,7 @@ import LoginScreen from "./login/view";
 import PanelAdmin from "./panel-admin/view";
 import PlanesRoutes from "./planes/view";
 import UsuariosIndex from "./users/view";
-import Footer from "./footer/view";
+import Footer from "../../components/footer/Footer";
 
 import { UserContext } from "./utils/context";
 import { authenticate } from "./utils/auth";

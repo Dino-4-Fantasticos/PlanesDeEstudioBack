@@ -3,7 +3,7 @@ import { Navbar, Image, Nav, Button, Container } from "react-bootstrap";
 
 import { logout } from "../utils/auth";
 import logoutIcon from "./logout_white_24dp.svg";
-import { UserContext } from "../utils/context";
+// import { UserContext } from "../utils/context";
 
 import "./style.scss";
 
@@ -13,7 +13,8 @@ import "./style.scss";
  * @param {Boolean} loggedUser Indica el usuario de la sesión.
  */
 export default function Header() {
-  const loggedUser = useContext(UserContext);
+  // const loggedUser = useContext(UserContext);
+  const loggedUser = {};
 
   return (
     <Navbar
