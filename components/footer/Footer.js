@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className="container text-center">
+    <Container className="text-center">
       <Col>
         <Row>
           <Col>
@@ -69,6 +69,6 @@ export default function Footer() {
           </Col>
         </Row>
       </Col>
-    </div>
+    </Container>
   );
 }
