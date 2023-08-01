@@ -53,7 +53,7 @@ export default function Footer() {
           </Col>
         </Row>
         <Row className="p-2">
-          <Col>
+          <Col className="d-flex justify-content-around">
             <Link
               rel="noreferrer"
               href="https://github.com/luispc111/PlanesDeEstudio"
