@@ -2,7 +2,7 @@
   "name": "planes-estudio-admin",
   "version": "0.1.0",
   "private": true,
-  "main": "index.js",
+  "main": "start.js",
   "scripts": {
     "client-build": "react-scripts build",
     "start-client": "react-scripts start",
