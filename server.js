@@ -5,19 +5,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const usersRouter = require("../users/router");
+const usersRouter = require("./src/users/router");
 app.use("/api/users", usersRouter);
 
-const materiasRouter = require("../materias/router");
+const materiasRouter = require("./src/materias/router");
 app.use("/api/materias", materiasRouter);
 
-const planesRouter = require("../planes/router");
+const planesRouter = require("./src/planes/router");
 app.use("/api/planes", planesRouter);
 
-const planificadosRouter = require("../planificados/router");
+const planificadosRouter = require("./src/planificados/router");
 app.use("/api/planificados", planificadosRouter);
 
-const loginRouter = require("../login/router");
+const loginRouter = require("./src/login/router");
 app.use("/api/login", loginRouter);
 
 module.exports = app;
