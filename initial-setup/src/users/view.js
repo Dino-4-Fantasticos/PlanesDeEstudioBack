@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import manageAccountsIcon from "../assets/manage_accounts_white_24dp.svg";
-import { stringsMatch } from "../utils/functions.es6";
+import { stringsMatch } from "../../initial-setup/src/utils/functions.es6";
 import "./style.scss";
-import { BACKEND_URL } from '../utils/auth';
+import { BACKEND_URL } from '../../initial-setup/src/utils/auth';
 
 async function fetchUsuarios(setUsuarios) {
   const resGet = await axios.get(`${BACKEND_URL}/users`).catch((err) => err);
