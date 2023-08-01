@@ -2,6 +2,7 @@
 
 import React, { useContext } from "react";
 import { Navbar, Image, Nav, Button, Container } from "react-bootstrap";
+import Link from 'next/link';
 
 import { logout } from "../../utils/auth";
 import logoutIcon from "./logout_white_24dp.svg";
@@ -32,7 +33,7 @@ export default function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="header-collapse" />
         <Navbar.Collapse id="header-collapse" className="justify-content-end">
-          <Nav.Link href="/login" className="element pr-0">
+          <Link href="/login" className="element pr-0">
             <Button onClick={logout} variant="danger" className="d-flex">
               <Image
                 className="imagen-perfil"
@@ -54,7 +55,7 @@ export default function Header() {
                 className="ml-3"
               />
             </Button>
-          </Nav.Link>
+          </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

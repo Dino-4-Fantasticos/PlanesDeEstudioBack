@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Materia from "./materia";
-import FormMateria from "./form-materia";
+import Materia from "../materia/materia";
+import FormMateria from "../materia/form_materia/form_materia";
 
 /** Componente referente al contenido de un semestre escolar. */
 export default function Semestre({ semestre, semIdx, setMaterias }) {

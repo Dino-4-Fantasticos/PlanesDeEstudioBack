@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import editIcon from "../../../assets/edit_white_24dp.svg";
-import deleteIcon from "../../../assets/delete_white_24dp.svg";
-import PlanFormContext from "./context";
-import FormMateria from "./form-materia";
+import editIcon from "../../assets/edit_white_24dp.svg";
+import deleteIcon from "../../assets/delete_white_24dp.svg";
+import PlanFormContext from "../../utils/form_planes_context";
+import FormMateria from "./form_materia/form_materia";
 
 /** Función para remover una materia de la matriz de materias. */
 function removerMateria(setMaterias, semIdx, matIdx) {

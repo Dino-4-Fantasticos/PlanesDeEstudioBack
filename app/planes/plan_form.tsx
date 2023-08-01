@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import PlanFormContext from "../../../../utils/form_planes_context";
-import Semestre from "../../../../components/semestre/semestre";
+import PlanFormContext from "../../utils/form_planes_context";
+import Semestre from "../../components/semestre/semestre";
 
 /** Componente del formulario para el nuevo plan de estudios. */
 export default function PlanesForm({ plan = {}, action }) {
