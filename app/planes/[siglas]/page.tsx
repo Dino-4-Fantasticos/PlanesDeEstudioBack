@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 // import { useParams } from "react-router-dom";
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import axios from "axios";
@@ -14,7 +14,7 @@ async function cargarPlan(siglas, setPlan) {
     .get(`${BACKEND_URL}/planes/${siglas}`)
     .catch((err) => err);
   if (resGet instanceof Error) {
-    alert(resGet.response.data.msg);
+    alert(resGet?.response?.data?.msg);
     return;
   }
   setPlan(resGet.data);
@@ -27,7 +27,7 @@ async function guardarPlan(plan) {
     .put(`${BACKEND_URL}/planes/${siglas}`, plan)
     .catch((err) => err);
   if (resPut instanceof Error) {
-    alert(resPut.body.msg);
+    alert(resPut?.body?.msg);
     return;
   }
   window.location = "/planes";
@@ -37,10 +37,17 @@ async function guardarPlan(plan) {
 export default function PlanesEdit() {
   const [plan, setPlan] = useState(undefined);
 
-  const siglas = usePathname()
+  const pathname = usePathname()
+
+  const siglas = useMemo(() => {
+    const paths = pathname?.split('/');
+    return paths.length ? paths[paths.length - 1] : "";
+  }, [pathname])
 
   useEffect(() => {
-    cargarPlan(siglas, setPlan);
+    if (siglas) {
+      cargarPlan(siglas, setPlan);
+    }
   }, [siglas]);
 
   if (!plan) {
