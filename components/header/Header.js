@@ -1,11 +1,14 @@
+"use client"
+
 import React, { useContext } from "react";
 import { Navbar, Image, Nav, Button, Container } from "react-bootstrap";
 
-import { logout } from "../utils/auth";
+import { logout } from "../../utils/auth";
 import logoutIcon from "./logout_white_24dp.svg";
 // import { UserContext } from "../utils/context";
 
-import "./style.scss";
+
+import "../../styles/header.scss";
 
 /**
  * Parte superior, contiene controles de manejo de sesión y perfil
