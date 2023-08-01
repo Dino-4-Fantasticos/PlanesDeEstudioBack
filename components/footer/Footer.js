@@ -5,6 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import githubIcon from "./github-icon.png";
 import Image from 'next/image'
 import Link from 'next/link'
+import '../../styles/footer.scss';
 
 export default function Footer() {
   return (
