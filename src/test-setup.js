@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-mongoose.set("useCreateIndex", true);
 mongoose.promise = global.Promise;
 
 async function removeAllCollections() {

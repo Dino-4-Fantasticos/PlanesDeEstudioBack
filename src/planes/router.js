@@ -65,7 +65,11 @@ router.post("/", cors(), async (req, res) => {
   const data = req.body || {};
 
   // Guardar materias
-  const resGuardarMaterias = await guardarMaterias(data).catch((err) => err);
+  const resGuardarMaterias = await guardarMaterias(data).catch((err) => {
+    console.error(err);
+    return err;
+  });
+
   if (resGuardarMaterias instanceof Error) {
     return res.status(400).json({
       err: { materias: optionalStringToJSON(resGuardarMaterias.message) },

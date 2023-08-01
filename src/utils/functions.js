@@ -1,3 +1,5 @@
+const jwt_decode = require("jwt-decode");
+
 /** Función para convertir de un objeto a un string query para URL */
 function toQueryString(query) {
   return Object.keys(query)
@@ -28,4 +30,13 @@ function extraerMensajesError({ errors }) {
   return returnErrors;
 }
 
-module.exports = { toQueryString, optionalStringToJSON, extraerMensajesError };
+/**
+ * @description Function to decode Google OAuth token
+ * @param token: string
+ * @returns ticket object
+ */
+const getDecodedOAuthJwtGoogle = token => {
+  return jwt_decode(token);
+}
+
+module.exports = { toQueryString, optionalStringToJSON, extraerMensajesError, getDecodedOAuthJwtGoogle };

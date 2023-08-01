@@ -42,6 +42,7 @@ async function authenticate() {
     throw extraerMensajeErrorCliente(resUserGet);
   }
 
+  
   const user = resUserGet.data;
   if (!user.esAdmin) {
     throw new Error("Usuario no es administrador.");
@@ -51,9 +52,9 @@ async function authenticate() {
 }
 
 /** Guardar la sesión en una cookie y refrescar la página. */
-async function login({ profileObj }) {
+async function login(credentialResponse) {
   const resLogin = await axios
-    .post(`${BACKEND_URL}/login/`, profileObj)
+    .post(`${BACKEND_URL}/login/`, credentialResponse)
     .catch((err) => err);
   if (resLogin instanceof Error) {
     const errMsg = resLogin.response
@@ -72,4 +73,4 @@ function logout() {
   window.location = "/login";
 }
 
-export { G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
+export { BACKEND_URL, G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
