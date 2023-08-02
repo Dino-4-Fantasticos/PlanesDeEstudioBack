@@ -5,15 +5,14 @@ import tec21Icon from "../../assets/logo-tec21.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
+const CLIENT_URL = process.env.NEXT_PUBLIC_CLIENT_URL;
 
 async function eliminarPlan(plan) {
   const confirmMessage = `Se eliminará el plan de estudios ${plan.siglas}. ¿Continuar?`;
   if (!window.confirm(confirmMessage)) return;
 
   const resDelete = await axios
-    .delete(`${BACKEND_URL}/planes/${plan.siglas}`)
+    .delete(`/api/planes/${plan.siglas}`)
     .catch((err) => err);
   if (resDelete instanceof Error) {
     alert(resDelete.response.data.msg);

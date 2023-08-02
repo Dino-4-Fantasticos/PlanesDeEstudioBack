@@ -88,14 +88,14 @@ export default function PlanesIndex() {
           </select>
         </div>
       </form>
-      {planesFiltrados?.map((plan, idx) => (
-        <PlanSummary key={`plan-${idx}`} {...{ plan }} />
-      ))}
-      <div className="text-right">
+      <div className="text-right" style={{marginBottom: "1rem"}}>
         <Link href={`/planes/new`}>
           <button className="btn btn-lg btn-warning">Nuevo Plan</button>
         </Link>
       </div>
+      {planesFiltrados?.map((plan, idx) => (
+        <PlanSummary key={`plan-${idx}`} {...{ plan }} />
+      ))}
     </main>
   );
 }

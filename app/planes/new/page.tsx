@@ -6,8 +6,6 @@ import axios from "axios";
 import PlanForm from "../plan_form";
 import "../../../styles/planes.scss";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
 async function guardarPlan(plan) {
   const resPost = await axios
     .post(`/api/planes`, plan)
