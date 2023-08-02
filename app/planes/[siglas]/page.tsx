@@ -25,7 +25,7 @@ async function guardarPlan(plan) {
   const siglas = plan.siglas;
   delete plan.siglas;
   const resPut = await axios
-    .put(`/planes/${siglas}`, plan)
+    .put(`/api/planes/${siglas}`, plan)
     .catch((err) => err);
   if (resPut instanceof Error) {
     alert(resPut?.body?.msg);

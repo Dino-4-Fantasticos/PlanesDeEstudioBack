@@ -8,7 +8,7 @@ import "../../styles/users.scss";
 import { BACKEND_URL } from '../../utils/auth';
 
 async function fetchUsuarios(setUsuarios) {
-  const resGet = await axios.get(`${BACKEND_URL}/users`).catch((err) => err);
+  const resGet = await axios.get(`/api/users`).catch((err) => err);
   if (resGet instanceof Error) {
     alert(resGet.message);
     setUsuarios([]);
@@ -24,7 +24,7 @@ async function setAdmin(matricula, esAdmin) {
   if (!window.confirm(confirmMessage)) return;
 
   const resPut = await axios
-    .put(`${BACKEND_URL}/users/${matricula}`, { esAdmin })
+    .put(`/api/users/${matricula}`, { esAdmin })
     .catch((err) => err);
   if (resPut instanceof Error) {
     alert(resPut.message);
