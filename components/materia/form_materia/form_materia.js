@@ -101,7 +101,7 @@ export default function FormMateria({
       editMode: Object.keys(materia).length > 0,
     };
     const resValidate = await axios
-      .post(`${BACKEND_URL}/planes/validate-materia`, postData)
+      .post(`/planes/validate-materia`, postData)
       .catch((err) => err);
     if (resValidate instanceof Error) {
       if (!resValidate.response) {

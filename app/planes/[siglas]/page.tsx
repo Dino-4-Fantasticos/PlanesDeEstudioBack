@@ -6,12 +6,13 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import axios from "axios";
 
 import PlanForm from "../plan_form";
+import "../../../styles/planes.scss";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 async function cargarPlan(siglas, setPlan) {
   const resGet = await axios
-    .get(`${BACKEND_URL}/planes/${siglas}`)
+    .get(`/api/planes/${siglas}`)
     .catch((err) => err);
   if (resGet instanceof Error) {
     alert(resGet?.response?.data?.msg);
@@ -24,7 +25,7 @@ async function guardarPlan(plan) {
   const siglas = plan.siglas;
   delete plan.siglas;
   const resPut = await axios
-    .put(`${BACKEND_URL}/planes/${siglas}`, plan)
+    .put(`/planes/${siglas}`, plan)
     .catch((err) => err);
   if (resPut instanceof Error) {
     alert(resPut?.body?.msg);
@@ -53,6 +54,8 @@ export default function PlanesEdit() {
   if (!plan) {
     return <>El plan no cargó</>;
   }
+
+  console.log(plan)
 
   return (
     <main id="planes-edit" className="container-fluid">
