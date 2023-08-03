@@ -2,9 +2,9 @@ import { NextResponse } from 'next/server'
 import clientPromise from "../../../../lib/mongodb";
 
 export async function POST(request: Request) {
-  console.log('validate materia', request);
+  // console.log('validate materia', request);
   const res = await request.json()
-  console.log(res);
+  // console.log(res);
   const {
     esTec21 = false,
     materias,

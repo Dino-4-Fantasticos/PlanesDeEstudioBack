@@ -1,44 +1,28 @@
 import { NextResponse } from 'next/server'
-import clientPromise from "../../../../lib/mongodb";
+import dbConnect from "../../../../lib/mongodb";
+const Materia = require('../../../models/Materia');
 
 export async function GET(request: Request) {
-  // console.log(request);
-  // console.log(request.url);
   const urls = request.url.split('/');
-  const clave = urls[urls.length - 1]
-  // console.log(siglas);
+  const clave = urls[urls.length - 1];
 
-  // console.log(NextResponse)
+  await dbConnect();
 
-
-  // return NextResponse.json({});
-  try {
-    const client = await clientPromise;
-    const db = client.db("PDE");
-
-    const materia = await db
-        .collection("materias")
-        .findOne({ clave })
-
-    console.log(materia);
-    
-    if (materia) {
-      return NextResponse.json(materia);
-    } else {
-      console.log('pipipi')
-      return NextResponse.json({
-        message: "materia no encontrada"
-      }, {
-        status: 408,
-      });
-    }
-
-  } catch (e) {
-    console.error(e);
-    return NextResponse.json({
-      message: "error"
-    }, {
-      status: 400,
+  return await Materia.findOne({ clave })
+    .then(materia => {
+      if (materia) {
+        return NextResponse.json(materia);
+      } else {
+        console.log('pipipi')
+        return NextResponse.json({
+          message: "materia no encontrada"
+        }, {
+          status: 408,
+        });
+      }
     })
-  }
+    .catch(error => {
+      console.error(error);
+      return NextResponse.json({ message: 'database error' }, { status: 400 })
+    });
 }

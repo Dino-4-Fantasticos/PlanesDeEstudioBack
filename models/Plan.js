@@ -1,10 +1,10 @@
-const { Schema, model } = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
-const Materia = require("../materias/model");
+import mongoose from 'mongoose'
+// const uniqueValidator = require("mongoose-unique-validator");
+const Materia = require("./Materia");
 
 const BLOQUES_POR_SEMESTRE = 3;
 
-const materiaSchema = new Schema(
+const materiaSchema = new mongoose.Schema(
   {
     /** Clave de la materia con la cual enlazar al modelo */
     clave: {
@@ -52,7 +52,7 @@ function validacionMaterias(materias) {
   }
   return true;
 }
-const schema = new Schema({
+const schema = new mongoose.Schema({
   /** Siglas para el plan de estudios. [Ej: ITC11] */
   siglas: {
     type: String,
@@ -123,12 +123,9 @@ schema.virtual("materiasCompletas").get(async function () {
   return cMaterias;
 });
 
-const uniqueErrors = {
-  siglas: "Ya existe otro plan de estudios registrado con estas siglas.",
-};
-schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
+// const uniqueErrors = {
+//   siglas: "Ya existe otro plan de estudios registrado con estas siglas.",
+// };
+// schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
 
-/** Plan de estudios tal cual ofrecido por el Tecnológico de Monterrey */
-const Plan = model("Plan", schema);
-
-module.exports = Plan;
+module.exports = mongoose.models.Plan || mongoose.model('Plan', schema);

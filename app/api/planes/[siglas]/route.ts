@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
-import clientPromise from "../../../../lib/mongodb";
+import dbConnect from "../../../../lib/mongodb";
+const Plan = require('../../../../models/Plan');
+
 
 export async function GET(request: Request) {
   // console.log(request);
@@ -8,19 +10,13 @@ export async function GET(request: Request) {
   const siglas = urls[urls.length - 1]
   // console.log(siglas);
 
+  await dbConnect();
 
   // return NextResponse.json({});
   try {
-    const client = await clientPromise;
-    const db = client.db("PDE");
-
-    const plan = await db
-        .collection("plans")
-        .findOne({ siglas })
-
-    return NextResponse.json(plan);
-  } catch (e) {
-    console.error(e);
-    return NextResponse.status(400).json({ msg: 'error' })
+    const planes = await Plan.findOne({ siglas }) /* find all the data in our database */
+    return NextResponse.json(planes);
+  } catch (error) {
+    return NextResponse.json({ message: 'database error' }, { status: 400 })
   }
 }

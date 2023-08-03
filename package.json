@@ -20,6 +20,7 @@
     "eslint-config-next": "13.4.12",
     "js-cookie": "^3.0.5",
     "mongodb": "^5.7.0",
+    "mongoose": "^7.4.1",
     "next": "13.4.12",
     "next-auth": "^4.22.3",
     "postcss": "8.4.27",
