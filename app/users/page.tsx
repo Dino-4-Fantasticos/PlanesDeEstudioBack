@@ -6,6 +6,7 @@ import manageAccountsIcon from "../../assets/manage_accounts_white_24dp.svg";
 import { stringsMatch } from "../../utils/functions.es6";
 import "../../styles/users.scss";
 import { BACKEND_URL } from '../../utils/auth';
+import Image from 'next/image';
 
 async function fetchUsuarios(setUsuarios) {
   const resGet = await axios.get(`/api/users`).catch((err) => err);
@@ -50,7 +51,7 @@ function UsuarioSummary({ usuario }) {
 
   return (
     <div className="card usuario-summary bg-secondary mb-2 d-flex flex-row p-2">
-      <img
+      <Image
         src={urlFoto}
         alt="foto perfil"
         className="foto-perfil"
@@ -64,16 +65,17 @@ function UsuarioSummary({ usuario }) {
         <small className="m-0 ml-2 matricula">{matricula}</small>
       </div>
       {esAdmin && (
-        <img
+        <Image
           src={manageAccountsIcon}
           alt="manage-account"
           width={48}
+          height={48}
           className="cursor-pointer"
           onClick={() => setAdmin(matricula, false)}
         />
       )}
       {!esAdmin && (
-        <img
+        <Image
           src={manageAccountsIcon}
           alt="manage-account"
           width={48}
