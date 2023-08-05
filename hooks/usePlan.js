@@ -56,7 +56,25 @@ function usePlan() {
       });
   }, []);
 
-  return { loading, guardarPlan, actualizarPlan, cargarPlan, plan }
+  const eliminarPlan = useCallback(async (plan) => {
+    const confirmMessage = `Se eliminará el plan de estudios ${plan.siglas}. ¿Continuar?`;
+    if (!window.confirm(confirmMessage)) return;
+    
+    setLoading(true);
+    await axios.delete(`/api/planes/${plan.siglas}`)
+      .then(res => {
+        alert(res.data.msg);
+        window.location = "/planes";
+      })
+      .catch((err) => {
+        alert(err?.response?.data?.msg);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  return { loading, guardarPlan, actualizarPlan, cargarPlan, eliminarPlan, plan }
 }
 
 export default usePlan;
