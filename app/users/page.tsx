@@ -1,53 +1,33 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useCallback } from "react";
 import axios from "axios";
 import manageAccountsIcon from "../../assets/manage_accounts_white_24dp.svg";
-import { stringsMatch } from "../../utils/functions.es6";
+
 import "../../styles/users.scss";
-import { BACKEND_URL } from '../../utils/auth';
 import Image from 'next/image';
 
-async function fetchUsuarios(setUsuarios) {
-  const resGet = await axios.get(`/api/users`).catch((err) => err);
-  if (resGet instanceof Error) {
-    alert(resGet.message);
-    setUsuarios([]);
-    return;
-  }
-  setUsuarios(resGet.data);
-}
+import useUsers from '../../hooks/useUsers';
 
-async function setAdmin(matricula, esAdmin) {
-  const confirmMessage = esAdmin
-    ? `Se añadirá al usuario ${matricula} a los administradores.`
-    : `Se removerá al usuario ${matricula} de los administradores.`;
-  if (!window.confirm(confirmMessage)) return;
-
-  const resPut = await axios
-    .put(`/api/users/${matricula}`, { esAdmin })
-    .catch((err) => err);
-  if (resPut instanceof Error) {
-    alert(resPut.message);
-    return;
-  }
-  window.location.reload();
-}
-
-/** Función para filtrar los planes de estudios. */
-function filtrarUsuarios(usuarios, filtro) {
-  if (filtro === "") {
-    return usuarios;
-  }
-  return usuarios.filter(
-    (u) =>
-      stringsMatch(`${u.nombre} ${u.apellido}`, filtro) ||
-      stringsMatch(u.matricula, filtro)
-  );
-}
 
 function UsuarioSummary({ usuario }) {
   const { matricula, nombre, apellido, urlFoto, esAdmin } = usuario;
+
+  const setAdmin = useCallback(async (matricula, esAdmin) => {
+    const confirmMessage = esAdmin
+      ? `Se añadirá al usuario ${matricula} a los administradores.`
+      : `Se removerá al usuario ${matricula} de los administradores.`;
+    if (!window.confirm(confirmMessage)) return;
+  
+    const resPut = await axios
+      .put(`/api/users/${matricula}`, { esAdmin })
+      .catch((err) => err);
+    if (resPut instanceof Error) {
+      alert(resPut.message);
+      return;
+    }
+    window.location.reload();
+  }, []);
 
   return (
     <div className="card usuario-summary bg-secondary mb-2 d-flex flex-row p-2">
@@ -89,13 +69,12 @@ function UsuarioSummary({ usuario }) {
 }
 
 export default function UsuariosIndex() {
-  const [usuarios, setUsuarios] = useState([]);
-  const [filtro, setFiltro] = useState("");
+  const { filtro, usuarios, fetchUsuarios, handleSetFiltro } = useUsers();
 
   useEffect(() => {
-    fetchUsuarios(setUsuarios)
-  }, []);
-  const usuariosFiltrados = filtrarUsuarios(usuarios, filtro);
+    fetchUsuarios();
+  }, [fetchUsuarios]);
+  
 
   return (
     <main id="usuarios-index" className="container">
@@ -108,12 +87,12 @@ export default function UsuariosIndex() {
             className="form-control"
             placeholder="Ej. [ITC11]"
             value={filtro}
-            onChange={(e) => setFiltro(e.target.value)}
+            onChange={(e) => handleSetFiltro(e.target.value)}
           />
           <label className="form-label">Filtrar por nombre o matrícula:</label>
         </div>
       </form>
-      {usuariosFiltrados.map((usuario) => (
+      {usuarios.map((usuario) => (
         <UsuarioSummary key={usuario.matricula} {...{ usuario }} />
       ))}
     </main>
