@@ -1,44 +1,19 @@
 "use client"
 
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 // import { useParams } from "react-router-dom";
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-import axios from "axios";
 
 import PlanForm from "../plan_form";
 import "../../../styles/planes.scss";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
-async function cargarPlan(siglas, setPlan) {
-  const resGet = await axios
-    .get(`/api/planes/${siglas}`)
-    .catch((err) => err);
-  if (resGet instanceof Error) {
-    alert(resGet?.response?.data?.msg);
-    return;
-  }
-  setPlan(resGet.data);
-}
-
-async function guardarPlan(plan) {
-  const siglas = plan.siglas;
-  delete plan.siglas;
-  const resPut = await axios
-    .put(`/api/planes/${siglas}`, plan)
-    .catch((err) => err);
-  if (resPut instanceof Error) {
-    alert(resPut?.body?.msg);
-    return;
-  }
-  window.location = "/planes";
-}
+import usePlan from '../../../hooks/usePlan';
 
 /** Ventana para editar un plan de estudios en específico. */
 export default function PlanesEdit() {
-  const [plan, setPlan] = useState(undefined);
+  const pathname = usePathname();
 
-  const pathname = usePathname()
+  const { cargarPlan, actualizarPlan, plan } = usePlan();
+
 
   const siglas = useMemo(() => {
     const paths = pathname?.split('/');
@@ -47,9 +22,9 @@ export default function PlanesEdit() {
 
   useEffect(() => {
     if (siglas) {
-      cargarPlan(siglas, setPlan);
+      cargarPlan(siglas);
     }
-  }, [siglas]);
+  }, [cargarPlan, siglas]);
 
   if (!plan) {
     return <>El plan no cargó</>;
@@ -59,7 +34,7 @@ export default function PlanesEdit() {
 
   return (
     <main id="planes-edit" className="container-fluid">
-      <PlanForm plan={plan} action={guardarPlan} />
+      <PlanForm plan={plan} action={actualizarPlan} />
     </main>
   );
 }

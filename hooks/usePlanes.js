@@ -9,18 +9,24 @@ export const filtroTec21Opciones = {
 };
 
 function usePlanes() {
+  const [loading, setLoading] = useState(false);
   const [planes, setPlanes] = useState([]);
   const [filtroNombre, setFiltroNombre] = useState("");
   const [filtroTec21, setFiltroTec21] = useState(filtroTec21Opciones.TODOS);
 
   const fetchPlanes = useCallback(async () => {
-    const resGet = await axios.get(`/api/planes`).catch((err) => err);
-    if (resGet instanceof Error) {
-      // alert(resGet.message);
-      setPlanes(null);
-      return;
-    }
-    setPlanes(resGet.data);
+    setLoading(true);
+    return axios.get(`/api/planes`)
+      .then(planes => {
+        setPlanes(planes.data);
+      })
+      .catch((err) => {
+        // alert(resGet.message);
+        setPlanes(null);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [setPlanes]);
 
   const filtrarPlanes = useCallback(() => {
@@ -50,7 +56,10 @@ function usePlanes() {
 
   const planesFiltrados = filtrarPlanes();
 
-  return { planes: planesFiltrados, filtroNombre, filtroTec21, fetchPlanes, handleUpdateFiltroNombre, handleUpdateFiltroTec21 }
+  return {
+    planes: planesFiltrados, filtroNombre, filtroTec21, loading,
+    fetchPlanes, handleUpdateFiltroNombre, handleUpdateFiltroTec21,
+  }
 }
 
 export default usePlanes;
