@@ -4,6 +4,7 @@ import Semestre from "../../components/semestre/semestre";
 
 /** Componente del formulario para el nuevo plan de estudios. */
 export default function PlanesForm({ plan = {}, action }) {
+  console.log('PlanesForm', plan)
   const [siglas, setSiglas] = useState(plan.siglas || "");
   const [errSiglas, setErrSiglas] = useState("");
 

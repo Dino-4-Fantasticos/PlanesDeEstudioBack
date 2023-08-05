@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+import mongoose from 'mongoose'
 
 const colorMatch = [
   /^#[0-9A-Fa-f]{6}$/,
@@ -38,7 +38,7 @@ const materiaGuardadaSchema = {
   },
 };
 
-const schema = new Schema({
+const schema = new mongoose.Schema({
   /** Matrícula del usuario dueño del plan planificado. [Ej. A01634310] */
   usuario: {
     type: String,
@@ -76,7 +76,4 @@ const schema = new Schema({
   }
 });
 
-/** Planificación específica de un plan de estudios. */
-const Planificado = model("Planificado", schema);
-
-module.exports = Planificado;
+module.exports = mongoose.models.Planificado || mongoose.model('Planificado', schema);

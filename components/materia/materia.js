@@ -36,6 +36,7 @@ export default function Materia({ materia, semIdx, matIdx }) {
     creditosAcademicos,
     unidadesDeCarga,
   } = materia;
+  console.log('Materia', materia)
 
   const [editMode, toggleEditMode] = useState(false);
   const [isHovered, toggleHover] = useState(false);

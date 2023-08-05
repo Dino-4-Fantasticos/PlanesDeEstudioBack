@@ -1,7 +1,7 @@
-const { Schema, model } = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
+import mongoose from 'mongoose'
+// const uniqueValidator = require("mongoose-unique-validator");
 
-const schema = new Schema({
+const schema = new mongoose.Schema({
   /** Clave de la materia. [Ej. TC1018] */
   clave: {
     type: String,
@@ -61,9 +61,6 @@ const schema = new Schema({
 const uniqueErrors = {
   clave: "Ya existe otra materia registrada con esta clave.",
 };
-schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
+// schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
 
-/** Materia que pueden contener múltiples planes de estudio */
-const Materia = model("Materia", schema);
-
-module.exports = Materia;
+module.exports = mongoose.models.Materia || mongoose.model('Materia', schema);

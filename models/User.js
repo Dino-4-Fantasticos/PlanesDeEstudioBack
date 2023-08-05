@@ -1,7 +1,7 @@
-const { Schema, model } = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
+import mongoose from 'mongoose'
+// const uniqueValidator = require("mongoose-unique-validator");
 
-const schema = new Schema({
+const schema = new mongoose.Schema({
   /** Matrícula del usuario. [Ej. A01634310] */
   matricula: {
     type: String,
@@ -48,9 +48,8 @@ const uniqueErrors = {
   matricula: "Ya existe otro usuario registrado con esta matrícula.",
   correo: "Ya existe otro usuario registrado con este correo.",
 };
-schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
+// schema.plugin(uniqueValidator, { message: ({ path }) => uniqueErrors[path] });
 
-/** Usuario del Tecnológico de Monterrey quien utiliza los servicios de la página */
-const User = model("User", schema);
 
-module.exports = User;
+module.exports = mongoose.models.User || mongoose.model('User', schema);
+

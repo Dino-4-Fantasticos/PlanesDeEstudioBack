@@ -5,6 +5,7 @@ import FormMateria from "../materia/form_materia/form_materia";
 /** Componente referente al contenido de un semestre escolar. */
 export default function Semestre({ semestre, semIdx, setMaterias }) {
   const [showNewMateria, toggleShowNewMateria] = useState(false);
+  console.log('Semestre', semestre)
 
   return (
     <div key={`sem-${semIdx + 1}`} className="d-flex p-1 flex-column semestre">

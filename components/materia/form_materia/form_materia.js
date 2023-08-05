@@ -2,8 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import PlanFormContext from "../../../utils/form_planes_context";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
 const DEFAULT_HORAS_CLASE = 3;
 const DEFAULT_HORAS_LABORATORIO = 0;
 const DEFAULT_UNIDADES = 8;
@@ -101,7 +99,7 @@ export default function FormMateria({
       editMode: Object.keys(materia).length > 0,
     };
     const resValidate = await axios
-      .post(`${BACKEND_URL}/planes/validate-materia`, postData)
+      .post(`/api/planes/validate-materia`, postData)
       .catch((err) => err);
     if (resValidate instanceof Error) {
       if (!resValidate.response) {
@@ -109,6 +107,7 @@ export default function FormMateria({
         return;
       }
       const errors = resValidate.response.data.err;
+      console.log(resValidate.response)
       const { materias } = errors;
       if (materias) {
         setErrClave(materias[nuevaMateria.clave].clave);
@@ -136,10 +135,11 @@ export default function FormMateria({
     async function fetchInfoMateria() {
       if (!/^[A-Z]{1,2}[0-9]{4}[A-Z]?$/.test(clave)) return;
       const resGet = await axios
-        .get(`${BACKEND_URL}/materias/${clave}`)
+        .get(`/api/materias/${clave}`)
         .catch((err) => err);
       if (resGet instanceof Error) return;
       const { data } = resGet;
+      console.log(resGet)
       setNombre(data.nombre);
       setHorasClase(data.horasClase);
       setHorasLaboratorio(data.horasLaboratorio);

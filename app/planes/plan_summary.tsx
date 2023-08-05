@@ -3,16 +3,16 @@ import deleteIcon from "../../assets/delete_white_24dp.svg";
 import editIcon from "../../assets/edit_white_24dp.svg";
 import tec21Icon from "../../assets/logo-tec21.svg";
 import Image from "next/image";
+import Link from "next/link";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const CLIENT_URL = process.env.REACT_APP_CLIENT_URL;
+const CLIENT_URL = process.env.NEXT_PUBLIC_CLIENT_URL;
 
 async function eliminarPlan(plan) {
   const confirmMessage = `Se eliminará el plan de estudios ${plan.siglas}. ¿Continuar?`;
   if (!window.confirm(confirmMessage)) return;
 
   const resDelete = await axios
-    .delete(`${BACKEND_URL}/planes/${plan.siglas}`)
+    .delete(`/api/planes/${plan.siglas}`)
     .catch((err) => err);
   if (resDelete instanceof Error) {
     alert(resDelete.response.data.msg);
@@ -25,7 +25,7 @@ async function eliminarPlan(plan) {
 export default function PlanesSummary({ plan }) {
   return (
     <figure className="plan-summary bg-secondary">
-      <a
+      <Link
         href={`${CLIENT_URL}/plan/${plan.siglas}`}
         target="_blank"
         rel="noreferrer"
@@ -40,11 +40,11 @@ export default function PlanesSummary({ plan }) {
             )}
           </div>
         </div>
-      </a>
+      </Link>
       <div className="d-flex icons-container">
-        <a href={`/planes/${plan.siglas}/edit`} className="edit-button">
+        <Link href={`/planes/${plan.siglas}`} className="edit-button">
           <Image src={editIcon} alt="delete" />
-        </a>
+        </Link>
         <button onClick={() => eliminarPlan(plan)} className="delete-button">
           <Image src={deleteIcon} alt="delete" />
         </button>
