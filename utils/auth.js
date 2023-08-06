@@ -1,8 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const G_CLIENT_ID = process.env.REACT_APP_G_CLIENT_ID;
+const G_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ID;
 
 /** Nombre de la cookie utilizada para guardar la sesión de usuario. */
 const TOKEN_NAME = "pde_id_admin";
@@ -28,7 +27,7 @@ async function authenticate() {
   if (!Cookies.get(TOKEN_NAME)) return null;
 
   const resAuth = await axios
-    .post(`${BACKEND_URL}/login/auth`, { token: Cookies.get(TOKEN_NAME) })
+    .post(`/login/auth`, { token: Cookies.get(TOKEN_NAME) })
     .catch((err) => err);
   if (resAuth instanceof Error) {
     throw extraerMensajeErrorCliente(resAuth);
@@ -36,7 +35,7 @@ async function authenticate() {
 
   const { matricula } = resAuth.data.verification;
   const resUserGet = await axios
-    .get(`${BACKEND_URL}/users/${matricula}`)
+    .get(`/users/${matricula}`)
     .catch((err) => err);
   if (resUserGet instanceof Error) {
     throw extraerMensajeErrorCliente(resUserGet);
@@ -54,7 +53,7 @@ async function authenticate() {
 /** Guardar la sesión en una cookie y refrescar la página. */
 async function login(credentialResponse) {
   const resLogin = await axios
-    .post(`${BACKEND_URL}/login/`, credentialResponse)
+    .post(`/login/`, credentialResponse)
     .catch((err) => err);
   if (resLogin instanceof Error) {
     const errMsg = resLogin.response
@@ -73,4 +72,4 @@ function logout() {
   window.location = "/login";
 }
 
-export { BACKEND_URL, G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };
+export { G_CLIENT_ID, TOKEN_NAME, authenticate, login, logout };

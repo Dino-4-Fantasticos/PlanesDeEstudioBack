@@ -1,20 +1,23 @@
+import GoogleLoginButton from '@/components/googleLoginButton/GoogleLoginButton';
 import '../styles/panel_admin.scss';
-import Link from 'next/link';
 
-export default function Home() {
+export default function SignIn() {
   return (
-    <main id="panel-admin" className="container">
-      <div className="row justify-content-around">
-        <Link href="/planes" className="col-8 col-md-5 m-3">
-          <button className="btn btn-primary btn-lg p-4">
-            Planes de Estudio
-          </button>
-        </Link>
-        <Link href="/users" className="col-8 col-md-5 m-3">
-          <button className="btn btn-info btn-lg p-4">
-            Usuarios y Administradores
-          </button>
-        </Link>
+    <main id="login-screen" className="container">
+      <div className="jumbotron text-center">
+        <p>
+          <strong>PLANES DE ESTUDIO</strong>
+        </p>
+        <p>Panel de Administración</p>
+        <p className="redirect-text">
+          Si buscar la página principal puedes redirigirte a <br />
+          <a href="https://dino-4-fantasticos.github.io/PlanesDeEstudio/#/">
+            https://dino-4-fantasticos.github.io/PlanesDeEstudio/#/
+          </a>
+        </p>
+      </div>
+      <div className="login-container">
+        <GoogleLoginButton />
       </div>
     </main>
   )
