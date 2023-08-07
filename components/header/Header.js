@@ -1,24 +1,24 @@
 "use client"
 
-import React, { useContext } from "react";
-import { Navbar, Image, Nav, Button, Container } from "react-bootstrap";
-import Link from 'next/link';
-
-import { logout } from "../../utils/auth";
-import logoutIcon from "./logout_white_24dp.svg";
-// import { UserContext } from "../utils/context";
-
-
 import "../../styles/header.scss";
+import React, { useEffect } from "react";
+import { Navbar, Image, Button, Container } from "react-bootstrap";
+import { signOut, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
-/**
- * Parte superior, contiene controles de manejo de sesión y perfil
- *
- * @param {Boolean} loggedUser Indica el usuario de la sesión.
- */
+import logoutIcon from "./logout_white_24dp.svg";
+
 export default function Header() {
-  // const loggedUser = useContext(UserContext);
-  const loggedUser = {};
+  const router = useRouter();
+  const { data: session } = useSession();
+  const loggedUser = session?.user;
+  console.log('Header', session);
+
+  useEffect(() => {
+    if (session === null) {
+      router.push('/');
+    }
+  }, [router, session])
 
   return (
     <Navbar
@@ -33,14 +33,15 @@ export default function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="header-collapse" />
         <Navbar.Collapse id="header-collapse" className="justify-content-end">
-          <Link href="/login" className="element pr-0">
-            <Button onClick={logout} variant="danger" className="d-flex">
+          {loggedUser && 
+            <Button onClick={() => signOut()} variant="danger" className="d-flex">
               <Image
                 className="imagen-perfil"
                 width={48}
                 height={48}
-                src={loggedUser.urlFoto}
+                src={loggedUser?.image}
                 roundedCircle
+                alt="icono usuario"
               />
               <div className="ml-2">
                 Cerrar
@@ -48,14 +49,14 @@ export default function Header() {
                 Sesión
               </div>
               <Image
-                src={logoutIcon}
+                src={logoutIcon.src}
                 width={48}
                 height={48}
                 alt="Cerrar sesión"
                 className="ml-3"
               />
             </Button>
-          </Link>
+          }
         </Navbar.Collapse>
       </Container>
     </Navbar>
