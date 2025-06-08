@@ -14,7 +14,7 @@ const config = {
 const seeder = new Seeder(config);
 const collections = seeder.readCollectionsFromPath(path.resolve("./seeds"));
 
-console.log('collections', collections)
+// console.log('collections', collections)
 
 
 // seeder
@@ -27,17 +27,25 @@ console.log('collections', collections)
 //     console.error('error con seeds db', err);
 //   });
 
-mongoose
-  .connect(process.env.ATLAS_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useCreateIndex: true,
-  })
-  .then(() => console.log("MongoDB database connected successfully"))
-  .catch(console.log);
+function connectDB() {
+
+	console.log('connecting to DB', process.env.ATLAS_URI)
+	mongoose
+  		.connect(process.env.ATLAS_URI, {
+    		useNewUrlParser: true,
+    		useUnifiedTopology: true,
+    		// useCreateIndex: true,
+  	})
+  		.then(() => console.log("MongoDB database connected successfully"))
+  		.catch(err => console.log(err))
+  		.finally(() => console.log("finally"));
+}
+
+connectDB();
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
+  console.log("produccion wiii");
   app.use(express.static(path.join(__dirname, "build")));
   app.get("*", (_, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
