@@ -13,32 +13,34 @@ const {
 	// MONGO_PASSWORD,
 	MONGO_HOSTNAME,
 	MONGO_PORT,
-	MONGO_DB
+	MONGO_DB,
+	MONGO_SEED_FLAG
 } = process.env;
 
 async function connectDB() {
 	// const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
 	const url = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`;
-	const config = {
-		// database: process.env.ATLAS_URI,
-		database: url,
-		dropDatabase: true,
-	};
-	const seeder = new Seeder(config);
-	const collections = seeder.readCollectionsFromPath(path.resolve("./seeds"));
-	
-	// console.log('collections', collections)
-	
-	
-	await seeder
-	   .import(collections)
-	   .then(() => {
-		 // Do whatever you want after successful import
-		 console.log('seeded db successfully');
-	   })
-	   .catch(err => {
-		 console.error('error con seeds db', err);
-	   });
+	if (MONGO_SEED_FLAG === 'true') {
+		const config = {
+			// database: process.env.ATLAS_URI,
+			database: url,
+			dropDatabase: true,
+		};
+		const seeder = new Seeder(config);
+		const collections = seeder.readCollectionsFromPath(path.resolve("./seeds"));
+		
+		// console.log('collections', collections)
+
+		await seeder
+			.import(collections)
+			.then(() => {
+				// Do whatever you want after successful import
+				console.log('seeded db successfully');
+			})
+			.catch(err => {
+				console.error('error con seeds db', err);
+			});
+	}
 
 	console.log('connecting to DB', url)
 	mongoose
