@@ -17,15 +17,15 @@ const collections = seeder.readCollectionsFromPath(path.resolve("./seeds"));
 // console.log('collections', collections)
 
 
-// seeder
-//   .import(collections)
-//   .then(() => {
-//     // Do whatever you want after successful import
-//     console.log('wiii');
-//   })
-//   .catch(err => {
-//     console.error('error con seeds db', err);
-//   });
+seeder
+   .import(collections)
+   .then(() => {
+     // Do whatever you want after successful import
+     console.log('seeded db successfully');
+   })
+   .catch(err => {
+     console.error('error con seeds db', err);
+   });
 
 const {
 	// MONGO_USERNAME,
